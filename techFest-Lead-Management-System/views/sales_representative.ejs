@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/logout" method="post"><button>Logout</button></form>
+    <%for(let lead of leads){%>
+        <%=lead.customer_name%>
+        <%=lead.Status%>
+        <form action="/update_status/<%=lead._id%>/<%=userId%>" method="POST">
+            <select name="status">
+                <option value="Validated">Validated</option>
+                <option value="Rejected">Rejected</option>
+                <option value="Closed">Closed</option>
+              </select>
+              <button>Update</button>
+        </form>
+        <br>
+        <%}%>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/Submit_lead/<%=id%>" method="post">
+        <p>Customer Name :</p>
+        <input type="text" name="customer_name">
+        <p>Project Detailes :</p>
+        <input type="text" name="project_details">
+        <p>Segment Details :</p>
+        <input type="text" name="Segment_details">
+        <p>Submeted by :</p>
+        <input type="text" name="lead_submitted_by">
+        <p>Submited to:</p>
+        <input type="text" name="lead_submitted_to">
+       <button>Submit</button>
+    </form>
+    <%for(let lead of leads){%>
+    <%=lead.customer_name%>
+
+    <%}%>
+</body>
+</html>
