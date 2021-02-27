@@ -65,7 +65,7 @@ app.post("/login",async(req,res)=>{
 });
 //----------------REGISTER---------------------
 app.get("/register", (req, res) => {
-    res.render('register');
+    res.render('login');
 });
 app.post("/register",async(req,res)=>{
 
@@ -79,7 +79,7 @@ app.post("/register",async(req,res)=>{
     //Checking the Email is already registered
     User.findOne({ Email: Email }).then(user => {
         if(user){
-            res.redirect("/register");
+            res.redirect("/login");
         }else{
             if(countUser==0){
                 //If the userCount is 0 make the position as Admin

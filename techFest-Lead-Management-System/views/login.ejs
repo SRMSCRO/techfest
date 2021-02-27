@@ -9,8 +9,19 @@
 <body>
     <%=message%>
 
-    <form action="/login" method="post">
+    <form id="login_form" action="/login" method="post">
         <p>Email: </p>
+        <input name="Email" type="text">
+        <p>Password :</p>
+        <input name="Password" type="password">
+        <button>Submit</button>
+    </form>
+    <form id="register_form" action="register" method="post">
+        <p>Name :</p>
+        <input name="Name" type="text">
+        <p>Operational Company :</p>
+        <input name="OpCo" type="text">
+        <p>Company Mail :</p>
         <input name="Email" type="text">
         <p>Password :</p>
         <input name="Password" type="password">
