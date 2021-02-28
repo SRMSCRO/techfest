@@ -50,22 +50,22 @@ ul {
   margin: 0; /* Remove margins */
 }
 #my-img:hover {
-  content: url('image/Component\ 3\ –\ 10\ \(Hover\ State\).png');
+  content: url('../image/Component\ 3\ –\ 10\ \(Hover\ State\).png');
 }
 
  
 
 #my-img2:hover {
-  content: url('image/Component\ 4\ –\ 19\ \(Hover\ State\).png');
+  content: url('../image/Component\ 4\ –\ 19\ \(Hover\ State\).png');
 }
 #my-img3:hover {
-  content: url('image/leadh.png');
+  content: url('../image/leadh.png');
 }
 #my-img4:hover {
-  content: url('image/checked.png');
+  content: url('../image/checked.png');
 }
 #my-img5:hover {
-  content: url('image/Component\ 5\ –\ 10\ \(Hover\ State\).png');
+  content: url('../image/Component\ 5\ –\ 10\ \(Hover\ State\).png');
 }
 
 
