@@ -18,8 +18,21 @@
                 <option value="Closed">Closed</option>
               </select>
               <button>Update</button>
-        </form>
+        </form><%}%>
+         <form action="/Submit_lead/<%=userId%>" method="post">
+        <p>Customer Name :</p>
+        <input type="text" name="customer_name">
+        <p>Project Detailes :</p>
+        <input type="text" name="project_details">
+        <p>Segment Details :</p>
+        <input type="text" name="Segment_details">
+        <p>Submeted by :</p>
+        <input type="text" name="lead_submitted_by">
+        <p>Submited to:</p>
+        <input type="text" name="lead_submitted_to">
+       <button>Submit</button>
+    </form>
         <br>
-        <%}%>
+        
 </body>
 </html>

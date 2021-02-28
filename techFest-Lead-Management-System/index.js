@@ -164,7 +164,7 @@ app.get("/sales_representative/:id",requireLogin,async(req,res)=>{
     // Find the user by ID
     let _id=req.params.id;
     const user = await User.findOne({ _id });
-
+    
     // Find the lead for the user
     Lead.find({lead_submitted_to:user.Name},(err,leads)=>{
         res.set('Cache-Control', 'no-cache, private, no-store, must-revalidate, max-stale=0, post-check=0, pre-check=0');
