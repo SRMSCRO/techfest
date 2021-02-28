@@ -154,7 +154,7 @@ app.get("/q/:id",requireLogin,async(req,res)=>{
      // Find the lead for the user
      Lead.find({lead_submitted_to:user.Name},(err,leads)=>{
          res.set('Cache-Control', 'no-cache, private, no-store, must-revalidate, max-stale=0, post-check=0, pre-check=0');
-         res.render("sales_representative",{leads:leads,userId:req.params.id});
+         res.render("filter",{leads:leads,userId:req.params.id});
      });
 });
 
