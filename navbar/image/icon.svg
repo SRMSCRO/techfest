@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="66.875" height="66.081" viewBox="0 0 66.875 66.081">
+  <defs>
+    <filter id="Path_180" x="7.94" y="19.552" width="53.029" height="26.977" filterUnits="userSpaceOnUse">
+      <feOffset dx="5" dy="5" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feFlood flood-opacity="0.302"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Path_181" x="22.034" y="4.416" width="38.933" height="57.248" filterUnits="userSpaceOnUse">
+      <feOffset dx="5" dy="5" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="4" result="blur-2"/>
+      <feFlood flood-opacity="0.302"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Path_182" x="0" y="13.1" width="39.881" height="39.881" filterUnits="userSpaceOnUse">
+      <feOffset dx="5" dy="5" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="4" result="blur-3"/>
+      <feFlood flood-opacity="0.302"/>
+      <feComposite operator="in" in2="blur-3"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Path_184" x="31.063" y="0" width="35.812" height="35.812" filterUnits="userSpaceOnUse">
+      <feOffset dx="5" dy="5" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="4" result="blur-4"/>
+      <feFlood flood-opacity="0.302"/>
+      <feComposite operator="in" in2="blur-4"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Rectangle_35" x="31.063" y="15.135" width="35.812" height="35.812" filterUnits="userSpaceOnUse">
+      <feOffset dx="5" dy="5" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="4" result="blur-5"/>
+      <feFlood flood-opacity="0.302"/>
+      <feComposite operator="in" in2="blur-5"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Path_183" x="31.063" y="30.269" width="35.812" height="35.812" filterUnits="userSpaceOnUse">
+      <feOffset dx="5" dy="5" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="4" result="blur-6"/>
+      <feFlood flood-opacity="0.302"/>
+      <feComposite operator="in" in2="blur-6"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="icon" transform="translate(7 7)">
+    <g transform="matrix(1, 0, 0, 1, -7, -7)" filter="url(#Path_180)">
+      <path id="Path_180-2" data-name="Path 180" d="M35.186,61.153H64.215V64.13H35.186Z" transform="translate(-20.25 -34.6)" fill="#eeefee"/>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, -7, -7)" filter="url(#Path_181)">
+      <path id="Path_181-2" data-name="Path 181" d="M77.074,65.453H65.118a2.977,2.977,0,0,1-2.977-2.98V35.183a2.977,2.977,0,0,1,2.978-2.978H77.074v2.98H65.714a.6.6,0,0,0-.6.6v26.1a.6.6,0,0,0,.6.6h11.36Z" transform="translate(-33.11 -20.79)" fill="#eeefee"/>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, -7, -7)" filter="url(#Path_182)">
+      <path id="Path_182-2" data-name="Path 182" d="M.934,0H14.947a.934.934,0,0,1,.934.934V14.947a.934.934,0,0,1-.934.934H.934A.934.934,0,0,1,0,14.947V.934A.934.934,0,0,1,.934,0Z" transform="translate(7 20.1)" fill="#88e7e7"/>
+    </g>
+    <g id="Group_14" data-name="Group 14" transform="translate(31.063)">
+      <g transform="matrix(1, 0, 0, 1, -38.06, -7)" filter="url(#Path_184)">
+        <path id="Path_184-2" data-name="Path 184" d="M1.329,0h9.154a1.329,1.329,0,0,1,1.329,1.329v9.154a1.329,1.329,0,0,1-1.329,1.329H1.329A1.329,1.329,0,0,1,0,10.483V1.329A1.329,1.329,0,0,1,1.329,0Z" transform="translate(38.06 7)" fill="#88e7e7"/>
+      </g>
+      <g transform="matrix(1, 0, 0, 1, -38.06, -7)" filter="url(#Rectangle_35)">
+        <rect id="Rectangle_35-2" data-name="Rectangle 35" width="11.812" height="11.812" rx="1.329" transform="translate(38.06 22.13)" fill="#88e7e7"/>
+      </g>
+      <g transform="matrix(1, 0, 0, 1, -38.06, -7)" filter="url(#Path_183)">
+        <path id="Path_183-2" data-name="Path 183" d="M1.329,0h9.154a1.329,1.329,0,0,1,1.329,1.329v9.154a1.329,1.329,0,0,1-1.329,1.329H1.329A1.329,1.329,0,0,1,0,10.483V1.329A1.329,1.329,0,0,1,1.329,0Z" transform="translate(38.06 37.27)" fill="#88e7e7"/>
+      </g>
+    </g>
+  </g>
+</svg>

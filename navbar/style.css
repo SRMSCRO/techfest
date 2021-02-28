@@ -1,0 +1,159 @@
+.sidenav {
+    height: 100%; /* Full-height: remove this if you want "auto" height */
+    width: 6%; /* Set the width of the sidebar */
+    font-family: 'Montserrat';
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: #6c63ff; /* Blue */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 20px;
+    border-top-left-radius: 52px;
+    border-bottom-left-radius: 68px;
+  }
+  
+  /* The navigation menu links */
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #ffffff;
+    display: block;
+}
+  
+.sidenav img{
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 0%;
+    width: 43px;
+}
+  /* Style page content */
+.main {
+    /* margin-left: 11%; Same as the width of the sidebar */
+    padding: 0px 10px;
+}
+
+.main h1{
+  color: #323335;
+}
+
+h1, h2, h3, h4, h5, h6{
+  color: black;
+}
+
+ 
+ul {
+  list-style-type: none; /* Remove bullets */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margins */
+}
+#my-img:hover {
+  content: url('image/Component\ 3\ –\ 10\ \(Hover\ State\).png');
+}
+
+ 
+
+#my-img2:hover {
+  content: url('image/Component\ 4\ –\ 19\ \(Hover\ State\).png');
+}
+#my-img3:hover {
+  content: url('image/Component\ 3.1–\ 10.png');
+}
+#my-img4:hover {
+  content: url('image/checked\ \(Hover\ State\).png');
+}
+#my-img5:hover {
+  content: url('image/Component\ 5\ –\ 10\ \(Hover\ State\).png');
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 1441px){
+
+  .sidenav{
+    width: 10%;
+  }
+  .main{
+    margin-left: 13%;
+  }
+}
+
+@media screen and (max-width: 1025px){
+
+  .sidenav{
+    width: 8%;
+    height: 100%;
+  }
+
+  .sidenav img{
+    padding-top: 300%;
+  }
+  .main{
+    /* margin-left: 14%; */
+    margin-left: 9%;
+    height: 100%;
+  }
+  .cards img{
+    width: 15%;
+  }
+  .cards{
+    width: 50%;
+  }
+
+  .col-xl-3{
+    padding-bottom: 20%;
+  }
+  .row{
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 768px) and (min-width: 576px){
+  .btn-style{
+    width: 82px;
+  }
+}
+
+@media screen and (max-width: 415px){
+
+  .sidenav{
+    width: 15%;
+  }
+
+  .sidenav a{
+    padding: 6px 8px 6px 10px;
+  }
+  .sidenav img{
+    padding-top: 250%;
+  }
+
+  .main{
+    margin-left: 20%;
+
+  }
+}
+
+@media screen and (max-width: 321px){
+  .sidenav img{
+    width: 100%;
+    padding-top: 270%;
+  }
+
+  .sidenav{
+    width: 14%;
+  }
+}
+
+@media screen and (max-width: 281px){
+
+  .btn-style{
+    width: 125px;
+    height: 32px;
+  }
+}
