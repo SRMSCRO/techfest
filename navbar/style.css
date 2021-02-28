@@ -123,14 +123,14 @@ ul {
 @media screen and (max-width: 415px){
 
   .sidenav{
-    width: 15%;
+    width: 20%;
   }
 
   .sidenav a{
     padding: 6px 8px 6px 10px;
   }
   .sidenav img{
-    padding-top: 250%;
+    padding-top: 72px;
   }
 
   .main{
