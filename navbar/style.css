@@ -27,7 +27,7 @@
     margin-right: auto;
     margin-left: auto;
     padding-top: 0%;
-    width: 43px;
+    width: 50px;
 }
   /* Style page content */
 .main {
@@ -59,10 +59,10 @@ ul {
   content: url('image/Component\ 4\ –\ 19\ \(Hover\ State\).png');
 }
 #my-img3:hover {
-  content: url('image/Component\ 3.1–\ 10.png');
+  content: url('image/leadh.png');
 }
 #my-img4:hover {
-  content: url('image/checked\ \(Hover\ State\).png');
+  content: url('image/checked.png');
 }
 #my-img5:hover {
   content: url('image/Component\ 5\ –\ 10\ \(Hover\ State\).png');
