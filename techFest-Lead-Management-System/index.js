@@ -164,11 +164,11 @@ app.get("/sales_representative/:id",requireLogin,async(req,res)=>{
     // Find the user by ID
     let _id=req.params.id;
     const user = await User.findOne({ _id });
-    
+    const countLead=await Lead.countDocuments();
     // Find the lead for the user
-    Lead.find({lead_submitted_to:user.Name},(err,leads)=>{
+     Lead.find({},(err,leads)=>{
         res.set('Cache-Control', 'no-cache, private, no-store, must-revalidate, max-stale=0, post-check=0, pre-check=0');
-        res.render("sales_representative",{leads:leads,userId:req.params.id, user:user});
+        res.render("sales_representative",{leads:leads,userId:req.params.id, user:user, countLead});
     });
 });
 app.post("/update_status/:id/:userId",async(req,res)=>{
