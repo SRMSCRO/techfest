@@ -24,7 +24,7 @@
     <script>
         $('.btn-style').prop('disabled', false)
     </script>-->
-<div class="sidenav">
+<div class="sidenav" >
         <ul>
             <li>
                 <a onclick="vis1()">
@@ -83,7 +83,10 @@
 <!---------------PROFILE------------------->
 <div id="Profile" class="main">
     <div class="container">
-
+        <%=user.name%><br>
+        <%=user.OpCo%><br>
+        <%=user.Email%>
+        <!-- <%=user.Position%> -->
     </div>
 </div>
 
@@ -123,7 +126,12 @@
 <!---------------LEAD SUBMITTED------------------->
 <div id="lead_submitted" class="main">
     <div class="container">
-
+        <h3>open</h3>
+        <%for(let lead of leads){%>
+        <%if(lead.lead_submitted_by == user.name){%>
+            <p>lead.customer_name<span>status</span>lead.Status</p>
+            <%}%>
+            <%}%>
     </div>
 </div>
 
@@ -175,8 +183,8 @@
         crossorigin="anonymous"></script>
         <script src="../css/script.js" type="text/javascript"></script>        
         <script src="https://kit.fontawesome.com/yourcode.js"></script>
-        
-        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
+        M<script src="../css/myChart.js" type="text/javascript"></script>
         <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.4.1.min.220afd743d.js" type="text/javascript"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
         

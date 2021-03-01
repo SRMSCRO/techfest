@@ -1,5 +1,5 @@
 //------LEAD MANAGEMENT SYSTEM---------------
-//TEAM MEMBERS : S ERIC RAYMUND REX
+//TEAM MEMBERS : S ERIC RAYMUND REX , ROEHIT RANGANATHAN, AMAN CHAWLA, AMANDEEP KAUR, KARTHIK ANIL
 
 const express = require('express');
 const mongoose = require('mongoose');
@@ -168,7 +168,7 @@ app.get("/sales_representative/:id",requireLogin,async(req,res)=>{
     // Find the lead for the user
     Lead.find({lead_submitted_to:user.Name},(err,leads)=>{
         res.set('Cache-Control', 'no-cache, private, no-store, must-revalidate, max-stale=0, post-check=0, pre-check=0');
-        res.render("sales_representative",{leads:leads,userId:req.params.id});
+        res.render("sales_representative",{leads:leads,userId:req.params.id, user:user});
     });
 });
 app.post("/update_status/:id/:userId",async(req,res)=>{
