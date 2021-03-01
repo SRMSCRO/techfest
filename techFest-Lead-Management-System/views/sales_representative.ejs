@@ -17,7 +17,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 </head>
-<body>
+<body onload="vis();">
 
 <!---------------NAVBAR------------>
 <!---
@@ -27,7 +27,7 @@
 <div class="sidenav">
         <ul>
             <li>
-                <a href="#">
+                <a onclick="vis1()">
                     <div class="center  ">
                     <img style="height: 60px; width:60px;" src="../image/Component 11 – 1.png">
                         <p style="font-size: 13px; text-align: center;">XYZ</p>
@@ -35,7 +35,7 @@
                 </a>
                 </li>
             <li>
-        <a href="#">
+        <a onclick="vis2()">
             <div class="center">
             <img id="my-img" src="../image/Component 3 – 10.png">
             <p style="font-size: 13px; text-align: center;">Analytics</p>
@@ -43,7 +43,7 @@
         </a>
         </li>
         <li>
-        <a href="#">
+        <a onclick="vis3()">
             <div class="center">
                 <img id="my-img2" src="../image/Component 4 – 39.png">
                 <p style="font-size: 13px; text-align: center;">Add Lead</p>
@@ -51,7 +51,7 @@
         </a>
     </li>
         <li>
-        <a href="#">
+        <a onclick="vis4()">
             <div class="center">
                 <img style="width: 46px;" id="my-img3"src="../image/leadsub.png">
                 <p style="font-size: 13px; text-align: center;">Lead<br> Submitted</p>
@@ -59,7 +59,7 @@
         </a>
     </li>
         <li>
-        <a href="#">
+        <a onclick="vis5()">
             <div class="center">
                 <img id="my-img4" src="../image/checked@2x.png">
                 <p style="font-size: 13px; text-align: center;">Leads<br>Assigned</p>
@@ -68,17 +68,27 @@
     </li>
 </li>
 <li>
-<a href="#">
+    <form action="/logout" id="logout_form" method="post">
+<a onclick="document.getElementById('logout_form').submit();">
     <div class="center">
         <img id="my-img5" src="../image/Component 5 – 10.png">
         <p style="font-size: 13px; text-align: center;">Logout</p>
         </div>
-</a>
+</a></form>
 </li>
 </ul>
 
 </div>
 <!---------------NAVBAR END--------------------------->
+<!---------------PROFILE------------------->
+<div id="Profile" class="main">
+    <div class="container">
+
+    </div>
+</div>
+
+
+<!---------------PROFILE END---------------->
 
 <!---------------ANALYTICS------------------->
 <div id="Analytics" class="main">
@@ -89,8 +99,45 @@
 
 
 <!---------------ANALYTICS END---------------->
+<!---------------ADD LEAD------------------->
+<div id="Add_lead" class="main">
+    <div class="container">
+        <form action="/Submit_lead/<%=userId%>" method="post">
+            <p>Customer Name :</p>
+            <input type="text" name="customer_name">
+            <p>Project Detailes :</p>
+            <input type="text" name="project_details">
+            <p>Segment Details :</p>
+            <input type="text" name="Segment_details">
+            <p>Submeted by :</p>
+            <input type="text" name="lead_submitted_by">
+            <p>Submited to:</p>
+            <input type="text" name="lead_submitted_to">
+           <button>Submit</button>
+        </form>
+    </div>
+</div>
 
-    <form action="/logout" method="post"><button>Logout</button></form>
+
+<!---------------ADD LEAD ENDS---------------->
+<!---------------LEAD SUBMITTED------------------->
+<div id="lead_submitted" class="main">
+    <div class="container">
+
+    </div>
+</div>
+
+
+<!---------------LEAD SUBMITTED ENDS---------------->
+<!---------------LEAD ASSIGNED------------------->
+<div id="lead_assigned" class="main">
+    <div class="container">
+
+    </div>
+</div>
+
+
+<!---------------LEAD ASSIGNED ENDS---------------->
     <%for(let lead of leads){%>
         <%=lead.customer_name%>
         <%=lead.Status%>
@@ -102,7 +149,7 @@
               </select>
               <button>Update</button>
         </form><%}%>
-         <form action="/Submit_lead/<%=userId%>" method="post">
+         <!-- <form action="/Submit_lead/<%=userId%>" method="post">
         <p>Customer Name :</p>
         <input type="text" name="customer_name">
         <p>Project Detailes :</p>
@@ -114,22 +161,19 @@
         <p>Submited to:</p>
         <input type="text" name="lead_submitted_to">
        <button>Submit</button>
-    </form>
+    </form> -->
         <br>
 
 
  
-     
+
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
         crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
-        
-        
-        
-        
+        <script src="../css/script.js" type="text/javascript"></script>        
         <script src="https://kit.fontawesome.com/yourcode.js"></script>
         
         

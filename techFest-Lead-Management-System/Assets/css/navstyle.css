@@ -157,3 +157,15 @@ ul {
     height: 32px;
   }
 }
+#Analytics{
+  display: none;
+}
+#Add_lead{
+  display: none;
+}
+#lead_submitted{
+  display: none;
+}
+#lead_assigned{
+  display: none;
+}
