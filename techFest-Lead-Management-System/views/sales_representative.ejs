@@ -13,6 +13,7 @@
         type="text/css">
      <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/scss/_reboot.scss" rel="stylesheet/scss"
         type="text/css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
         <link rel="stylesheet" href="../css/navstyle.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
@@ -49,7 +50,7 @@
         <li>
         <a onclick="vis4()">
             <div class="center">
-                <img style="width: 46px;" id="my-img3"src="../image/leadsub.png">
+                <img style="width: 75px; !important" id="my-img3"src="../image/leadsub.png">
                 <p style="font-size: 13px; text-align: center;">Lead<br> Submitted</p>
                 </div>
         </a>
@@ -99,8 +100,162 @@
 
 <!---------------ANALYTICS END---------------->
 <!---------------ADD LEAD------------------->
+
+
 <div id="Add_lead" class="main">
     <div class="container">
+        <div class="main">
+            <div class="float-container">
+            <div class="float-child">
+                  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Open
+                  <span class="caret"></span></button>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">on11</a></li>
+                    <li><a href="#">2121</a></li>
+                    <li><a href="#">2cv</a></li>
+                  </ul>
+                  <img class="search" src="../image/search.png">
+                 
+            </div>
+            
+                <div class="input-group rounded float-child">
+                    
+                    <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search"
+                      aria-describedby="search-addon" />
+                      
+                    <span class="input-group-text border-0" id="search-addon">
+                      
+                    </span>
+                   
+                  </div>
+              </div>
+                </div>
+                <div class="previous">
+                    <img src="../image/Component 2 – 11.png"></div>
+                <section>
+              <div ><br>
+                <h1 id="heading">Add Lead</h1>
+            </div> </section>
+            
+            <div class="container" style="margin-top: 60px; margin-left: 150px;">
+                <div class="row" style="margin-top: 50px;">
+            <div class="row "  >
+                <div class="col-md-4 " >
+                    <div class="form">
+                        <label for="usr"></label>
+                        <div class="customer">
+                        <input type="text" class="form-control" placeholder="Coustomer"></div>
+                      </div>
+                      
+                
+                 </div> 
+             <div class="col-md-4 ">
+                 <img class="g201" src="../image/Group 201.png" >
+                 <div class="centered"></div>
+             </div>
+             
+             
+             
+            
+             
+             </div> 
+             
+             
+                <div class="row">
+                    <div class="col-md-4 ">
+                        <img class="grp20" src="../image/Grp 20.png" >
+                        <div class="centered"></div>
+                       </div>
+                    <div class="col-md-4">
+                        <div class="form" >
+                            <label for="usr"></label>
+                            <input type="text"  class="form-control" placeholder="Name">
+                          </div>
+                    </div>
+                    
+                    
+            </div>
+            
+            <div class="row">
+                <div class="col-md-4 ">
+                     
+                    <div class="form">
+                        <label for="usr"></label>
+                        <div class="Pname">
+                        <input type="text" class="form-control" placeholder="Project Name"></div>
+                      </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form">
+                    <label for="usr"></label>
+                    <div class="lid">
+                    <input type="text" class="form-control" placeholder="ID"></div>
+                     </div>
+                </div>
+            
+                <div class="col-md-4"> 
+                    <div class="addpos">
+                    <img id ="addimg"src="../image/addimg.png"></div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-4 ">
+                     
+                    <div class="form">
+                        <label for="usr"></label>
+                        <input type="text" class="form-control" placeholder="Project $ Value">
+                      </div>
+                </div>
+            
+                 <div class="row">
+                <div class="col-md-4">
+                    <img class="g202" src="../image/Group 202.png" >
+                    <div class="centered"></div>
+                </div>
+                <div class="col-md-12" id="yoyo">
+                    <div class="form">
+                        <label for="usr"></label>
+                        <input type="text" class="form-control" placeholder="Name">
+                      </div>
+                </div>
+                <div class="col-md-12" id="yoyo">
+                    <div class="form">
+                        <label for="usr"></label>
+                        <input type="text" class="form-control" placeholder="ID">
+                      </div>
+                </div>
+                </div>
+            
+                <div class="float-container">
+                    <div class="float-child">
+                        <div class="pos">
+                          <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" style="width: 180px;">Segment Details
+                          <span class="caret"></span></button></div>
+                          <ul class="dropdown-menu">
+                            <li><a href="#">on11</a></li>
+                            <li><a href="#">2121</a></li>
+                            <li><a href="#">2cv</a></li>
+                          </ul>
+                          
+                         
+                    </div>
+                <div>
+                    <button type="button" class="submit">SUBMIT</button>
+                </div>
+            
+            </div>
+            
+            
+            </div>
+            </div>
+        
+        </div>
+        
+        
+        
+        
+
         <form action="/Submit_lead/<%=userId%>" method="post">
             <p>Customer Name :</p>
             <input type="text" name="customer_name">
