@@ -5,13 +5,14 @@ body{
   background-position-x: right;
   background-size:contain;
   overflow-y: hidden;
+  overflow-x: hidden;
 }
 
 
 
 .sidenav {
   height: 100%; /* Full-height: remove this if you want "auto" height */
-  width: 6%; /* Set the width of the sidebar */
+  width: 8%; /* Set the width of the sidebar */
   font-family: 'Montserrat';
   position: fixed; /* Fixed Sidebar (stay in place on scroll) */
   z-index: 1; /* Stay on top */
@@ -225,6 +226,7 @@ display: none;
 .grp20
 {
   margin-top: 70px;
+  margin-left:-100px;
 }
 
 .g202
@@ -240,8 +242,9 @@ display: none;
 .previous
 {
 margin-top: -10px;
-float: right;
+
 height: 25px;
+
 
 }
 
@@ -265,7 +268,9 @@ height: 25px;
   margin-left: 166px;
   font-family: 'MONTSERRAT';
   position: absolute;
+  margin-left:50px;
  }
+
 
  #addimg {
   float: right;
@@ -305,12 +310,15 @@ height: 25px;
   border-bottom-width: medium;
   border-color: none;
   
+  
 }
 
 .customer
 {
   margin-top: 60px;
+ 
 }
+
 
 .lid 
 {
@@ -360,7 +368,7 @@ height: 25px;
  border-color: #F04705;
  box-shadow: 2px 2px  #F04705;
  float: right;
- margin-left: -50px;
+ margin-right: 150px;
  margin-top: -100px;
  border: none;
 }
