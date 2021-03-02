@@ -85,13 +85,13 @@ app.post("/register",async(req,res)=>{
             if(countUser==0){
                 //If the userCount is 0 make the position as Admin
                 const user=new User({
-                    Name,OpCo,Email,Password:hash,Position:"Admin",Emp_ID:countUser+1,
+                    Name,OpCo,Email,Password:hash,Position:"Admin"
                 });
                 user.save();
             }else{
                 //Else Dont care about admin
                 const user=new User({
-                    Name,OpCo,Email,Password:hash,Position:"Employee",Emp_ID:countUser+1,
+                    Name,OpCo,Email,Password:hash,Position:"Employee"
                 });
                 user.save();
                 
@@ -141,7 +141,7 @@ app.post("/Submit_lead/:id",async(req,res)=>{
     const {customer_name,project_details,Segment_details,lead_submitted_by,lead_submitted_to}=req.body;
     const lead=new Lead({
         customer_name,project_details,Segment_details,lead_submitted_by,lead_submitted_to,
-        Open_time:datetime,
+        Open_time:datetime,project_name,
         Status:"Open"
     });
     lead.save();

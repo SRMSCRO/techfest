@@ -149,57 +149,57 @@
                       
                 
                  </div> 
-             <div class="col-md-4 ">
+             <!-- <div class="col-md-4 ">
                  <img class="g201" style="margin-left: -100px !important;" src="../image/Group 201.png" >
                  <div class="centered"></div>
-             </div>
+             </div> -->
              </div> 
               <div class="row">
                     <div class="col-md-4 ">
                         <img class="grp20" style="margin-left: -100px !important;" src="../image/Grp 20.png" >
                         <div class="centered"></div>
                        </div>
-                    <div class="col-md-4">
+                    <!-- <div class="col-md-4">
                         <div class="form" >
                             <label for="usr"></label>
                             <input type="text"  class="form-control" style="margin-left: -100px !important;" placeholder="Name">
                           </div>
-                    </div>
+                    </div> -->
             </div>
             <div class="row">
                 <div class="col-md-4 ">
                     <div class="form">
                         <label for="usr"></label>
                         <div class="Pname">
-                        <input type="text" class="form-control" style="margin-left: -100px; !important" placeholder="Project Name"></div>
+                        <input type="text" class="form-control" style="margin-left: -100px; !important" placeholder="Project Name"></div> <br><br><br>
                       </div>
                 </div>
-                <div class="col-md-4">
+                <!-- <div class="col-md-4">
                     <div class="form">
                     <label for="usr"></label>
                     <div class="lid">
                     <input type="text" class="form-control" style="margin-left: -100px !important;" placeholder="ID"></div>
                      </div>
-                </div>
+                </div> -->
             
                 <div class="col-md-4"> 
                     <div class="addpos">
-                    <img id ="addimg" style="margin-left: -100px !important;"src="../image/addimg.png"></div>
+                    <img id ="addimg" style="margin-left: 300px !important;"src="../image/addimg.png"></div>
                 </div>
             </div>
             
             <div class="row">
-                <div class="col-md-4 ">
+                <!-- <div class="col-md-4 ">
                      
                     <div class="form">
                         <label for="usr"></label>
                         <input type="text" class="form-control" style="margin-left: -100px; !important" placeholder="Project $ Value">
                       </div>
-                </div>
+                </div> -->
             
                  <div class="row">
-                <div class="col-md-4">
-                    <img class="g202" style="margin-left: -100px !important;" src="../image/Group 202.png" >
+                <div class="col-md-12">
+                    <img class="g202" style="margin-left: 300px !important;" src="../image/Group 202.png" >
                     <div class="centered"></div>
                 </div>
                 <div class="col-md-12" id="yoyo">
@@ -245,19 +245,28 @@
         
         
 
-        <!-- <form action="/Submit_lead/<%=userId%>" method="post">
+        <form action="/Submit_lead/<%=userId%>" method="post">
             <p>Customer Name :</p>
             <input type="text" name="customer_name">
-            <p>Project Detailes :</p>
+            <p>Project Name :</p>
+            <input type="text" name="project_name">
+            <p>Project Details :</p>
             <input type="text" name="project_details">
             <p>Segment Details :</p>
-            <input type="text" name="Segment_details">-->
+            <input type="text" list="segment" name="Segment_details" autocomplete="off">
+            <datalist id="segment">
+                <option value="Pharma">
+                <option value="Bio-Pharma">
+                <option value="Life Sciences">
+                <option value="Diagnostics">
+                <option value="Environmental & Applied Solutions">
+              </datalist>
             <!-- <p>Submitted by :</p> -->
-            <!--<input type="text" name="lead_submitted_by" style="display: none;" value="<%=user.Name%>">
+            <input type="text" name="lead_submitted_by" style="display: none;" value="<%=user.Name%>">
             <p>Submited to:</p>
             <input type="text" name="lead_submitted_to">
            <button>Submit</button>
-        </form> -->
+        </form>
     </div>
 </div>
 

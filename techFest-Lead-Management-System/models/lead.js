@@ -2,6 +2,7 @@ const mongoose = require('mongoose');
 
 const Lead=new mongoose.Schema({
     customer_name: String,
+    project_name: String,
     project_details:String,
     Segment_details:String,
     lead_submitted_by:String,
