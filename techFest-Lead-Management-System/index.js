@@ -43,7 +43,8 @@ app.get("/",(req,res)=>{
 // -----------------AUTENTICATION-----------------------
 // --------------LOGIN------------------
 app.get("/login",(req,res)=>{
-    res.render("login",{message:""});
+    const countUser=User.countDocuments();
+    res.render("login",{message:"",countUser});
 });
 app.post("/login",async(req,res)=>{
     const {Email,Password}=req.body;
@@ -84,15 +85,16 @@ app.post("/register",async(req,res)=>{
             if(countUser==0){
                 //If the userCount is 0 make the position as Admin
                 const user=new User({
-                    Name,OpCo,Email,Password:hash,Position:"Admin"
+                    Name,OpCo,Email,Password:hash,Position:"Admin",Emp_ID:countUser+1,
                 });
                 user.save();
             }else{
                 //Else Dont care about admin
                 const user=new User({
-                    Name,OpCo,Email,Password:hash
+                    Name,OpCo,Email,Password:hash,Position:"Employee",Emp_ID:countUser+1,
                 });
                 user.save();
+                
             }
             res.redirect("/login");
         }
