@@ -21,7 +21,7 @@
        <button>Submit</button>
     </form>
     <%for(let lead of leads){%>
-    <%=lead.customer_name%>
+    <%=lead.customer_name%><a href="/q/<%=lead._id%>">link</a>
 
     <%}%>
 </body>

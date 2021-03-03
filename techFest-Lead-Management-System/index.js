@@ -138,7 +138,7 @@ app.post("/Submit_lead/:id",async(req,res)=>{
     + currentdate.getSeconds();
 
     //Storeing in data base
-    const {customer_name,project_details,Segment_details,lead_submitted_by,lead_submitted_to}=req.body;
+    const {customer_name,project_details,Segment_details,lead_submitted_by,lead_submitted_to,project_name}=req.body;
     const lead=new Lead({
         customer_name,project_details,Segment_details,lead_submitted_by,lead_submitted_to,
         Open_time:datetime,project_name,
@@ -152,8 +152,8 @@ app.get("/q/:id",requireLogin,async(req,res)=>{
      // Find the user by ID
      let _id=req.params.id;
      const user = await User.findOne({ _id });
- 
-     // Find the lead for the user
+    console.log(user);
+         // Find the lead for the user
      Lead.find({lead_submitted_to:user.Name},(err,leads)=>{
          res.set('Cache-Control', 'no-cache, private, no-store, must-revalidate, max-stale=0, post-check=0, pre-check=0');
          res.render("filter",{leads:leads,userId:req.params.id});
