@@ -4,7 +4,7 @@ body{
   background-repeat: no-repeat;
   background-position-x: right;
   background-size:contain;
-  overflow-y: hidden;
+ 
   overflow-x: hidden;
 }
 
@@ -185,6 +185,12 @@ display: none;
 
 /**********************************ADD LEAD CSS**********************/
 
+.addlead
+{
+    width:30%;
+    height: 20%;
+    margin-top: 40px;
+}
 .dropdown-toggle{
   color: #5059E2; background-color:transparent; width : 140px; 
   margin-left: 100px;
@@ -362,15 +368,17 @@ height: 25px;
 {
   background-color: #F04705;
  color:#ffffff;
- width: 130px;
- height: 40px;
+ width: 120px;
+ height: 37px;
  border-radius: 7px;
  border-color: #F04705;
  box-shadow: 2px 2px  #F04705;
  float: right;
- margin-right: 150px;
- margin-top: -100px;
+ margin-right: 720px;
+ margin-top: -230px;
  border: none;
+ font-size: 20px;
+ font-family: Monsterrat Regular;
 }
 
 /********************LEAD SUBMITTED********************/

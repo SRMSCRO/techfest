@@ -103,6 +103,7 @@
 
 
 <div id="Add_lead" class="main">
+
     <div class="container">
         <div class="main">
             <div class="float-container">
@@ -132,10 +133,11 @@
                 </div>
                 <div class="previous">
                     <img style="margin-left: 1200px !important;" src="../image/Component 2 – 11.png"></div>
-                <section>
-              <div ><br>
-                <h1 id="heading">Add Lead</h1>
-            </div> </section>
+                    <div >
+                        <img class="addlead" src="../image/Add Lead.svg">
+                        <div>
+                        <img class="line1" style=" width: 25%; margin-top: -10px;" src="../image/Path 26.svg"></div>
+                    </div>
             
             <div class="container" style="margin-top: 60px; margin-left: 150px;">
                 <div class="row" style="margin-top: 50px;">
@@ -144,7 +146,7 @@
                     <div class="form">
                         <label for="usr"></label>
                         <div class="customer">
-                        <input type="text" class="form-control" style="margin-left: -100px !important;" placeholder="Customer"></div>
+                        <input type="text" class="form-control" style="margin-left: 120px !important; margin-top: -100px;" placeholder="Customer Name"></div>
                       </div>
                       
                 
@@ -156,7 +158,7 @@
              </div> 
               <div class="row">
                     <div class="col-md-4 ">
-                        <img class="grp20" style="margin-left: -100px !important;" src="../image/Grp 20.png" >
+                        <img class="grp20" style="margin-left: -120px !important;" src="../image/Grp 20.png" >
                         <div class="centered"></div>
                        </div>
                     <!-- <div class="col-md-4">
@@ -171,7 +173,7 @@
                     <div class="form">
                         <label for="usr"></label>
                         <div class="Pname">
-                        <input type="text" class="form-control" style="margin-left: -100px !important;" placeholder="Project Name"></div> <br><br><br>
+                        <input type="text" class="form-control" style="margin-left: -110px !important;" placeholder="Project Name"></div> <br><br><br>
                       </div>
                 </div>
                 <!-- <div class="col-md-4">
@@ -184,34 +186,34 @@
             
                 <div class="col-md-4"> 
                     <div class="addpos">
-                    <img id ="addimg" style="margin-left: 300px !important;"src="../image/addimg.png"></div>
+                    <img id ="addimg" style="margin-left: 260px !important ; margin-top: -300px;"src="../image/addimg.png"></div>
                 </div>
             </div>
             
             <div class="row">
-                <!-- <div class="col-md-4 ">
+                <div class="col-md-4 ">
                      
                     <div class="form">
                         <label for="usr"></label>
-                        <input type="text" class="form-control" style="margin-left: -100px; !important" placeholder="Project $ Value">
+                        <input type="text" class="form-control" style="margin-left: -110px !important; margin-top: -20px;" placeholder="Project $ Value">
                       </div>
-                </div> -->
+                </div> 
             
                  <div class="row">
                 <div class="col-md-12">
-                    <img class="g202" style="margin-left: 300px !important;" src="../image/Group 202.png" >
+                    <img class="g202" style="margin-left: 300px !important; margin-top: -460px;" src="../image/Group 202.png" >
                     <div class="centered"></div>
                 </div>
                 <div class="col-md-12" id="yoyo">
                     <div class="form">
                         <label for="usr"></label>
-                        <input type="text" class="form-control" style="margin-left: -100px !important;" placeholder="Name">
+                        <input type="text" class="form-control" style="margin-left: -110px !important; margin-top: -193px;" placeholder="Name">
                       </div>
                 </div>
                 <div class="col-md-12" id="yoyo">
                     <div class="form">
                         <label for="usr"></label>
-                        <input type="text" class="form-control" style="margin-left: -100px !important;" placeholder="ID">
+                        <input type="text" class="form-control" style="margin-left: -110px !important; margin-top: -120px; " placeholder="ID">
                       </div>
                 </div>
                 </div>
@@ -219,7 +221,7 @@
                 <div class="float-container">
                     <div class="float-child">
                         <div class="pos">
-                          <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" style="width: 180px; margin-left: 20px !important;">Segment Details
+                          <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" style="width: 200px; margin-left: 200px !important; margin-top: 80px; font-family: Monsterrat regular; border-radius: 7px;">Segment Details
                           <span class="caret"></span></button></div>
                           <ul class="dropdown-menu">
                             <li><a href="#">on11</a></li>
@@ -229,9 +231,9 @@
                           
                          
                     </div>
-                <div>
-                    <button type="button" style="margin-left: -500px !important;" class="submit1">SUBMIT</button>
-                </div>
+                <!--<div>
+                    <button type="button" style="margin-left: -200px !important; margin-top: -500px;" class="submit1">SUBMIT</button>
+                </div>-->
             
             </div>
             
@@ -265,10 +267,11 @@
             <input type="text" name="lead_submitted_by" style="display: none;" value="<%=user.Name%>">
             <p>Submited to:</p>
             <input type="text" name="lead_submitted_to">
-           <button>Submit</button>
+           <button class="submit1">Submit</button>
         </form>
     </div>
 </div>
+
 
 
 <!---------------ADD LEAD ENDS---------------->
