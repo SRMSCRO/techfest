@@ -358,7 +358,7 @@ height: 25px;
   width: 34%;
 }
 
-.submit
+.submit1
 {
   background-color: #F04705;
  color:#ffffff;
@@ -371,5 +371,153 @@ height: 25px;
  margin-right: 150px;
  margin-top: -100px;
  border: none;
+}
+
+/********************LEAD SUBMITTED********************/
+
+
+.leadhead
+{
+    width:40%;
+    height: 30%;
+    margin-top: 60px;
+}
+
+/************************FOUR BUTTONS CSS***********/
+
+.events_btn_img {
+    background-color: #bfbfbf;
+    margin: 10px;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    line-height: 50px;
+    border: 7px solid #f04705;
+    
+    border-radius: 40px;
+    box-shadow: rgba(0, 191, 255, 0) 0 7px 5px;
+    width: 150px;
+    font-family: Montserrat Regular;
+    float: left;
+}
+
+.ADDimg {
+    display: none;
+}
+
+.PROJimg {
+    display: none;
+}
+
+.EXAMimg {
+    display: none;
+}
+
+.INTimg {
+    display: none;
+}
+
+
+
+.corebtn {
+    background-color: #f04705;
+    
+
+}
+
+
+.events_btn_img {
+    background-color: #bfbfbf;
+    margin: 10px;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    line-height: 30px;
+    border: 0;
+    border-radius: 10px;
+    box-shadow: rgba(0, 191, 255, 0) 0 7px 5px;
+    width: 150px;
+    height: 50px;
+    font-family: Montserrat Regular;
+    padding-left: 10px;
+}
+.btn-primary {
+    color: #fff;
+    background-color: #f04705;
+    border-color: #f04705;
+    font-family: Montserrate;
+}
+  .btn {
+    display: inline-block;
+    font-weight: 400;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    border: black;
+    user-select: none;
+    font-family: 'Montserrat';
+    background-color: #f04705;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 140%;
+    line-height: 1.5;
+    border-radius: 10;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    margin-left: 10px;
+}
+
+
+
+
+
+.clipart
+{
+    width: 550px;
+    float: right;
+    margin-top: -500px;
+    margin-right: -120px;
+}
+
+.imageContainer {
+  
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    float:left;
+    width: 700px;
+    
+ }
+
+.text {
+    position: absolute;
+    top: 35%;
+    left: 27%;
+    font-size: 20px;
+    font-family: Montserrat Regular;
+}
+
+.status 
+{
+    position: absolute;
+    top: 35%;
+    left: 70%;
+    
+}
+
+.submit
+{
+    background-color: #6c63ff;
+   color:#ffffff;
+   width: 100px;
+   height: 20px;
+   border-radius: 7px;
+   border-color: #6c63ff;
+   box-shadow: 0.5px 0.5px  #6c63ff;
+   float: right;
+  
+   border: none;
 }
 
