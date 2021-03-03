@@ -14,7 +14,7 @@
      <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/scss/_reboot.scss" rel="stylesheet/scss"
         type="text/css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-        <link rel="stylesheet" href="../css/navstyle.css">
+        <link rel="stylesheet" href="/css/navstyle.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 </head>
@@ -50,7 +50,7 @@
         <li>
         <a onclick="vis4()">
             <div class="center">
-                <img style="width: 75px; !important" id="my-img3" src="../image/leadsub.png">
+                <img style="width: 75px !important;" id="my-img3" src="../image/leadsub.png">
                 <p style="font-size: 13px; text-align: center;">Lead<br> Submitted</p>
                 </div>
         </a>
@@ -171,7 +171,7 @@
                     <div class="form">
                         <label for="usr"></label>
                         <div class="Pname">
-                        <input type="text" class="form-control" style="margin-left: -100px; !important" placeholder="Project Name"></div> <br><br><br>
+                        <input type="text" class="form-control" style="margin-left: -100px !important;" placeholder="Project Name"></div> <br><br><br>
                       </div>
                 </div>
                 <!-- <div class="col-md-4">
@@ -287,20 +287,20 @@
         <div class="row">
             <div class="col-md-12 col-xs-4">
                 <div class="sections text-center">
-                    <button type="button" id="APPbtn" class="btn btn-primary events_btn_img APPbtn "  style="isolation: isolate; background-color: #f04705; border-color: #f04705;" onclick="visFunction()">OPEN</button>
+                    <button type="button" id="openbtn" class="btn btn-primary events_btn_img openbtn "  style="isolation: isolate; background-color: #f04705; border-color: #f04705;" onclick="visFunction()">OPEN</button>
                   
-                    <button type="button" id="EXAMbtn" class="btn btn-primary events_btn_img EXAMbtn"  style="isolation: isolate; background-color: #6c63ff; border-color: #6c63ff;" onclick="visFunction1()">VALIDATED</button>
+                    <button type="button" id="validatedbtn" class="btn btn-primary events_btn_img validatedbtn"  style="isolation: isolate; background-color: #6c63ff; border-color: #6c63ff;" onclick="visFunction1()">VALIDATED</button>
                    
-                    <button type="button" id="PROJbtn" class="btn btn-primary events_btn_img PROJbtn"  style="isolation: isolate; background-color: #6c63ff; border-color: #6c63ff;" onclick="visFunction2()">REJECTED</button>
+                    <button type="button" id="rejectedbtn" class="btn btn-primary events_btn_img rejectedbtn"  style="isolation: isolate; background-color: #6c63ff; border-color: #6c63ff;" onclick="visFunction2()">REJECTED</button>
                   
-                    <button type="button" id="INTbtn" class="btn btn-primary events_btn_img INTbtn"  style="isolation: isolate; background-color: #6c63ff; border-color: #6c63ff;" onclick="visFunction3()">CLOSE</button>
+                    <button type="button" id="closedbtn" class="btn btn-primary events_btn_img closedbtn"  style="isolation: isolate; background-color: #6c63ff; border-color: #6c63ff;" onclick="visFunction3()">CLOSED</button>
                    
                     
                     </div>
             
                 </div>
         
-                <div class="members container APPimg" id="APPimg">
+                <div class="members container openimg" id="openimg">
         
         
                     <div class="imageContainer">
@@ -341,50 +341,7 @@
         
                 </div>
         
-                <div class="members container EXAMimg" id="EXAMimg">
-        
-        
-                    <div class="imageContainer">
-                        <img style="width: 700px;" src="../image/Component 10 – 56.png">
-                        
-                        <div class="caption text">Project Name </div>
-                        <div class="caption status"> <button type="button" class="submit">Status</button></div>
-                    </div>
-        
-                    <div class="imageContainer">
-                        <img style="width: 700px;" src="../image/Component 10 – 56.png">
-                        
-                        <div class="caption text">Project Name</div>
-                        <div class="caption status"> <button type="button" class="submit">Status</button></div>
-                    </div>
-                 
-                    <div class="imageContainer">
-                        <img style="width: 700px;" src="../image/Component 10 – 56.png">
-                        
-                        <div class="caption text">Project Name</div>
-                        <div class="caption status"> <button type="button" class="submit">Status</button></div>
-                    </div>
-        
-                    
-                    <div class="imageContainer">
-                        <img style="width: 700px;" src="../image/Component 10 – 56.png">
-                        
-                        <div class="caption text">Project Name</div>
-                        <div class="caption status"> <button type="button" class="submit">Status</button></div>
-                    </div>
-        
-        
-                    <div>
-                        <img class="clipart" src="../image/undraw_Resume_folder_re_e0bi.svg">
-                        
-                    </div>
-        
-        
-        
-        
-                </div>
-        
-                <div class="members container PROJimg" id="PROJimg">
+                <div class="members container validatedimg" id="validatedimg">
         
         
                     <div class="imageContainer">
@@ -427,7 +384,50 @@
         
                 </div>
         
-                <div class="members container INTimg" id="INTimg">
+                <div class="members container rejectedimg" id="rejectedimg">
+        
+        
+                    <div class="imageContainer">
+                        <img style="width: 700px;" src="../image/Component 10 – 56.png">
+                        
+                        <div class="caption text">Project Name </div>
+                        <div class="caption status"> <button type="button" class="submit">Status</button></div>
+                    </div>
+        
+                    <div class="imageContainer">
+                        <img style="width: 700px;" src="../image/Component 10 – 56.png">
+                        
+                        <div class="caption text">Project Name</div>
+                        <div class="caption status"> <button type="button" class="submit">Status</button></div>
+                    </div>
+                 
+                    <div class="imageContainer">
+                        <img style="width: 700px;" src="../image/Component 10 – 56.png">
+                        
+                        <div class="caption text">Project Name</div>
+                        <div class="caption status"> <button type="button" class="submit">Status</button></div>
+                    </div>
+        
+                    
+                    <div class="imageContainer">
+                        <img style="width: 700px;" src="../image/Component 10 – 56.png">
+                        
+                        <div class="caption text">Project Name</div>
+                        <div class="caption status"> <button type="button" class="submit">Status</button></div>
+                    </div>
+        
+        
+                    <div>
+                        <img class="clipart" src="../image/undraw_Resume_folder_re_e0bi.svg">
+                        
+                    </div>
+        
+        
+        
+        
+                </div>
+        
+                <div class="members container closedimg" id="closedimg">
         
         
                     <div class="imageContainer">
@@ -478,10 +478,7 @@
         
         </div>
         </div>
-        
-        
-          
-        
+       
     <div class="container">
         <h3>open</h3>
         <%for(let lead of leads){%>
@@ -540,13 +537,13 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
-        <script src="../css/script.js" type="text/javascript"></script>        
+        <script src="/css/script.js" type="text/javascript"></script>        
         <script src="https://kit.fontawesome.com/yourcode.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
-        <script src="../css/myChart.js" type="text/javascript"></script>
+        <script src="/css/myChart.js" type="text/javascript"></script>
         <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.4.1.min.220afd743d.js" type="text/javascript"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-        <script async type="text/javascript" src="../JS/script.js"></script>
+        <script async type="text/javascript" src="/JS/script.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
               
