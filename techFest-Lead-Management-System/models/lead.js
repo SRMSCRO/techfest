@@ -4,6 +4,7 @@ const Lead=new mongoose.Schema({
     customer_name: String,
     project_name: String,
     project_details:String,
+    project_value:String,
     Segment_details:String,
     lead_submitted_by:String,
     lead_submitted_to:String,

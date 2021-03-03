@@ -138,14 +138,14 @@ app.post("/Submit_lead/:id",async(req,res)=>{
     + currentdate.getSeconds();
 
     //Storeing in data base
-    const {customer_name,project_details,Segment_details,lead_submitted_by,lead_submitted_to,project_name}=req.body;
+    const {customer_name,project_details,Segment_details,lead_submitted_by,lead_submitted_to,project_name,project_value}=req.body;
     const lead=new Lead({
-        customer_name,project_details,Segment_details,lead_submitted_by,lead_submitted_to,
+        customer_name,project_details,Segment_details,lead_submitted_by,lead_submitted_to,project_value,
         Open_time:datetime,project_name,
         Status:"Open"
     });
     lead.save();
-    res.redirect("/admin/"+req.params.id);
+    res.redirect("/sales_representative/"+req.params.id);
 });
 //-----------------------------Admin-Page - To filter----------------------------------------------------------------------------------------------
 app.get("/q/:id",requireLogin,async(req,res)=>{
