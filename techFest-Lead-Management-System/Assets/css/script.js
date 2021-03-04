@@ -56,7 +56,7 @@ document.getElementById('lead_submitted').style.display ="none";
 // <-----------------------------VISUAL SCRIPT END ---------------------->
 // <-----------------------------LEAD SUBMITTED ------------------------->
 function visFunction() {
-    document.getElementById("openimg").style.display = "block";
+    document.getElementById("openimg1").style.display = "contents";
     document.getElementById("validatedimg").style.display = "none";
     document.getElementById("rejectedimg").style.display = "none";
     document.getElementById("closedimg").style.display = "none";
@@ -70,8 +70,8 @@ function visFunction() {
 }
 
 function visFunction1() {
-    document.getElementById("openimg").style.display = "none";
-    document.getElementById("validatedimg").style.display = "block";
+    document.getElementById("openimg1").style.display = "none";
+    document.getElementById("validatedimg").style.display = "contents";
     document.getElementById("rejectedimg").style.display = "none";
     document.getElementById("closedimg").style.display = "none";
 
@@ -84,9 +84,9 @@ function visFunction1() {
 }
 
 function visFunction2() {
-    document.getElementById("openimg").style.display = "none";
+    document.getElementById("openimg1").style.display = "none";
     document.getElementById("validatedimg").style.display = "none";
-    document.getElementById("rejectedimg").style.display = "block";
+    document.getElementById("rejectedimg").style.display = "contents";
     document.getElementById("closedimg").style.display = "none";
 
 
@@ -98,10 +98,10 @@ function visFunction2() {
 }
 
 function visFunction3() {
-    document.getElementById("openimg").style.display = "none";
+    document.getElementById("openimg1").style.display = "none";
     document.getElementById("validatedimg").style.display = "none";
     document.getElementById("rejectedimg").style.display = "none";
-    document.getElementById("closedimg").style.display = "block";
+    document.getElementById("closedimg").style.display = "contents";
 
 
     document.getElementById("openbtn").style.backgroundColor = "#6c63ff";
@@ -114,7 +114,7 @@ function visFunction3() {
 
 
 function visFunction4() {
-    document.getElementById("openimg_").style.display = "block";
+    document.getElementById("openimg_").style.display = "contents";
     document.getElementById("validatedimg_").style.display = "none";
     document.getElementById("rejectedimg_").style.display = "none";
     document.getElementById("closedimg_").style.display = "none";
@@ -129,7 +129,7 @@ function visFunction4() {
 
 function visFunction5() {
     document.getElementById("openimg_").style.display = "none";
-    document.getElementById("validatedimg_").style.display = "block";
+    document.getElementById("validatedimg_").style.display = "contents";
     document.getElementById("rejectedimg_").style.display = "none";
     document.getElementById("closedimg_").style.display = "none";
 
@@ -144,7 +144,7 @@ function visFunction5() {
 function visFunction6() {
     document.getElementById("openimg_").style.display = "none";
     document.getElementById("validatedimg_").style.display = "none";
-    document.getElementById("rejectedimg_").style.display = "block";
+    document.getElementById("rejectedimg_").style.display = "contents";
     document.getElementById("closedimg_").style.display = "none";
 
 
@@ -159,7 +159,7 @@ function visFunction7() {
     document.getElementById("openimg_").style.display = "none";
     document.getElementById("validatedimg_").style.display = "none";
     document.getElementById("rejectedimg_").style.display = "none";
-    document.getElementById("closedimg_").style.display = "block";
+    document.getElementById("closedimg_").style.display = "contents";
 
 
     document.getElementById("open_btn").style.backgroundColor = "#6c63ff";

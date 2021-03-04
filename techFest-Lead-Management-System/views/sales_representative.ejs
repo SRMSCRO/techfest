@@ -48,7 +48,7 @@
         </a>
     </li>
         <li>
-        <a onclick="vis4()">
+        <a onclick="vis4();visFunction();">
             <div class="center">
                 <img style="width: 75px !important;" id="my-img3" src="../image/leadsub.png">
                 <p style="font-size: 13px; text-align: center;">Lead<br> Submitted</p>
@@ -56,7 +56,7 @@
         </a>
     </li>
         <li>
-        <a onclick="vis5()">
+        <a onclick="vis5();visFunction4();">
             <div class="center">
                 <img id="my-img4" src="../image/checked@2x.png">
                 <p style="font-size: 13px; text-align: center;">Leads<br>Assigned</p>
@@ -109,27 +109,8 @@
         <div class="main">
             <div class="float-container">
             <div class="float-child">
-                  <!-- <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Open
-                  <span class="caret"></span></button>
-                  <ul class="dropdown-menu">
-                    <li><a href="#">on11</a></li>
-                    <li><a href="#">2121</a></li>
-                    <li><a href="#">2cv</a></li>
-                  </ul> -->
-                  <!-- <img class="search" src="../image/search.png"> -->
-                 
+                                 
             </div>
-            
-                <!-- <div class="input-group rounded float-child">
-                    
-                    <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search"
-                      aria-describedby="search-addon" />
-                      
-                    <span class="input-group-text border-0" id="search-addon">
-                      
-                    </span>
-                   
-                  </div> -->
               </div>
                 </div>
                 <div class="previous">
@@ -152,22 +133,12 @@
                       
                 
                  </div> 
-             <!-- <div class="col-md-4 ">
-                 <img class="g201" style="margin-left: -100px !important;" src="../image/Group 201.png" >
-                 <div class="centered"></div>
-             </div> -->
              </div> 
               <div class="row">
                     <div class="col-md-4 ">
                         <img class="grp20" style="margin-left: -130px !important;" src="../image/Grp 20.png" >
                         <div class="centered"></div>
                        </div>
-                    <!-- <div class="col-md-4">
-                        <div class="form" >
-                            <label for="usr"></label>
-                            <input type="text"  class="form-control" style="margin-left: -100px !important;" placeholder="Name">
-                          </div>
-                    </div> -->
             </div>
             <div class="row">
                 <div class="col-md-4 ">
@@ -177,13 +148,6 @@
                         <input type="text" class="form-control" style="margin-left: -130px !important;" name="project_name" placeholder="Project Name"></div> <br><br><br>
                       </div>
                 </div>
-                <!-- <div class="col-md-4">
-                    <div class="form">
-                    <label for="usr"></label>
-                    <div class="lid">
-                    <input type="text" class="form-control" style="margin-left: -100px !important;" placeholder="ID"></div>
-                     </div>
-                </div> -->
             
                 <div class="col-md-4"> 
                     <div class="addpos">
@@ -199,7 +163,7 @@
                         <input type="text" name="project_value" class="form-control" style="margin-left: -130px !important; margin-top: -20px;" placeholder="Project $ Value">
                       </div>
                 </div> 
-            
+                <input type="text" name="lead_submitted_by" style="display: none;" value="<%=user.Name%>">
                  <div class="row">
                 <div class="col-md-12">
                     <img class="g202" style="margin-left: 300px !important; margin-top: -700px;" src="../image/Group 202.png" >
@@ -213,18 +177,10 @@
                         </div>
                     </div>
                 </div>
-                <!--<div class="col-md-12" id="yoyo">
-                    <div class="form">
-                        <label for="usr"></label>
-                        <input type="text" class="form-control" style="margin-left: -110px !important; margin-top: -270px; " placeholder="ID">
-                      </div>
-                </div>-->
+    
                 </div>
-                <form action="/action_page.php">
-                    <textarea class="area" name="message" rows="10" cols="30"> &nbsp; Project Details......</textarea>
+                    <textarea name="project_details" class="area" name="message" placeholder="Project Details......" rows="10" cols="30"></textarea>
                     <br><br>
-                    
-                  </form>
             
                 <div class="float-container">
                     <div class="float-child">
@@ -253,33 +209,6 @@
             </div>
         
         </div>
-        
-        
-        
-        
-
-        <!-- <form action="/Submit_lead/<%=userId%>" method="post">
-            <p>Customer Name :</p>
-            <input type="text" name="customer_name">
-            <p>Project Name :</p>
-            <input type="text" name="project_name">
-            <p>Project Details :</p>
-            <input type="text" name="project_details">
-            <p>Segment Details :</p>
-            <input type="text" list="segment" name="Segment_details" autocomplete="off">
-            <datalist id="segment">
-                <option value="Pharma">
-                <option value="Bio-Pharma">
-                <option value="Life Sciences">
-                <option value="Diagnostics">
-                <option value="Environmental & Applied Solutions">
-              </datalist>
-            <!-- <p>Submitted by :</p> -->
-       <!--     <input type="text" name="lead_submitted_by" style="display: none;" value="<%=user.Name%>">
-            <p>Submited to:</p>
-            <input type="text" name="lead_submitted_to">
-           <button class="submit1">Submit</button>
-        </form> -->
     </div>
     
 </div>
@@ -293,7 +222,7 @@
         <div class="container">
         
         
-        <div >
+        <div>
             <img class="leadhead" src="../image/Leads Submitted.png">
             <div>
             <img class="line" src="../image/Path 26.svg"></div>
@@ -302,206 +231,79 @@
         <div class="row">
             <div class="col-md-12 col-xs-4">
                 <div class="sections text-center">
-                    <button type="button" id="openbtn" class="btn btn-primary events_btn_img openbtn "  style="isolation: isolate; background-color: #f04705; border-color: #f04705;" onclick="visFunction()">OPEN</button>
-                  
+                    <button type="button" id="openbtn" class="btn btn-primary events_btn_img openbtn "  style="isolation: isolate; background-color: #f04705; border-color: #f04705;" onclick="visFunction()">OPEN</button>                  
                     <button type="button" id="validatedbtn" class="btn btn-primary events_btn_img validatedbtn"  style="isolation: isolate; background-color: #6c63ff; border-color: #6c63ff;" onclick="visFunction1()">VALIDATED</button>
-                   
                     <button type="button" id="rejectedbtn" class="btn btn-primary events_btn_img rejectedbtn"  style="isolation: isolate; background-color: #6c63ff; border-color: #6c63ff;" onclick="visFunction2()">REJECTED</button>
-                  
                     <button type="button" id="closedbtn" class="btn btn-primary events_btn_img closedbtn"  style="isolation: isolate; background-color: #6c63ff; border-color: #6c63ff;" onclick="visFunction3()">CLOSED</button>
-                   
-                    
                     </div>
                     <button type="button" class="export" >Export</button>
                 </div>
-        
-                <div class="members container openimg" id="openimg">
-        
-        
-                    <div class="imageContainer">
-                        <img style="width: 700px;" src="../image/Component 10 – 56.png">
-                        
-                        <div class="caption text">Project Name </div>
-                        <div class="caption status"> <button type="button" class="submit">Status</button></div>
-                    </div>
-        
-                    <div class="imageContainer">
-                        <img style="width: 700px;" src="../image/Component 10 – 56.png">
-                        
-                        <div class="caption text">Project Name</div>
-                        <div class="caption status"> <button type="button" class="submit">Status</button></div>
-                    </div>
-                 
-                    <div class="imageContainer">
-                        <img style="width: 700px;" src="../image/Component 10 – 56.png">
-                        
-                        <div class="caption text">Project Name</div>
-                        <div class="caption status"> <button type="button" class="submit">Status</button></div>
-                    </div>
-        
+                <%for(let lead of leads){%>
                     
+                <div class="members container openimg1" id="openimg1">
+                    <%if(lead.lead_submitted_by == user.Name && lead.Status == "Open"){%>
                     <div class="imageContainer">
                         <img style="width: 700px;" src="../image/Component 10 – 56.png">
-                        
-                        <div class="caption text">Project Name</div>
-                        <div class="caption status"> <button type="button" class="submit">Status</button></div>
+                        <div class="caption text"><%=lead.project_name%> </div>
+                        <div class="caption status"> <button type="button" class="submit"><%=lead.Status%></button></div>
                     </div>
-        
-        
+                    <%}%>    
                     <div>
                         <img class="clipart" src="../image/undraw_envelope_n8lc.svg">
-                        
                     </div>
-        
-        
                 </div>
-        
+                <%}%>
+                <%for(let lead of leads){%>
                 <div class="members container validatedimg" id="validatedimg">
-        
-        
+                    <%if(lead.Status == "Validated" && lead.lead_submitted_by == user.Name){%>
                     <div class="imageContainer">
                         <img style="width: 700px;" src="../image/Component 10 – 56.png">
                         
-                        <div class="caption text">Project Name </div>
-                        <div class="caption status"> <button type="button" class="submit">Status</button></div>
+                        <div class="caption text"><%=lead.project_name%></div>
+                        <div class="caption status"> <button type="button" class="submit"><%=lead.Status%></button></div>
                     </div>
-        
-                    <div class="imageContainer">
-                        <img style="width: 700px;" src="../image/Component 10 – 56.png">
-                        
-                        <div class="caption text">Project Name</div>
-                        <div class="caption status"> <button type="button" class="submit">Status</button></div>
-                    </div>
-                 
-                    <div class="imageContainer">
-                        <img style="width: 700px;" src="../image/Component 10 – 56.png">
-                        
-                        <div class="caption text">Project Name</div>
-                        <div class="caption status"> <button type="button" class="submit">Status</button></div>
-                    </div>
-        
-                    
-                    <div class="imageContainer">
-                        <img style="width: 700px;" src="../image/Component 10 – 56.png">
-                        
-                        <div class="caption text">Project Name</div>
-                        <div class="caption status"> <button type="button" class="submit">Status</button></div>
-                    </div>
-        
-        
+                    <%}%> 
                     <div>
                         <img class="clipart_" src="../image/undraw_message_sent_1030.svg">
                         
                     </div>
-        
-        
-        
-        
-                </div>
-        
+                </div><%}%>
+                <%for(let lead of leads){%>
                 <div class="members container rejectedimg" id="rejectedimg">
-        
-        
+                    <%if(lead.Status == "Rejected"){%>
                     <div class="imageContainer">
                         <img style="width: 700px;" src="../image/Component 10 – 56.png">
                         
-                        <div class="caption text">Project Name </div>
-                        <div class="caption status"> <button type="button" class="submit">Status</button></div>
+                        <div class="caption text"><%=lead.project_name%></div>
+                        <div class="caption status"> <button type="button" class="submit"><%=lead.Status%></button></div>
                     </div>
-        
-                    <div class="imageContainer">
-                        <img style="width: 700px;" src="../image/Component 10 – 56.png">
-                        
-                        <div class="caption text">Project Name</div>
-                        <div class="caption status"> <button type="button" class="submit">Status</button></div>
-                    </div>
-                 
-                    <div class="imageContainer">
-                        <img style="width: 700px;" src="../image/Component 10 – 56.png">
-                        
-                        <div class="caption text">Project Name</div>
-                        <div class="caption status"> <button type="button" class="submit">Status</button></div>
-                    </div>
-        
-                    
-                    <div class="imageContainer">
-                        <img style="width: 700px;" src="../image/Component 10 – 56.png">
-                        
-                        <div class="caption text">Project Name</div>
-                        <div class="caption status"> <button type="button" class="submit">Status</button></div>
-                    </div>
-        
-        
+                    <%}%>
                     <div>
                         <img class="clipart_1" src="../image/undraw_cancel_u1it (1).svg">
                         
                     </div>
-        
-        
-        
-        
-                </div>
-        
+                </div><%}%>
+                <%for(let lead of leads){%>
                 <div class="members container closedimg" id="closedimg">
-        
-        
+                    <%if(lead.Status == "Closed"){%>
                     <div class="imageContainer">
                         <img style="width: 700px;" src="../image/Component 10 – 56.png">
                         
-                        <div class="caption text">Project Name </div>
-                        <div class="caption status"> <button type="button" class="submit">Status</button></div>
+                        <div class="caption text"><%=lead.project_name%></div>
+                        <div class="caption status"> <button type="button" class="submit"><%=lead.Status%></button></div>
                     </div>
-        
-                    <div class="imageContainer">
-                        <img style="width: 700px;" src="../image/Component 10 – 56.png">
-                        
-                        <div class="caption text">Project Name</div>
-                        <div class="caption status"> <button type="button" class="submit">Status</button></div>
-                    </div>
-                 
-                    <div class="imageContainer">
-                        <img style="width: 700px;" src="../image/Component 10 – 56.png">
-                        
-                        <div class="caption text">Project Name</div>
-                        <div class="caption status"> <button type="button" class="submit">Status</button></div>
-                    </div>
-        
-                    
-                    <div class="imageContainer">
-                        <img style="width: 700px;" src="../image/Component 10 – 56.png">
-                        
-                        <div class="caption text">Project Name</div>
-                        <div class="caption status"> <button type="button" class="submit">Status</button></div>
-                    </div>
-        
-        
-                    <div>
+                    <%}%>
+                     <div>
                         <img class="clipart_2" src="../image/undraw_my_files_swob.svg">
-                        
                     </div>
-        
-        
-        
-        
                 </div>
-        
-        
+                <%}%>
             </div>
-        
-        
-        
-        
+            
         </div>
         </div>
        
-    <div class="container">
-        <h3>open</h3>
-        <%for(let lead of leads){%>
-            <%if(lead.lead_submitted_by == user.Name){%>
-            <p><%=lead.customer_name%> <%=lead.Status%></p>
-            <%}%>
-            <%}%>
-    </div>
+    
 </div>
 
 
@@ -510,209 +312,117 @@
 <div id="lead_assigned" class="main">
     <div id="#Leadsub" class="main">
         <div class="container">
-        
-        
         <div >
             <img class="leadhead" src="../image/Leads Assigned.svg">
             <div>
-            <img class="line" src="../image/Path 26.svg"></div>
+            <img class="line" src="../image/Path 26.svg">
+        </div>
         </div>
         
         <div class="row">
             <div class="col-md-12 col-xs-4">
                 <div class="sections text-center">
-                    <button type="button" id="open_btn" class="btn btn-primary events_btn_img open_btn "  style="isolation: isolate; background-color: #f04705; border-color: #6c63ff;" onclick="visFunction4()">OPEN</button>
-                          
-                    <button type="button" id="validated_btn" class="btn btn-primary events_btn_img validated_btn"  style="isolation: isolate; background-color: #6c63ff; border-color: #6c63ff;" onclick="visFunction5()">VALIDATED</button>
-                   
-                    <button type="button" id="rejected_btn" class="btn btn-primary events_btn_img rejected_btn"  style="isolation: isolate; background-color: #6c63ff; border-color: #6c63ff;" onclick="visFunction6()">REJECTED</button>
-                  
+                    <button type="button" id="open_btn" class="btn btn-primary events_btn_img open_btn "  style="isolation: isolate; background-color: #f04705; border-color: #6c63ff;" onclick="visFunction4()">OPEN</button>                          
+                    <button type="button" id="validated_btn" class="btn btn-primary events_btn_img validated_btn"  style="isolation: isolate; background-color: #6c63ff; border-color: #6c63ff;" onclick="visFunction5()">VALIDATED</button>                   
+                    <button type="button" id="rejected_btn" class="btn btn-primary events_btn_img rejected_btn"  style="isolation: isolate; background-color: #6c63ff; border-color: #6c63ff;" onclick="visFunction6()">REJECTED</button>                  
                     <button type="button" id="closed_btn" class="btn btn-primary events_btn_img closed_btn"  style="isolation: isolate; background-color: #6c63ff; border-color: #6c63ff;" onclick="visFunction7()">CLOSED</button>
-                    
-                    </div>
-                    <button type="button" class="export" >Export</button>
                 </div>
-        
+                    <button type="button" class="export" >Export</button>
+            </div>
+                <%for (let lead of leads){
+                    if(lead.lead_submitted_to == user.Name){%>
                 <div class="members container openimg_" id="openimg_">
-        
-        
+                    <%if(lead.Status == "Open"){%>
                     <div class="imageContainer">
                         <img style="width: 700px;" src="../image/Component 10 – 56.png">
-                        
-                        <div class="caption text">Project Name </div>
+                        <div class="caption text"><%=lead.project_name%>
+                        <form action="/update_status/<%=lead._id%>/<%=userId%>" method="POST">
+                            <select name="status">
+                                <option value="Validated">Validated</option>
+                                <option value="Rejected">Rejected</option>
+                                <option value="Closed">Closed</option>
+                              </select>
+                              <button>Update</button>
+                        </form>
+                        </div>
                         <div class="caption status"> <button type="button" class="submit">Status</button></div>
                     </div>
-        
-                    <div class="imageContainer">
-                        <img style="width: 700px;" src="../image/Component 10 – 56.png">
-                        
-                        <div class="caption text">Project Name</div>
-                        <div class="caption status"> <button type="button" class="submit">Status</button></div>
-                    </div>
-                 
-                    <div class="imageContainer">
-                        <img style="width: 700px;" src="../image/Component 10 – 56.png">
-                        
-                        <div class="caption text">Project Name</div>
-                        <div class="caption status"> <button type="button" class="submit">Status</button></div>
-                    </div>
-        
-                    
-                    <div class="imageContainer">
-                        <img style="width: 700px;" src="../image/Component 10 – 56.png">
-                        
-                        <div class="caption text">Project Name</div>
-                        <div class="caption status"> <button type="button" class="submit">Status</button></div>
-                    </div>
-        
-        
+                    <%}%>
                     <div>
                         <img class="clipart1" src="../image/undraw_Updates_re_o5af.svg">
-                        
                     </div>
-        
                 </div>
-        
                 <div class="members container validatedimg_" id="validatedimg_">
-        
-        
+                    <%if(lead.Status == "Validated"){%>
                     <div class="imageContainer">
                         <img style="width: 700px;" src="../image/Component 10 – 56.png">
-                        
-                        <div class="caption text">Project Name </div>
+                        <div class="caption text"><%=lead.project_name%>
+                            <form action="/update_status/<%=lead._id%>/<%=userId%>" method="POST">
+                            <select name="status">
+                                <option value="Validated">Validated</option>
+                                <option value="Rejected">Rejected</option>
+                                <option value="Closed">Closed</option>
+                              </select>
+                              <button>Update</button>
+                        </form></div>
                         <div class="caption status"> <button type="button" class="submit">Status</button></div>
                     </div>
-        
-                    <div class="imageContainer">
-                        <img style="width: 700px;" src="../image/Component 10 – 56.png">
-                        
-                        <div class="caption text">Project Name</div>
-                        <div class="caption status"> <button type="button" class="submit">Status</button></div>
-                    </div>
-                 
-                    <div class="imageContainer">
-                        <img style="width: 700px;" src="../image/Component 10 – 56.png">
-                        
-                        <div class="caption text">Project Name</div>
-                        <div class="caption status"> <button type="button" class="submit">Status</button></div>
-                    </div>
-        
-                    
-                    <div class="imageContainer">
-                        <img style="width: 700px;" src="../image/Component 10 – 56.png">
-                        
-                        <div class="caption text">Project Name</div>
-                        <div class="caption status"> <button type="button" class="submit">Status</button></div>
-                    </div>
-        
-        
+                    <%}%>
                     <div>
                         <img class="clipart2" src="../image/undraw_Hiring_re_yk5n (1).svg">
-                        
                     </div>
-        
-        
-        
-        
                 </div>
-        
                 <div class="members container rejectedimg_" id="rejectedimg_">
-        
-        
+                    <%if(lead.Status == "Rejected"){%>
                     <div class="imageContainer">
                         <img style="width: 700px;" src="../image/Component 10 – 56.png">
-                        
-                        <div class="caption text">Project Name </div>
+                        <div class="caption text"><%=lead.project_name%>
+                        <form action="/update_status/<%=lead._id%>/<%=userId%>" method="POST">
+                            <select name="status">
+                                <option value="Validated">Validated</option>
+                                <option value="Rejected">Rejected</option>
+                                <option value="Closed">Closed</option>
+                              </select>
+                              <button>Update</button>
+                        </form></div>
                         <div class="caption status"> <button type="button" class="submit">Status</button></div>
                     </div>
-        
-                    <div class="imageContainer">
-                        <img style="width: 700px;" src="../image/Component 10 – 56.png">
-                        
-                        <div class="caption text">Project Name</div>
-                        <div class="caption status"> <button type="button" class="submit">Status</button></div>
-                    </div>
-                 
-                    <div class="imageContainer">
-                        <img style="width: 700px;" src="../image/Component 10 – 56.png">
-                        
-                        <div class="caption text">Project Name</div>
-                        <div class="caption status"> <button type="button" class="submit">Status</button></div>
-                    </div>
-        
-                    
-                    <div class="imageContainer">
-                        <img style="width: 700px;" src="../image/Component 10 – 56.png">
-                        
-                        <div class="caption text">Project Name</div>
-                        <div class="caption status"> <button type="button" class="submit">Status</button></div>
-                    </div>
-        
-        
+                    <%}%>
                     <div>
                         <img class="clipart3" src="../image/undraw_access_denied_6w73.svg">
-                        
                     </div>
-        
-        
-        
-        
                 </div>
-        
                 <div class="members container closedimg_" id="closedimg_">
-        
-        
+                    <%if(lead.Status == "Closed"){%>
                     <div class="imageContainer">
                         <img style="width: 700px;" src="../image/Component 10 – 56.png">
                         
-                        <div class="caption text">Project Name </div>
+                        <div class="caption text"><%=lead.project_name%>
+                        <form action="/update_status/<%=lead._id%>/<%=userId%>" method="POST">
+                            <select name="status">
+                                <option value="Validated">Validated</option>
+                                <option value="Rejected">Rejected</option>
+                                <option value="Closed">Closed</option>
+                              </select>
+                              <button>Update</button>
+                        </form></div>
                         <div class="caption status"> <button type="button" class="submit">Status</button></div>
                     </div>
-        
-                    <div class="imageContainer">
-                        <img style="width: 700px;" src="../image/Component 10 – 56.png">
-                        
-                        <div class="caption text">Project Name</div>
-                        <div class="caption status"> <button type="button" class="submit">Status</button></div>
-                    </div>
-                 
-                    <div class="imageContainer">
-                        <img style="width: 700px;" src="../image/Component 10 – 56.png">
-                        
-                        <div class="caption text">Project Name</div>
-                        <div class="caption status"> <button type="button" class="submit">Status</button></div>
-                    </div>
-        
-                    
-                    <div class="imageContainer">
-                        <img style="width: 700px;" src="../image/Component 10 – 56.png">
-                        
-                        <div class="caption text">Project Name</div>
-                        <div class="caption status"> <button type="button" class="submit">Status</button></div>
-                    </div>
-        
-        
+                    <%}%>
                     <div>
                         <img class="clipart4" src="../image/undraw_close_tab_uk6g.svg">
-                        
                     </div>
                     
-        
-        
-        
                 </div>
-        
-        
+                
             </div>
-        
-        
-        
-        
+            <%}}%>
         </div>
         </div>
-    <div class="container">
+    <!-- <div class="container">
         <%for (let lead of leads){%>
-            <%if(lead.lead_submitted_by == user.Name){%>
+            <%if(lead.lead_submitted_to == user.Name){%>
+                <h1>lead asigned</h1>
             <%=lead.customer_name%>
             <%=lead.Status%>
             <form action="/update_status/<%=lead._id%>/<%=userId%>" method="POST">
@@ -724,25 +434,13 @@
                   <button>Update</button>
             </form>
             <%}%><%}%>
-    </div>
+    </div> -->
 </div>
+
 
 
 <!---------------LEAD ASSIGNED ENDS---------------->
       
-         <!-- <form action="/Submit_lead/<%=userId%>" method="post">
-        <p>Customer Name :</p>
-        <input type="text" name="customer_name">
-        <p>Project Detailes :</p>
-        <input type="text" name="project_details">
-        <p>Segment Details :</p>
-        <input type="text" name="Segment_details">
-        <p>Submeted by :</p>
-        <input type="text" name="lead_submitted_by">
-        <p>Submited to:</p>
-        <input type="text" name="lead_submitted_to">
-       <button>Submit</button>
-    </form> -->
         <br>
 
 
