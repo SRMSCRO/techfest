@@ -248,10 +248,11 @@ display: none;
 .area
 {
   position: absolute;
-  margin-left: 200px;
+  margin-left: 255px;
   margin-top: -150px;
   background-color: #F2F3FE;
-  width: 600px;
+  width:400px;
+  height: 200px;
   border-color: #6c63ff;
   border-radius: 10px ;
   font-family: Monsterrat;
