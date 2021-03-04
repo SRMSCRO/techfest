@@ -245,11 +245,29 @@ display: none;
   border-color: blue;
   margin-top: 20px;
 }
+.area
+{
+  position: absolute;
+  margin-left: 200px;
+  margin-top: -150px;
+  background-color: #F2F3FE;
+  width: 600px;
+  border-color: #6c63ff;
+  border-radius: 10px ;
+  font-family: Monsterrat;
+  font-size: 20px;
+  color: #F04705;
 
+}
+
+.area:hover{
+  border-radius: 10px;
+  border-color: #6c63ff;
+}
 .grp20
 {
-  margin-top: 70px;
-  margin-left:-100px;
+  margin-top: 20px;
+  margin-left:-200px;
 }
 
 .g202
