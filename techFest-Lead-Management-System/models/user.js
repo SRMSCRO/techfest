@@ -5,8 +5,7 @@ const User=new mongoose.Schema({
     OpCo:String,
     Email:String,
     Password:String,
-    Position:String,
-    // Emp_ID:String,
+    Position:String
 });
 
 module.exports = mongoose.model('User', User);

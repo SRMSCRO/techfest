@@ -1,0 +1,2 @@
+{ "_id" : ObjectId("6035045239ad2f1c54a019da"), "Name" : "Eric", "OpCo" : "no company", "Email" : "eric@skymail.com", "Password" : "$2b$12$5GLJgVBuJwJ8wY.GqYO5juNuXU9uS5zndH/pyV3VbaRW35mnIOCDe", "Position" : "Admin", "__v" : 0 }
+{ "_id" : ObjectId("603504a639ad2f1c54a019db"), "Name" : "rohit", "OpCo" : "no company", "Email" : "rohit@skymail.com", "Password" : "$2b$12$w4dXD0aq9aMbGF8DkcyTHeYnkwnBSUI2g51kNPaXmWfdES2dbYl6O", "__v" : 0 }

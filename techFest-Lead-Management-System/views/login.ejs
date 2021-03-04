@@ -21,13 +21,13 @@
             <!-- <form id="register_form" action="register" method="post"> -->
                 <form id="register_form" action="/register" method="post">
                     <h1>Register</h1>
-                    <input name="Name" type="text" placeholder="Name">
+                    <input name="Name" type="text" placeholder="Name" required>
                     
-                    <input name="OpCo" type="text" placeholder="Operational Company">
+                    <input name="OpCo" type="text" placeholder="Operational Company" required>
                   
-                    <input name="Email" type="text" placeholder="Company Mail">
+                    <input name="Email" type="text" placeholder="Company Mail" required>
                    
-                    <input name="Password" type="password" placeholder="Password">
+                    <input name="Password" type="password" placeholder="Password" required>
 
                     <!-- <input name="Emp_ID" type="text" style="display: none;" value="<%=countUser%>"> -->
                 <button>Submit</button>
@@ -36,9 +36,9 @@
 <div class="form-container sign-in-container">
     <form id="login_form" action="/login" method="post">
         <h1>Sign in</h1>
-        <input name="Email" type="text" placeholder="Email">
+        <input name="Email" type="text" placeholder="Email" required>
         
-        <input name="Password" type="password" placeholder="Password">
+        <input name="Password" type="password" placeholder="Password" required>
         <button>Submit</button>
     </form>
 </div>

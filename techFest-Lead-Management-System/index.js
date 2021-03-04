@@ -13,7 +13,7 @@ const User = require('./models/user');
 const bcrypt = require('bcrypt');
 const session = require("express-session");
 
-mongoose.connect('mongodb://localhost:27017/LMS_4', { useNewUrlParser: true, useUnifiedTopology: true }).then(() => { console.log("MONGO CONNECTION OPEN") }).catch(err => {
+mongoose.connect('mongodb://localhost:27017/LMS_6', { useNewUrlParser: true, useUnifiedTopology: true }).then(() => { console.log("MONGO CONNECTION OPEN") }).catch(err => {
     console.log("THERE IS A PROBLEM");
     console.log(err)
 });
@@ -65,9 +65,6 @@ app.post("/login",async(req,res)=>{
             } 
 });
 //----------------REGISTER---------------------
-app.get("/register", (req, res) => {
-    res.render('login');
-});
 app.post("/register",async(req,res)=>{
 
     //Counting number of users in User Collection before saveing the data
@@ -115,9 +112,12 @@ app.get("/admin/:id",requireLogin,(req,res)=>{
 
         //Checking the user is admin or not
         User.findById(req.params.id).then(user => {
+            
             if(user.Position=="Admin"){
-                res.set('Cache-Control', 'no-cache, private, no-store, must-revalidate, max-stale=0, post-check=0, pre-check=0');
-                res.render("admin",{leads:leads,id:req.params.id});
+                User.find({}).then(allUsers=>{
+                    res.set('Cache-Control', 'no-cache, private, no-store, must-revalidate, max-stale=0, post-check=0, pre-check=0');
+                    res.render("admin",{leads:leads,id:req.params.id,allUsers:allUsers});
+                });
             }else{
                 res.redirect("/sales_representative/"+user._id);
             }
@@ -148,13 +148,10 @@ app.post("/Submit_lead/:id",async(req,res)=>{
     res.redirect("/sales_representative/"+req.params.id);
 });
 //-----------------------------Admin-Page - To filter----------------------------------------------------------------------------------------------
-app.get("/q/:id",requireLogin,async(req,res)=>{
-     // Find the user by ID
-     let _id=req.params.id;
-     const user = await User.findOne({ _id });
-    console.log(user);
+app.get("/q/:name/:id",requireLogin,async(req,res)=>{
+     
          // Find the lead for the user
-     Lead.find({lead_submitted_to:user.Name},(err,leads)=>{
+     Lead.find({lead_submitted_to:req.params.name},(err,leads)=>{
          res.set('Cache-Control', 'no-cache, private, no-store, must-revalidate, max-stale=0, post-check=0, pre-check=0');
          res.render("filter",{leads:leads,userId:req.params.id});
      });
@@ -169,8 +166,10 @@ app.get("/sales_representative/:id",requireLogin,async(req,res)=>{
     const countLead=await Lead.countDocuments();
     // Find the lead for the user
      Lead.find({},(err,leads)=>{
-        res.set('Cache-Control', 'no-cache, private, no-store, must-revalidate, max-stale=0, post-check=0, pre-check=0');
-        res.render("sales_representative",{leads:leads,userId:req.params.id, user:user, countLead});
+        User.find({}).then(allUsers=>{
+            res.set('Cache-Control', 'no-cache, private, no-store, must-revalidate, max-stale=0, post-check=0, pre-check=0');
+            res.render("sales_representative",{leads:leads,userId:req.params.id, user:user, countLead,allUsers:allUsers});
+        });
     });
 });
 app.post("/update_status/:id/:userId",async(req,res)=>{
@@ -211,7 +210,9 @@ app.post("/update_status/:id/:userId",async(req,res)=>{
     });
     }
 });
-
+app.get("*",(req,res)=>{
+    res.send("404 page not found");
+});
 // The SSERVER starts in port::3000
 app.listen(3000, () => {
     console.log("SERVER STARTED");
