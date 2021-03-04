@@ -13,7 +13,7 @@ const User = require('./models/user');
 const bcrypt = require('bcrypt');
 const session = require("express-session");
 
-mongoose.connect('mongodb://localhost:27017/LMS_6', { useNewUrlParser: true, useUnifiedTopology: true }).then(() => { console.log("MONGO CONNECTION OPEN") }).catch(err => {
+mongoose.connect('mongodb://localhost:27017/LMS_4', { useNewUrlParser: true, useUnifiedTopology: true }).then(() => { console.log("MONGO CONNECTION OPEN") }).catch(err => {
     console.log("THERE IS A PROBLEM");
     console.log(err)
 });
@@ -138,11 +138,11 @@ app.post("/Submit_lead/:id",async(req,res)=>{
     + currentdate.getSeconds();
 
     //Storeing in data base
-    const {customer_name,project_details,Segment_details,lead_submitted_by,lead_submitted_to,project_name,project_value}=req.body;
+    const {customer_name,project_details,Segment_details,lead_submitted_by,lead_submitted_to,project_name,project_value,}=req.body;
     const lead=new Lead({
         customer_name,project_details,Segment_details,lead_submitted_by,lead_submitted_to,project_value,
         Open_time:datetime,project_name,
-        Status:"Open"
+        Status:"Open",
     });
     lead.save();
     res.redirect("/sales_representative/"+req.params.id);
