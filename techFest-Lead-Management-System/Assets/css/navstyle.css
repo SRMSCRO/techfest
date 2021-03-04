@@ -3,7 +3,7 @@ body{
   background-image: url("../image/Path\ 179.png");
   background-repeat: no-repeat;
   background-position-x: right;
-  background-size: 30% 250%;
+  background-size: 30% 180%;
  
   
 }
@@ -221,6 +221,7 @@ display: none;
 {
   color:#ffffff;
 }
+
   
 .search
 {
