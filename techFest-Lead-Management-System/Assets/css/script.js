@@ -111,3 +111,60 @@ function visFunction3() {
 
 }
 //<----------------------------LEAD SUBMITTED ENDS---------------------->
+
+
+function visFunction4() {
+    document.getElementById("openimg_").style.display = "block";
+    document.getElementById("validatedimg_").style.display = "none";
+    document.getElementById("rejectedimg_").style.display = "none";
+    document.getElementById("closedimg_").style.display = "none";
+   
+   
+    document.getElementById("open_btn").style.backgroundColor = "#F04705";
+    document.getElementById("validated_btn").style.backgroundColor = "#6c63ff";
+    document.getElementById("rejected_btn").style.backgroundColor = "#6c63ff";
+    document.getElementById("closed_btn").style.backgroundColor = "#6c63ff";
+
+}
+
+function visFunction5() {
+    document.getElementById("openimg_").style.display = "none";
+    document.getElementById("validatedimg_").style.display = "block";
+    document.getElementById("rejectedimg_").style.display = "none";
+    document.getElementById("closedimg_").style.display = "none";
+
+
+    document.getElementById("open_btn").style.backgroundColor = "#6c63ff";
+    document.getElementById("validated_btn").style.backgroundColor = "#F04705";
+    document.getElementById("rejected_btn").style.backgroundColor = "#6c63ff";
+    document.getElementById("closed_btn").style.backgroundColor = "#6c63ff";
+
+}
+
+function visFunction6() {
+    document.getElementById("openimg_").style.display = "none";
+    document.getElementById("validatedimg_").style.display = "none";
+    document.getElementById("rejectedimg_").style.display = "block";
+    document.getElementById("closedimg_").style.display = "none";
+
+
+    document.getElementById("open_btn").style.backgroundColor = "#6c63ff";
+    document.getElementById("validated_btn").style.backgroundColor = "#6c63ff";
+    document.getElementById("rejected_btn").style.backgroundColor = "#F04705";
+    document.getElementById("closed_btn").style.backgroundColor = "#6c63ff";
+
+}
+
+function visFunction7() {
+    document.getElementById("openimg_").style.display = "none";
+    document.getElementById("validatedimg_").style.display = "none";
+    document.getElementById("rejectedimg_").style.display = "none";
+    document.getElementById("closedimg_").style.display = "block";
+
+
+    document.getElementById("open_btn").style.backgroundColor = "#6c63ff";
+    document.getElementById("validated_btn").style.backgroundColor = "#6c63ff";
+    document.getElementById("rejected_btn").style.backgroundColor = "#6c63ff";
+    document.getElementById("closed_btn").style.backgroundColor = "#F04705";
+
+}
