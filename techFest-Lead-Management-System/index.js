@@ -116,7 +116,7 @@ app.get("/admin/:id",requireLogin,(req,res)=>{
             if(user.Position=="Admin"){
                 User.find({}).then(allUsers=>{
                     res.set('Cache-Control', 'no-cache, private, no-store, must-revalidate, max-stale=0, post-check=0, pre-check=0');
-                    res.render("admin",{leads:leads,id:req.params.id,allUsers:allUsers});
+                    res.render("admin",{leads:leads,id:req.params.id,allUsers:allUsers,user:user});
                 });
             }else{
                 res.redirect("/sales_representative/"+user._id);
