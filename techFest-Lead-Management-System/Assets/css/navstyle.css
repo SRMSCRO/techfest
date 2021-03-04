@@ -529,3 +529,103 @@ height: 25px;
    border: none;
 }
 
+/********************lead assigned***************************/
+
+
+
+
+.clipart
+{
+    width: 550px;
+    float: right;
+    margin-top: -500px;
+    margin-right: -120px;
+}
+
+.clipart1
+{
+    width: 550px;
+    float: right;
+    margin-top: -400px;
+    margin-right: -180px;
+}
+
+.clipart2
+{
+    width: 450px;
+    float: right;
+    margin-top: -420px;
+    margin-right: -150px;
+}
+
+
+.clipart3
+{
+    width: 400px;
+    float: right;
+    margin-top: -500px;
+    margin-right: -90px;
+}
+.clipart4
+{
+    width: 500px;
+    float: right;
+    margin-top: -400px;
+    margin-right: -120px;
+}
+
+.imageContainer {
+  
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    float:left;
+    width: 700px;
+    
+ }
+
+.text {
+    position: absolute;
+    top: 35%;
+    left: 27%;
+    font-size: 20px;
+    font-family: Montserrat Regular;
+}
+
+.status 
+{
+    position: absolute;
+    top: 35%;
+    left: 70%;
+    
+}
+
+.submit
+{
+    background-color: #6c63ff;
+   color:#ffffff;
+   width: 100px;
+   height: 20px;
+   border-radius: 7px;
+   border-color: #6c63ff;
+   box-shadow: 0.5px 0.5px  #6c63ff;
+   float: right;
+  
+   border: none;
+}
+
+.export 
+{
+  background-color: #f04705;
+  border-color: #f04705;
+  border-radius: 10px;
+  height: 70%;
+  width: 10%;
+  color: #fff;
+  margin-top: 480px;
+  position: absolute;
+  margin-left: 250px;
+
+
+    
+}
