@@ -5,8 +5,78 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <link rel="stylesheet" rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.6/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/scss/_buttons.scss" rel="stylesheet/scss"
+        type="text/css">
+     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/scss/_reboot.scss" rel="stylesheet/scss"
+        type="text/css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/css/navstyle.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 </head>
 <body>
+
+<!-----------------------------------------NAVBAR ---------------->
+<div class="sidenav"  >
+  <ul>
+      <li>
+          <a onclick="vis1()">
+              <div class="center  ">
+              <img style="height: 60px; width:60px;" src="../image/Component 11 – 1.png">
+                  <p style="font-size: 13px; text-align: center;"><%=user.Name%></p>
+                  </div>
+          </a>
+          </li>
+      <li>
+  <!--<a onclick="vis2()">
+      <div class="center">
+      <img id="my-img" src="../image/Component 3 – 10.png">
+      <p style="font-size: 13px; text-align: center;">Analytics</p>
+      </div>
+  </a>
+  </li>
+  <li>
+  <a onclick="vis3()">
+      <div class="center">
+          <img id="my-img2" src="../image/Component 4 – 39.png">
+          <p style="font-size: 13px; text-align: center;">Add Lead</p>
+          </div>
+  </a>
+</li>
+  <li>
+  <a onclick="vis4();visFunction();">
+      <div class="center">
+          <img style="width: 75px !important;" id="my-img3" src="../image/leadsub.png">
+          <p style="font-size: 13px; text-align: center;">Lead<br> Submitted</p>
+          </div>
+  </a>
+</li>
+  <li>
+  <a onclick="vis5();visFunction4();">
+      <div class="center">
+          <img id="my-img4" src="../image/checked@2x.png">
+          <p style="font-size: 13px; text-align: center;">Leads<br>Assigned</p>
+          </div>
+  </a>
+</li>
+</li>
+<li>--->
+<form action="/logout" id="logout_form" method="post">
+<a onclick="document.getElementById('logout_form').submit();">
+<div class="center">
+  <img id="my-img5" src="../image/Component 5 – 10.png">
+  <p style="font-size: 13px; text-align: center;">Logout</p>
+  </div>
+</a></form>
+</li>
+</ul>
+
+</div>
+<!---------------------------NAVBAR ENDS--------------------->
     <form action="/logout" method="POST">
         <button>Logout</button>
     </form>
