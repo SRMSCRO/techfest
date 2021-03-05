@@ -17,6 +17,10 @@
         <link rel="stylesheet" href="/css/navstyle.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw==" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>
+
 </head>
 <body>
 
@@ -94,7 +98,8 @@
           <img class="leadhead" src="../image/Admin Dashboard.svg">
       <div>
          <div class="col-md-12"><img class="line" src="../image/Path 26.svg"></div>
-
+        
+      <button type="button" class="export2" >Export</button>
 
       <div class="col-md-4"> 
             <div class="addpos">
@@ -103,8 +108,8 @@
 
       <div class="float-container">
         <div class="float-child">
-            <div class="pos">
-                <input class="btn btn-primary dropdown-toggle" type="text" list="segment"  name="Segment_details" placeholder="Segment Details" autocomplete="off">
+            <div class="dropdown transparentbar" id="myseg" >
+             <input class="btn btn-light dropdown-toggle" type="text" list="segment"  name="Segment_details" placeholder="Segment Details" autocomplete="off">
              
               <datalist id="segment">
                 <option value="Pharma">
@@ -117,6 +122,41 @@
              
         </div>
     <div>
+
+      <div id="mydiv" class="dropdown transparentbar" style="z-index:4">
+        <button class="btn btn-default dropdown-toggle" type="button" id="mybyn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+          Staus
+          <span class="caret"></span></button>
+        <ul class="dropdown-menu">
+          <li><a href="#">Open</a></li>
+          <li><a href="#">Validated</a></li>
+          <li><a href="#">Rejected</a></li>
+          
+          <li><a href="#">Closed</a></li>
+        </ul> 
+      </div>
+
+      
+
+      
+
+              
+      <div class="imageContainer1">
+        <img  style="width: 700px;" src="../image/Component 10 – 56.png">
+        
+        <div class="caption text">Project Name </div>
+        
+    </div>
+
+    <div class="imageContainer1">
+      <img  style="width: 700px;" src="../image/Component 10 – 56.png">
+      
+      <div class="caption text">Project Name </div>
+      
+  </div>
+
+ 
+
        
      
       

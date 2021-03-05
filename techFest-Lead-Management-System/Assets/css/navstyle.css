@@ -3,7 +3,8 @@ body{
   background-image: url("../image/Path\ 179.png");
   background-repeat: no-repeat;
   background-position-x: right;
-  background-size: 30% 180%;
+  background-size: 50% 115%;
+ 
  
   
 }
@@ -222,6 +223,10 @@ display: none;
   color:#ffffff;
 }
 
+.segment2
+{
+  background-color: transparent;
+}
   
 .search
 {
@@ -548,15 +553,94 @@ height: 25px;
     margin-top: -38px;
     margin-right: -120px;
 }
+
 .imageContainer {
+  
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  float:left;
+  width: 700px;
+  
+}
+.imageContainer1 {
   
     display: inline-block;
     position: relative;
     text-align: center;
+    
     float:left;
     width: 700px;
     
+    transition: 0.5s ease;
+    -webkit-transition: 0.5s ease;
+    -moz-transition: 0.5s ease;
+    
  }
+
+ .imageContainer1:hover {
+  width: 1000px;
+  opacity: 1;
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
+  
+}
+
+#seg > .btn-default {
+  background:transparent;
+
+}
+
+
+#seg > .btn
+{
+  color: #6c63ff;
+  border-color: #6c63ff;
+}
+
+#mydiv
+{
+  margin-left: 17%;
+  margin-top: -4%;
+}
+
+#mydiv > .btn-default {
+  background:transparent;
+
+}
+
+#mydiv > .btn
+{
+  color: #6c63ff;
+  border-color: #6c63ff;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  float: left;
+  min-width: 160px;
+  padding: 5px 0;
+  margin: 2px 0 0;
+  font-size: 8%;
+  text-align: left;
+  list-style: none;
+  background-color:#F2F3FE; /* here */
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0,0,0,.15);
+  border-radius: 6%;
+  -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+  box-shadow: 0 6px 12px rgba(0,0,0,.175);
+}
+
+#mydiv > .dropdown-menu {
+  background: #ffffff;
+}
 
 .text {
     position: absolute;
@@ -564,6 +648,7 @@ height: 25px;
     left: 27%;
     font-size: 20px;
     font-family: Montserrat Regular;
+    color: #000000;
 }
 
 .status 
@@ -684,6 +769,25 @@ height: 25px;
   margin-top: 480px;
   position: absolute;
   margin-left: 250px;
+
+
+    
+}
+
+
+/*************************ADMIN**************************/
+
+.export2
+{
+  background-color: #f04705;
+  border-color: #f04705;
+  border-radius: 10px;
+  height: 4%;
+  width: 12%;
+  color: #fff;
+  margin-top: 5%;
+  position: absolute;
+  margin-left: -60%;
 
 
     
