@@ -238,23 +238,23 @@
                     </div>
                     <button type="button" class="export" >Export</button>
                 </div>
-                <%for(let lead of leads){%>
+                
                     
-                <div class="members container openimg1" id="openimg1">
+                <div class="members container openimg1" id="openimg1"><%for(let lead of leads){%>
                     <%if(lead.lead_submitted_by == user.Name && lead.Status == "Open"){%>
                     <div class="imageContainer">
                         <img style="width: 700px;" src="../image/Component 10 – 56.png">
                         <div class="caption text"><%=lead.project_name%> </div>
                         <div class="caption status"> <button type="button" class="submit"><%=lead.Status%></button></div>
                     </div>
-                    <%}%>    
+                    <%}%>   <%}%>
                     <div>
                         <img class="clipart" src="../image/undraw_envelope_n8lc.svg">
                     </div>
                 </div>
-                <%}%>
-                <%for(let lead of leads){%>
-                <div class="members container validatedimg" id="validatedimg">
+                
+                
+                <div class="members container validatedimg" id="validatedimg"><%for(let lead of leads){%>
                     <%if(lead.Status == "Validated" && lead.lead_submitted_by == user.Name){%>
                     <div class="imageContainer">
                         <img style="width: 700px;" src="../image/Component 10 – 56.png">
@@ -262,48 +262,48 @@
                         <div class="caption text"><%=lead.project_name%></div>
                         <div class="caption status"> <button type="button" class="submit"><%=lead.Status%></button></div>
                     </div>
-                    <%}%> 
+                    <%}%> <%}%>
                     <div>
                         <img class="clipart_" src="../image/undraw_message_sent_1030.svg">
                         
                     </div>
-                </div><%}%>
-                <%for(let lead of leads){%>
-                <div class="members container rejectedimg" id="rejectedimg">
-                    <%if(lead.Status == "Rejected"){%>
+                </div>
+                
+                <div class="members container rejectedimg" id="rejectedimg"><%for(let lead of leads){%>
+                    <%if(lead.Status == "Rejected" && lead.lead_submitted_by == user.Name){%>
                     <div class="imageContainer">
                         <img style="width: 700px;" src="../image/Component 10 – 56.png">
                         
                         <div class="caption text"><%=lead.project_name%></div>
                         <div class="caption status"> <button type="button" class="submit"><%=lead.Status%></button></div>
                     </div>
-                    <%}%>
+                    <%}}%>
                     <div>
                         <img class="clipart_1" src="../image/undraw_cancel_u1it (1).svg">
                         
                     </div>
-                </div><%}%>
-                <%for(let lead of leads){%>
-                <div class="members container closedimg" id="closedimg">
-                    <%if(lead.Status == "Closed"){%>
+                </div>
+                
+                <div class="members container closedimg" id="closedimg"><%for(let lead of leads){%>
+                    <%if(lead.Status == "Closed" && lead.lead_submitted_by == user.Name){%>
                     <div class="imageContainer">
                         <img style="width: 700px;" src="../image/Component 10 – 56.png">
                         
                         <div class="caption text"><%=lead.project_name%></div>
                         <div class="caption status"> <button type="button" class="submit"><%=lead.Status%></button></div>
                     </div>
-                    <%}%>
+                    <%}}%>
                      <div>
                         <img class="clipart_2" src="../image/undraw_my_files_swob.svg">
                     </div>
                 </div>
-                <%}%>
+                
             </div>
             
         </div>
         </div>
        
-    
+    </div>
 </div>
 
 
@@ -329,10 +329,10 @@
                 </div>
                     <button type="button" class="export" >Export</button>
             </div>
-                <%for (let lead of leads){
-                    if(lead.lead_submitted_to == user.Name){%>
-                <div class="members container openimg_" id="openimg_">
-                    <%if(lead.Status == "Open"){%>
+                
+
+                <div class="members container openimg_" id="openimg_"><%for (let lead of leads){%>
+                    <%if(lead.lead_submitted_to == user.Name && lead.Status == "Open"){%>
                     <div class="imageContainer">
                         <img style="width: 700px;" src="../image/Component 10 – 56.png">
                         <div class="caption text"><%=lead.project_name%>
@@ -347,13 +347,13 @@
                         </div>
                         <div class="caption status"> <button type="button" class="submit">Status</button></div>
                     </div>
-                    <%}%>
+                    <%}}%>
                     <div>
                         <img class="clipart1" src="../image/undraw_Updates_re_o5af.svg">
                     </div>
                 </div>
-                <div class="members container validatedimg_" id="validatedimg_">
-                    <%if(lead.Status == "Validated"){%>
+                <div class="members container validatedimg_" id="validatedimg_"><%for (let lead of leads){%>
+                    <%if(lead.lead_submitted_to == user.Name && lead.Status == "Validated"){%>
                     <div class="imageContainer">
                         <img style="width: 700px;" src="../image/Component 10 – 56.png">
                         <div class="caption text"><%=lead.project_name%>
@@ -367,13 +367,13 @@
                         </form></div>
                         <div class="caption status"> <button type="button" class="submit">Status</button></div>
                     </div>
-                    <%}%>
+                    <%}}%>
                     <div>
                         <img class="clipart2" src="../image/undraw_Hiring_re_yk5n (1).svg">
                     </div>
                 </div>
-                <div class="members container rejectedimg_" id="rejectedimg_">
-                    <%if(lead.Status == "Rejected"){%>
+                <div class="members container rejectedimg_" id="rejectedimg_"><%for (let lead of leads){%>
+                    <%if(lead.lead_submitted_to == user.Name && lead.Status == "Rejected"){%>
                     <div class="imageContainer">
                         <img style="width: 700px;" src="../image/Component 10 – 56.png">
                         <div class="caption text"><%=lead.project_name%>
@@ -387,13 +387,13 @@
                         </form></div>
                         <div class="caption status"> <button type="button" class="submit">Status</button></div>
                     </div>
-                    <%}%>
+                    <%}}%>
                     <div>
                         <img class="clipart3" src="../image/undraw_access_denied_6w73.svg">
                     </div>
                 </div>
-                <div class="members container closedimg_" id="closedimg_">
-                    <%if(lead.Status == "Closed"){%>
+                <div class="members container closedimg_" id="closedimg_"><%for (let lead of leads){%>
+                    <%if(lead.lead_submitted_to == user.Name && lead.Status == "Closed"){%>
                     <div class="imageContainer">
                         <img style="width: 700px;" src="../image/Component 10 – 56.png">
                         
@@ -408,7 +408,7 @@
                         </form></div>
                         <div class="caption status"> <button type="button" class="submit">Status</button></div>
                     </div>
-                    <%}%>
+                    <%}}%>
                     <div>
                         <img class="clipart4" src="../image/undraw_close_tab_uk6g.svg">
                     </div>
@@ -416,7 +416,6 @@
                 </div>
                 
             </div>
-            <%}}%>
         </div>
         </div>
     <!-- <div class="container">
