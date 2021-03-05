@@ -56,7 +56,7 @@ document.getElementById('lead_submitted').style.display ="none";
 // <-----------------------------VISUAL SCRIPT END ---------------------->
 // <-----------------------------LEAD SUBMITTED ------------------------->
 function visFunction() {
-    document.getElementById("openimg1").style.display = "contents";
+    document.getElementById("openimg").style.display = "contents";
     document.getElementById("validatedimg").style.display = "none";
     document.getElementById("rejectedimg").style.display = "none";
     document.getElementById("closedimg").style.display = "none";
@@ -70,7 +70,7 @@ function visFunction() {
 }
 
 function visFunction1() {
-    document.getElementById("openimg1").style.display = "none";
+    document.getElementById("openimg").style.display = "none";
     document.getElementById("validatedimg").style.display = "contents";
     document.getElementById("rejectedimg").style.display = "none";
     document.getElementById("closedimg").style.display = "none";
@@ -84,7 +84,7 @@ function visFunction1() {
 }
 
 function visFunction2() {
-    document.getElementById("openimg1").style.display = "none";
+    document.getElementById("openimg").style.display = "none";
     document.getElementById("validatedimg").style.display = "none";
     document.getElementById("rejectedimg").style.display = "contents";
     document.getElementById("closedimg").style.display = "none";
@@ -98,7 +98,7 @@ function visFunction2() {
 }
 
 function visFunction3() {
-    document.getElementById("openimg1").style.display = "none";
+    document.getElementById("openimg").style.display = "none";
     document.getElementById("validatedimg").style.display = "none";
     document.getElementById("rejectedimg").style.display = "none";
     document.getElementById("closedimg").style.display = "contents";
@@ -173,7 +173,7 @@ function visFunction7() {
 /*************************************Admin *******************/
 
 function visFunction8() {
-    document.getElementById("openimg1").style.display = "block";
+    document.getElementById("openimg1").style.display = "contents";
     document.getElementById("validatedimg1").style.display = "none";
     document.getElementById("rejectedimg1").style.display = "none";
     document.getElementById("closedimg1").style.display = "none";
@@ -182,13 +182,11 @@ function visFunction8() {
     document.getElementById("openbtn1").style.backgroundColor = "#F04705";
     document.getElementById("validatedbtn1").style.backgroundColor = "#6c63ff";
     document.getElementById("rejectedbtn1").style.backgroundColor = "#6c63ff";
-    document.getElementById("closedbtn1").style.backgroundColor = "#6c63ff";
-
+    document.getElementById("closedbtn1").style.backgroundColor = "#6c63ff"
 }
-
 function visFunction9() {
     document.getElementById("openimg1").style.display = "none";
-    document.getElementById("validatedimg1").style.display = "block";
+    document.getElementById("validatedimg1").style.display = "contents";
     document.getElementById("rejectedimg1").style.display = "none";
     document.getElementById("closedimg1").style.display = "none";
 
@@ -203,7 +201,7 @@ function visFunction9() {
 function visFunction10() {
     document.getElementById("openimg1").style.display = "none";
     document.getElementById("validatedimg1").style.display = "none";
-    document.getElementById("rejectedimg1").style.display = "block";
+    document.getElementById("rejectedimg1").style.display = "contents";
     document.getElementById("closedimg1").style.display = "none";
 
 
@@ -218,7 +216,7 @@ function visFunction11() {
     document.getElementById("openimg1").style.display = "none";
     document.getElementById("validatedimg1").style.display = "none";
     document.getElementById("rejectedimg1").style.display = "none";
-    document.getElementById("closedimg1").style.display = "block";
+    document.getElementById("closedimg1").style.display = "contents";
 
 
     document.getElementById("openbtn1").style.backgroundColor = "#6c63ff";
@@ -227,3 +225,4 @@ function visFunction11() {
     document.getElementById("closedbtn1").style.backgroundColor = "#F04705";
 
 }
+//<-----------------------------Filter segment admin page script --------------------------->
