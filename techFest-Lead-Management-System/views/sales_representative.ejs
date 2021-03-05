@@ -80,9 +80,9 @@
 <!---------------PROFILE------------------->
 <div id="Profile" class="main">
     <div class="container">
-        <%=user.Name%><br>
-        <%=user.OpCo%><br>
-        <%=user.Email%>
+       Name: <%=user.Name%><br>
+       Company: <%=user.OpCo%><br>
+       Enterprise Email: <%=user.Email%>
         <!-- <%=user.Position%> -->
     </div>
 </div>
@@ -94,6 +94,14 @@
 <div id="Analytics" class="main">
     <div class="container">
        total no of leads:  <%=countLead%>
+       <%for(let lead of leads){%>
+        <%if(lead.lead_submitted_by == user.Name || lead.lead_submitted_to == user.name){%>
+            <div class="imageContainer">
+                <img style="width: 700px;" src="../image/Component 10 – 56.png">
+                <div class="caption text"><%=lead.project_name%> </div>
+                <div class="caption status"> <button type="button" class="submit"><%=lead.Status%></button></div>
+            </div>
+            <%}}%>
     </div>
 </div>
 
