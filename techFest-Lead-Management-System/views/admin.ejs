@@ -95,60 +95,53 @@
    
         <div class="members container openimg1" id="openimg1"><%for(let lead of leads){%>
           <%if(lead.Status == "Open"){%>
-          <div class="imageContainer">
+            <div class="imageContainer1">
               <img style="width: 700px;" src="../image/Component 10 – 56.png">
+              
               <div class="caption text"><%=lead.project_name%> </div>
-              <div class="caption status"> <button type="button" class="submit"><%=lead.Status%></button></div>
+            <div class="caption status"><a href="#Project"><button type="button" class="submit"><%=lead.Status%></button></a></div>
           </div>
+
           <%}%>   <%}%>
-          <div>
-              <img class="clipart" src="../image/undraw_envelope_n8lc.svg">
-          </div>
+
       </div>
      
       
       <div class="members container validatedimg" id="validatedimg1"><%for(let lead of leads){%>
           <%if(lead.Status == "Validated"){%>
-          <div class="imageContainer">
+          <div class="imageContainer1">
               <img style="width: 700px;" src="../image/Component 10 – 56.png">
               
               <div class="caption text"><%=lead.project_name%></div>
               <div class="caption status"> <button type="button" class="submit"><%=lead.Status%></button></div>
           </div>
           <%}%> <%}%>
-          <div>
-              <img class="clipart_" src="../image/undraw_message_sent_1030.svg">
-              
-          </div>
+ 
       </div>
       
       <div class="members container rejectedimg" id="rejectedimg1"><%for(let lead of leads){%>
           <%if(lead.Status == "Rejected"){%>
-          <div class="imageContainer">
-              <img style="width: 700px;" src="../image/Component 10 – 56.png">
+          <div class="imageContainer1">
+            <img src="../image/Component 10 – 56.png">
               
               <div class="caption text"><%=lead.project_name%></div>
               <div class="caption status"> <button type="button" class="submit"><%=lead.Status%></button></div>
           </div>
+
           <%}}%>
-          <div>
-              <img class="clipart_1" src="../image/undraw_cancel_u1it (1).svg">
-              
-          </div>
+
       </div>
       
       <div class="members container closedimg" id="closedimg1"><%for(let lead of leads){%>
           <%if(lead.Status == "Closed"){%>
-          <div class="imageContainer">
+          <div class="imageContainer1">
               <img style="width: 700px;" src="../image/Component 10 – 56.png">
               
               <div class="caption text"><%=lead.project_name%></div>
               <div class="caption status"> <button type="button" class="submit"><%=lead.Status%></button></div>
           </div>
           <%}}%>
-           <div>
-              <img class="clipart_2" src="../image/undraw_my_files_swob.svg">
-          </div>
+
       </div>
       <div>
           <img class="clipart_ad" src="../image/undraw_mobile_login_ikmv.svg">
@@ -158,6 +151,32 @@
   </div>
 </div>
 </div>
+
+<!----------------------------PROJECT dETAILS_---------------------------->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------ENDS---------------------------------------->
     <!-- <form action="/logout" method="POST">
         <button>Logout</button>
     </form>

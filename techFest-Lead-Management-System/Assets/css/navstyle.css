@@ -737,21 +737,34 @@ height: 25px;
    border: none;
 }
 
-.export 
+.export1
 {
   background-color: #f04705;
   border-color: #f04705;
   border-radius: 10px;
-  height: 9%;
+  height: 60%;
   width: 10%;
   color: #fff;
-  margin-top: 480px;
+  margin-top: 38%;
   position: absolute;
   margin-left: 250px;
 }
 
 
 /*************************ADMIN**************************/
+
+.export 
+{
+  background-color: #f04705;
+  border-color: #f04705;
+  border-radius: 10px;
+  height: 20%;
+  width: 20%;
+  color: #fff;
+  margin-top: 65%;
+  position: absolute;
+  margin-left: 250px;
+}
 
 
 
@@ -771,7 +784,7 @@ height: 25px;
 }
 
 .imageContainer1:hover {
-width: 1000px;
+width: 800px;
 opacity: 1;
 -webkit-opacity: 1;
 -moz-opacity: 1;
