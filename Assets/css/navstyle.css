@@ -434,6 +434,11 @@ height: 25px;
     margin-top: 60px;
 }
 
+.sideimge
+{
+  width: 700px;
+}
+
 /************************FOUR BUTTONS CSS***********/
 
 .events_btn_img {
@@ -803,6 +808,56 @@ height: 25px;
   margin-top: 141%;
   position: absolute;
   margin-left: 63px;
+}
+
+
+
+
+ 
+.status {
+  position: absolute;
+  top: 31%;
+  left: 76%;
+}
+
+
+.sideimge{
+  width: 339px;
+}
+
+.imageContainer {
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  float: left;
+  width: 337px;
+  top: 223px;
+}
+
+
+.clipart {
+  width: 250px;
+  float: right;
+  margin-top: -172px;
+  margin-right: 0px;
+}
+
+.clipart_, .clipart_1, .clipart_2 {
+  width: 250px;
+  float: right;
+  margin-top: 0px;
+  margin-right: 0px;
+}
+.submit {
+  background-color: #6c63ff;
+  color: #ffffff;
+  width: 60px;
+  height: 20px;
+  border-radius: 7px;
+  border-color: #6c63ff;
+  box-shadow: 0.5px 0.5px #6c63ff;
+  float: right;
+  border: none;
 }
 
 }

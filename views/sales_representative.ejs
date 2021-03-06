@@ -325,7 +325,7 @@
                 <div class="members container openimg" id="openimg"><%for(let lead of leads){%>
                     <%if(lead.lead_submitted_by == user.Name && lead.Status == "Open"){%>
                     <div class="imageContainer">
-                        <img style="width: 700px;" src="../image/Group 24.png">
+                        <img class="sideimge" src="../image/Group 24.png">
                         <div class="caption text"><%=lead.project_name%> </div>
                         <div class="caption status"> <button id="modal" type="button" class="submit"><%=lead.Status%></button></div>
                         <div id="myModal" class="modal">
@@ -349,7 +349,7 @@
                 <div class="members container validatedimg" id="validatedimg"><%for(let lead of leads){%>
                     <%if(lead.Status == "Validated" && lead.lead_submitted_by == user.Name){%>
                     <div class="imageContainer">
-                        <img style="width: 700px;" src="../image/Group 27.png">
+                        <img  class="sideimge"  src="../image/Group 27.png">
                         
                         <div class="caption text"><%=lead.project_name%></div>
                         <div class="caption status"> <button type="button" class="submit"><%=lead.Status%></button></div>
@@ -364,7 +364,7 @@
                 <div class="members container rejectedimg" id="rejectedimg"><%for(let lead of leads){%>
                     <%if(lead.Status == "Rejected" && lead.lead_submitted_by == user.Name){%>
                     <div class="imageContainer">
-                        <img style="width: 700px;" src="../image/Group 26.png">
+                        <img class="sideimge" src="../image/Group 26.png">
                         
                         <div class="caption text"><%=lead.project_name%></div>
                         <div class="caption status"> <button type="button" class="submit"><%=lead.Status%></button></div>
@@ -379,7 +379,7 @@
                 <div class="members container closedimg" id="closedimg"><%for(let lead of leads){%>
                     <%if(lead.Status == "Closed" && lead.lead_submitted_by == user.Name){%>
                     <div class="imageContainer">
-                        <img style="width: 700px;" src="../image/Group 25.png">
+                        <img class="sideimge" src="../image/Group 25.png">
                         
                         <div class="caption text"><%=lead.project_name%></div>
                         <div class="caption status"> <button type="button" class="submit"><%=lead.Status%></button></div>
@@ -395,8 +395,8 @@
         </div>
         </div>
        
-    </div>
 </div>
+ 
 
 
 <!---------------LEAD SUBMITTED ENDS---------------->
