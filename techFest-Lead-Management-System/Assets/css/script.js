@@ -2,13 +2,13 @@ const signUpButton = document.getElementById('signUp');
 const signInButton = document.getElementById('signIn');
 const container = document.getElementById('container');
 
-// signUpButton.addEventListener('click', () => {
-// 	container.classList.add("right-panel-active");
-// });
+signUpButton.addEventListener('click', () => {
+	container.classList.add("right-panel-active");
+});
 
-// signInButton.addEventListener('click', () => {
-// 	container.classList.remove("right-panel-active");
-// });
+signInButton.addEventListener('click', () => {
+	container.classList.remove("right-panel-active");
+});
 // <-----------------------------VISUAL SCRIPT--------------------------->
 function vis(){
 	document.getElementById('Profile').style.display ="contents";
@@ -54,63 +54,6 @@ document.getElementById('Add_lead').style.display ="none";
 document.getElementById('lead_submitted').style.display ="none";
 }
 // <-----------------------------VISUAL SCRIPT END ---------------------->
-// <-----------------------------ANALYTICS------------------------------->
-function vis2Function() {
-    document.getElementById("openimg2").style.display = "contents";
-    document.getElementById("validatedimg2").style.display = "none";
-    document.getElementById("rejectedimg2").style.display = "none";
-    document.getElementById("closedimg2").style.display = "none";
-   
-   
-    document.getElementById("openbtn2").style.backgroundColor = "#F04705";
-    document.getElementById("validatedbtn2").style.backgroundColor = "#6c63ff";
-    document.getElementById("rejectedbtn2").style.backgroundColor = "#6c63ff";
-    document.getElementById("closedbtn2").style.backgroundColor = "#6c63ff";
-
-}
-
-function vis2Function1() {
-    document.getElementById("openimg2").style.display = "none";
-    document.getElementById("validatedimg2").style.display = "contents";
-    document.getElementById("rejectedimg2").style.display = "none";
-    document.getElementById("closedimg2").style.display = "none";
-
-
-    document.getElementById("openbtn2").style.backgroundColor = "#6c63ff";
-    document.getElementById("validatedbtn2").style.backgroundColor = "#F04705";
-    document.getElementById("rejectedbtn2").style.backgroundColor = "#6c63ff";
-    document.getElementById("closedbtn2").style.backgroundColor = "#6c63ff";
-
-}
-
-function vis2Function2() {
-    document.getElementById("openimg2").style.display = "none";
-    document.getElementById("validatedimg2").style.display = "none";
-    document.getElementById("rejectedimg2").style.display = "contents";
-    document.getElementById("closedimg2").style.display = "none";
-
-
-    document.getElementById("openbtn2").style.backgroundColor = "#6c63ff";
-    document.getElementById("validatedbtn2").style.backgroundColor = "#6c63ff";
-    document.getElementById("rejectedbtn2").style.backgroundColor = "#F04705";
-    document.getElementById("closedbtn2").style.backgroundColor = "#6c63ff";
-
-}
-
-function vis2Function3() {
-    document.getElementById("openimg2").style.display = "none";
-    document.getElementById("validatedimg2").style.display = "none";
-    document.getElementById("rejectedimg2").style.display = "none";
-    document.getElementById("closedimg2").style.display = "contents";
-
-
-    document.getElementById("openbtn2").style.backgroundColor = "#6c63ff";
-    document.getElementById("validatedbtn2").style.backgroundColor = "#6c63ff";
-    document.getElementById("rejectedbtn2").style.backgroundColor = "#6c63ff";
-    document.getElementById("closedbtn2").style.backgroundColor = "#F04705";
-
-}
-// <-----------------------------ANALYTICS END--------------------------->
 // <-----------------------------LEAD SUBMITTED ------------------------->
 function visFunction() {
     document.getElementById("openimg").style.display = "contents";
@@ -283,28 +226,3 @@ function visFunction11() {
 
 }
 //<-----------------------------Filter segment admin page script --------------------------->
-//<-----------------------------Modal script------------------------------------------------>
-var modal = document.getElementById("myModal");
-
-// Get the button that opens the modal
-var btn = document.getElementById("modal");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks on the button, open the modal
-btn.onclick = function() {
-  modal.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
