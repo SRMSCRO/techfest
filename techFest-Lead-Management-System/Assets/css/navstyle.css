@@ -522,14 +522,15 @@ height: 25px;
 
 
 
-.clipart {
-  width: 424px;
-  float: right;
-  margin-top: -291px;
-  margin-right: 0px;
-}
 
- 
+
+.clipart
+{
+    width: 550px;
+    float: right;
+    margin-top: -80px;
+    margin-right: -120px;
+}
 
 .clipart_
 {
@@ -655,7 +656,14 @@ height: 25px;
 
 
 
- 
+
+.clipart
+{
+    width: 550px;
+    float: right;
+    margin-top: -80px;
+    margin-right: -120px;
+}
 
 .clipart1
 {
@@ -697,11 +705,6 @@ height: 25px;
     
  }
 
- .sideimg
- {
-   width:700px;
- }
-
 .text {
     position: absolute;
     top: 35%;
@@ -732,22 +735,20 @@ height: 25px;
    border: none;
 }
 
-.export1 {
+.export1
+{
   background-color: #f04705;
   border-color: #f04705;
   border-radius: 10px;
-  height: 11%;
-  width: 20%;
+  height: 60%;
+  width: 10%;
   color: #fff;
-  margin-top: 57%;
+  margin-top: 38%;
   position: absolute;
-  margin-left: 139px;
+  margin-left: 250px;
 }
-
-/*--------------------------------------------------MQ---------------------------------------------------------------*/
 @media only screen and (max-width: 576px) {
- 
-  /***************************lead assignedmq mob view********************************/
+
   .btn {
     display: inline-block;
     font-weight: 100;
@@ -793,52 +794,13 @@ height: 25px;
   background-color: #f04705;
   border-color: #f04705;
   border-radius: 10px;
-  height: 29px;
+  height: 20%;
   width: 22%;
   color: #fff;
   margin-top: 34%;
   position: absolute;
   margin-left: 34px;
 }
-/******************************************LEAD SUBMITTEDmq  mob v****************************************************/
-.submit {
-  background-color: #6c63ff;
-  color: #ffffff;
-  width: 49px;
-  height: 20px;
-  border-radius: 7px;
-  border-color: #6c63ff;
-  box-shadow: 0.5px 0.5px #6c63ff;
-  float: right;
-  margin-left: 70px;
-  border: none;
-}
-
-.clipart , .clipart_ , .clipart_1 , .clipart_2 {
-  
-    width: 260px;
-    float: right;
-    margin-top: -220px;
-    margin-right: -10px;
-}
-
-
-
-
-.imageContainer {
-  display: inline-block;
-  position: relative;
-  text-align: center;
-  float: left;
-  width: 287px;
-  top: 266px;
-}
-.sideimg {
-  width: 345px;
-  height: 78px;
-}
-
-
 }
 
 /*************************ADMIN**************************/

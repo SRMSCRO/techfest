@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
- 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <link rel="stylesheet" rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.6/css/all.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
    
@@ -227,7 +227,7 @@
 <!---------------LEAD SUBMITTED------------------->
 <div id="lead_submitted" class="main">
     <div id="#Leadsub" class="main">
-        <div class="fluid-container">
+        <div class="container">
         
         
         <div>
@@ -237,7 +237,7 @@
         </div>
         
         <div class="row">
-            <div class="col-md-12   ">
+            <div class="col-md-12 col-xs-4">
                 <div class="sections text-center">
                     <button type="button" id="openbtn" class="btn btn-primary events_btn_img openbtn "  style="isolation: isolate; background-color: #f04705; border-color: #f04705;" onclick="visFunction()">OPEN</button>                  
                     <button type="button" id="validatedbtn" class="btn btn-primary events_btn_img validatedbtn"  style="isolation: isolate; background-color: #6c63ff; border-color: #6c63ff;" onclick="visFunction1()">VALIDATED</button>
@@ -247,11 +247,11 @@
                     <button type="button" class="export1" >Export</button>
                 </div>
                 
-                  
+                    
                 <div class="members container openimg" id="openimg"><%for(let lead of leads){%>
                     <%if(lead.lead_submitted_by == user.Name && lead.Status == "Open"){%>
                     <div class="imageContainer">
-                        <img  class="sideimg" src="../image/Component 10 – 56.png">
+                        <img style="width: 700px;" src="../image/Component 10 – 56.png">
                         <div class="caption text"><%=lead.project_name%> </div>
                         <div class="caption status"> <button type="button" class="submit"><%=lead.Status%></button></div>
                     </div>
@@ -280,7 +280,7 @@
                 <div class="members container rejectedimg" id="rejectedimg"><%for(let lead of leads){%>
                     <%if(lead.Status == "Rejected" && lead.lead_submitted_by == user.Name){%>
                     <div class="imageContainer">
-                        <img class="sideimg"  src="../image/Component 10 – 56.png">
+                        <img style="width: 700px;" src="../image/Component 10 – 56.png">
                         
                         <div class="caption text"><%=lead.project_name%></div>
                         <div class="caption status"> <button type="button" class="submit"><%=lead.Status%></button></div>
