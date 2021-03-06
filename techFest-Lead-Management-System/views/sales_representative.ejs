@@ -5,7 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+<<<<<<< HEAD
  
+=======
+    
+>>>>>>> 006e6f0688bb43e2032095f4840b87fd6ad6023c
     <link rel="stylesheet" rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.6/css/all.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
    
@@ -32,7 +36,7 @@
                 </a>
                 </li>
             <li>
-        <a onclick="vis2()">
+        <a onclick="vis2();vis2Function();">
             <div class="center">
             <img id="my-img" src="../image/Component 3 – 10.png">
             <p style="font-size: 13px; text-align: center;">Analytics</p>
@@ -93,18 +97,92 @@
 <!---------------ANALYTICS------------------->
 <div id="Analytics" class="main">
     <div class="container">
-       total no of leads:  <%=countLead%>
-       <%for(let lead of leads){%>
-        <%if(lead.lead_submitted_by == user.Name || lead.lead_submitted_to == user.name){%>
-            <div class="imageContainer">
-                <img style="width: 700px;" src="../image/Component 10 – 56.png">
-                <div class="caption text"><%=lead.project_name%> </div>
-                <div class="caption status"> <button type="button" class="submit"><%=lead.Status%></button></div>
+      
+    <div class="row">
+        <div class="col-md-12 col-xs-4">
+            <div class="sections text-center">
+                <button type="button" id="openbtn2" class="btn btn-primary events_btn_img openbtn "  style="isolation: isolate; background-color: #f04705; border-color: #f04705;" onclick="vis2Function()">OPEN</button>                  
+                <button type="button" id="validatedbtn2" class="btn btn-primary events_btn_img validatedbtn"  style="isolation: isolate; background-color: #6c63ff; border-color: #6c63ff;" onclick="vis2Function1()">VALIDATED</button>
+                <button type="button" id="rejectedbtn2" class="btn btn-primary events_btn_img rejectedbtn"  style="isolation: isolate; background-color: #6c63ff; border-color: #6c63ff;" onclick="vis2Function2()">REJECTED</button>
+                <button type="button" id="closedbtn2" class="btn btn-primary events_btn_img closedbtn"  style="isolation: isolate; background-color: #6c63ff; border-color: #6c63ff;" onclick="vis2Function3()">CLOSED</button>
+                </div>
+                <button type="button" class="export1" >Export</button>
             </div>
-            <%}}%>
+            
+                
+            <div class="members container openimg" id="openimg2"><%for(let lead of leads){%>
+                <%if(lead.Status == "Open"){%>
+                <div class="imageContainer">
+                    <img style="width: 700px;" src="../image/Group 24.png">
+                    <div class="caption text"><%=lead.project_name%> </div>
+                    <div class="caption status"> <button id="modal" type="button" class="submit"><%=lead.Status%></button></div>
+                    <div id="myModal" class="modal">
+
+                        <!-- Modal content -->
+                        <div class="modal-content">
+                          <span class="close">&times;</span>
+                          <p>Some text in the Modal..</p>
+                        </div>
+                      
+                    </div>
+                </div>
+                <%}%>   <%}%>
+                <div>
+                    <img class="clipart" src="../image/undraw_envelope_n8lc.svg">
+                </div>
+               
+            </div>
+            
+            
+            <div class="members container validatedimg" id="validatedimg2"><%for(let lead of leads){%>
+                <%if(lead.Status == "Validated"){%>
+                <div class="imageContainer">
+                    <img style="width: 700px;" src="../image/Group 27.png">
+                    
+                    <div class="caption text"><%=lead.project_name%></div>
+                    <div class="caption status"> <button type="button" class="submit"><%=lead.Status%></button></div>
+                </div>
+                <%}%> <%}%>
+                <div>
+                    <img class="clipart_" src="../image/undraw_message_sent_1030.svg">
+                    
+                </div>
+            </div>
+            
+            <div class="members container rejectedimg" id="rejectedimg2"><%for(let lead of leads){%>
+                <%if(lead.Status == "Rejected"){%>
+                <div class="imageContainer">
+                    <img style="width: 700px;" src="../image/Group 26.png">
+                    
+                    <div class="caption text"><%=lead.project_name%></div>
+                    <div class="caption status"> <button type="button" class="submit"><%=lead.Status%></button></div>
+                </div>
+                <%}}%>
+                <div>
+                    <img class="clipart_1" src="../image/undraw_cancel_u1it (1).svg">
+                    
+                </div>
+            </div>
+            
+            <div class="members container closedimg" id="closedimg2"><%for(let lead of leads){%>
+                <%if(lead.Status == "Closed"){%>
+                <div class="imageContainer">
+                    <img style="width: 700px;" src="../image/Group 25.png">
+                    
+                    <div class="caption text"><%=lead.project_name%></div>
+                    <div class="caption status"> <button type="button" class="submit"><%=lead.Status%></button></div>
+                </div>
+                <%}}%>
+                 <div>
+                    <img class="clipart_2" src="../image/undraw_my_files_swob.svg">
+                </div>
+            </div>
+            
+        </div>
+        
     </div>
 </div>
-
+</div>
 
 <!---------------ANALYTICS END---------------->
 <!---------------ADD LEAD------------------->
@@ -251,21 +329,35 @@
                 <div class="members container openimg" id="openimg"><%for(let lead of leads){%>
                     <%if(lead.lead_submitted_by == user.Name && lead.Status == "Open"){%>
                     <div class="imageContainer">
+<<<<<<< HEAD
                         <img  class="sideimg" src="../image/Component 10 – 56.png">
+=======
+                        <img style="width: 700px;" src="../image/Group 24.png">
+>>>>>>> 006e6f0688bb43e2032095f4840b87fd6ad6023c
                         <div class="caption text"><%=lead.project_name%> </div>
-                        <div class="caption status"> <button type="button" class="submit"><%=lead.Status%></button></div>
+                        <div class="caption status"> <button id="modal" type="button" class="submit"><%=lead.Status%></button></div>
+                        <div id="myModal" class="modal">
+
+                            <!-- Modal content -->
+                            <div class="modal-content">
+                              <span class="close">&times;</span>
+                              <p>Some text in the Modal..</p>
+                            </div>
+                          
+                        </div>
                     </div>
                     <%}%>   <%}%>
                     <div>
                         <img class="clipart" src="../image/undraw_envelope_n8lc.svg">
                     </div>
+                   
                 </div>
                 
                 
                 <div class="members container validatedimg" id="validatedimg"><%for(let lead of leads){%>
                     <%if(lead.Status == "Validated" && lead.lead_submitted_by == user.Name){%>
                     <div class="imageContainer">
-                        <img style="width: 700px;" src="../image/Component 10 – 56.png">
+                        <img style="width: 700px;" src="../image/Group 27.png">
                         
                         <div class="caption text"><%=lead.project_name%></div>
                         <div class="caption status"> <button type="button" class="submit"><%=lead.Status%></button></div>
@@ -280,7 +372,11 @@
                 <div class="members container rejectedimg" id="rejectedimg"><%for(let lead of leads){%>
                     <%if(lead.Status == "Rejected" && lead.lead_submitted_by == user.Name){%>
                     <div class="imageContainer">
+<<<<<<< HEAD
                         <img class="sideimg"  src="../image/Component 10 – 56.png">
+=======
+                        <img style="width: 700px;" src="../image/Group 26.png">
+>>>>>>> 006e6f0688bb43e2032095f4840b87fd6ad6023c
                         
                         <div class="caption text"><%=lead.project_name%></div>
                         <div class="caption status"> <button type="button" class="submit"><%=lead.Status%></button></div>
@@ -295,7 +391,7 @@
                 <div class="members container closedimg" id="closedimg"><%for(let lead of leads){%>
                     <%if(lead.Status == "Closed" && lead.lead_submitted_by == user.Name){%>
                     <div class="imageContainer">
-                        <img style="width: 700px;" src="../image/Component 10 – 56.png">
+                        <img style="width: 700px;" src="../image/Group 25.png">
                         
                         <div class="caption text"><%=lead.project_name%></div>
                         <div class="caption status"> <button type="button" class="submit"><%=lead.Status%></button></div>
@@ -319,7 +415,7 @@
 <!---------------LEAD ASSIGNED------------------->
 <div id="lead_assigned" class="main">
     <div id="#Leadsub" class="main">
-        <div class="fluid-container">
+        <div class="container">
         <div >
             <img class="leadhead" src="../image/Leads Assigned.svg">
             <div>
@@ -328,7 +424,7 @@
         </div>
         
         <div class="row">
-            <div class="col-md-8  col-lg-8">
+            <div class="col-md-12 col-xs-4">
                 <div class="sections text-center">
                     <button type="button" id="open_btn" class="btn btn-primary events_btn_img open_btn "  style="isolation: isolate; background-color: #f04705; border-color: #6c63ff;" onclick="visFunction4()">OPEN</button>                          
                     <button type="button" id="validated_btn" class="btn btn-primary events_btn_img validated_btn"  style="isolation: isolate; background-color: #6c63ff; border-color: #6c63ff;" onclick="visFunction5()">VALIDATED</button>                   
@@ -338,12 +434,11 @@
                     <button type="button" class="export1" >Export</button>
             </div>
                 
-            <div class="col-md-4 col-lg-4">
 
                 <div class="members container openimg_" id="openimg_"><%for (let lead of leads){%>
                     <%if(lead.lead_submitted_to == user.Name && lead.Status == "Open"){%>
                     <div class="imageContainer">
-                        <img style="width: 700px;" src="../image/Component 10 – 56.png">
+                        <img style="width: 700px;" src="../image/Group 24.png">
                         <div class="caption text"><%=lead.project_name%>
                         <form action="/update_status/<%=lead._id%>/<%=userId%>" method="POST">
                             <select name="status">
@@ -364,7 +459,7 @@
                 <div class="members container validatedimg_" id="validatedimg_"><%for (let lead of leads){%>
                     <%if(lead.lead_submitted_to == user.Name && lead.Status == "Validated"){%>
                     <div class="imageContainer">
-                        <img style="width: 700px;" src="../image/Component 10 – 56.png">
+                        <img style="width: 700px;" src="../image/Group 27.png">
                         <div class="caption text"><%=lead.project_name%>
                             <form action="/update_status/<%=lead._id%>/<%=userId%>" method="POST">
                             <select name="status">
@@ -384,7 +479,7 @@
                 <div class="members container rejectedimg_" id="rejectedimg_"><%for (let lead of leads){%>
                     <%if(lead.lead_submitted_to == user.Name && lead.Status == "Rejected"){%>
                     <div class="imageContainer">
-                        <img style="width: 700px;" src="../image/Component 10 – 56.png">
+                        <img style="width: 700px;" src="../image/Group 26.png">
                         <div class="caption text"><%=lead.project_name%>
                         <form action="/update_status/<%=lead._id%>/<%=userId%>" method="POST">
                             <select name="status">
@@ -404,7 +499,7 @@
                 <div class="members container closedimg_" id="closedimg_"><%for (let lead of leads){%>
                     <%if(lead.lead_submitted_to == user.Name && lead.Status == "Closed"){%>
                     <div class="imageContainer">
-                        <img style="width: 700px;" src="../image/Component 10 – 56.png">
+                        <img style="width: 700px;" src="../image/Group 25.png">
                         
                         <div class="caption text"><%=lead.project_name%>
                         <form action="/update_status/<%=lead._id%>/<%=userId%>" method="POST">
@@ -423,10 +518,10 @@
                     </div>
                     
                 </div>
-            </div>
+                
             </div>
         </div>
-    </div> 
+        </div>
     <!-- <div class="container">
         <%for (let lead of leads){%>
             <%if(lead.lead_submitted_to == user.Name){%>
@@ -559,18 +654,17 @@
         autocomplete(document.getElementById("myInput"),users );
         </script>
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
         crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
+        crossorigin="anonymous"></script> -->
         <script src="../css/script.js" type="text/javascript"></script>        
-        <script src="https://kit.fontawesome.com/yourcode.js"></script>
+        <!-- <script src="https://kit.fontawesome.com/yourcode.js"></script> -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
         <script src="/css/myChart.js" type="text/javascript"></script>
-        <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.4.1.min.220afd743d.js" type="text/javascript"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.4.1.min.220afd743d.js" type="text/javascript" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
               

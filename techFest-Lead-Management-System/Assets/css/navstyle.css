@@ -659,32 +659,34 @@ height: 25px;
 
 .clipart1
 {
-    width: 470px;
+    width: 550px;
     float: right;
-    margin-top: 0px;
-    margin-right: 0px;
+    margin-top: -40px;
+    margin-right: -180px;
 }
 
 .clipart2
 {
     width: 450px;
     float: right;
-    margin-top: 0px;
-    margin-right: 0px;
+    margin-top: -42px;
+    margin-right: -150px;
 }
 
 
-.clipart3 {
-  width: 338px;
-  float: right;
-  margin-top: -50px;
-  margin-right: 60px;
+.clipart3
+{
+    width: 400px;
+    float: right;
+    margin-top: -80px;
+    margin-right: -90px;
 }
-.clipart4 {
-  width: 423px;
-  float: right;
-  margin-top: -4px;
-  margin-right: 50px;
+.clipart4
+{
+    width: 500px;
+    float: right;
+    margin-top: -40px;
+    margin-right: -120px;
 }
 
 .imageContainer {
@@ -692,7 +694,7 @@ height: 25px;
     display: inline-block;
     position: relative;
     text-align: center;
-    float: left;
+    float:left;
     width: 700px;
     
  }
@@ -743,6 +745,7 @@ height: 25px;
   position: absolute;
   margin-left: 139px;
 }
+<<<<<<< HEAD
 
 /*--------------------------------------------------MQ---------------------------------------------------------------*/
 @media only screen and (max-width: 576px) {
@@ -840,6 +843,9 @@ height: 25px;
 
 
 }
+=======
+
+>>>>>>> 006e6f0688bb43e2032095f4840b87fd6ad6023c
 
 /*************************ADMIN**************************/
 
@@ -864,7 +870,7 @@ height: 25px;
   position: relative;
   text-align: center;
   
-  float:left;
+  float: left;
   width: 700px;
   
   transition: 0.5s ease;
@@ -892,4 +898,41 @@ opacity: 1;
     top: 20%;
     left: 60%;
     
+}
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }
