@@ -54,6 +54,63 @@ document.getElementById('Add_lead').style.display ="none";
 document.getElementById('lead_submitted').style.display ="none";
 }
 // <-----------------------------VISUAL SCRIPT END ---------------------->
+// <-----------------------------ANALYTICS------------------------------->
+function vis2Function() {
+    document.getElementById("openimg2").style.display = "contents";
+    document.getElementById("validatedimg2").style.display = "none";
+    document.getElementById("rejectedimg2").style.display = "none";
+    document.getElementById("closedimg2").style.display = "none";
+   
+   
+    document.getElementById("openbtn2").style.backgroundColor = "#F04705";
+    document.getElementById("validatedbtn2").style.backgroundColor = "#6c63ff";
+    document.getElementById("rejectedbtn2").style.backgroundColor = "#6c63ff";
+    document.getElementById("closedbtn2").style.backgroundColor = "#6c63ff";
+
+}
+
+function vis2Function1() {
+    document.getElementById("openimg2").style.display = "none";
+    document.getElementById("validatedimg2").style.display = "contents";
+    document.getElementById("rejectedimg2").style.display = "none";
+    document.getElementById("closedimg2").style.display = "none";
+
+
+    document.getElementById("openbtn2").style.backgroundColor = "#6c63ff";
+    document.getElementById("validatedbtn2").style.backgroundColor = "#F04705";
+    document.getElementById("rejectedbtn2").style.backgroundColor = "#6c63ff";
+    document.getElementById("closedbtn2").style.backgroundColor = "#6c63ff";
+
+}
+
+function vis2Function2() {
+    document.getElementById("openimg2").style.display = "none";
+    document.getElementById("validatedimg2").style.display = "none";
+    document.getElementById("rejectedimg2").style.display = "contents";
+    document.getElementById("closedimg2").style.display = "none";
+
+
+    document.getElementById("openbtn2").style.backgroundColor = "#6c63ff";
+    document.getElementById("validatedbtn2").style.backgroundColor = "#6c63ff";
+    document.getElementById("rejectedbtn2").style.backgroundColor = "#F04705";
+    document.getElementById("closedbtn2").style.backgroundColor = "#6c63ff";
+
+}
+
+function vis2Function3() {
+    document.getElementById("openimg2").style.display = "none";
+    document.getElementById("validatedimg2").style.display = "none";
+    document.getElementById("rejectedimg2").style.display = "none";
+    document.getElementById("closedimg2").style.display = "contents";
+
+
+    document.getElementById("openbtn2").style.backgroundColor = "#6c63ff";
+    document.getElementById("validatedbtn2").style.backgroundColor = "#6c63ff";
+    document.getElementById("rejectedbtn2").style.backgroundColor = "#6c63ff";
+    document.getElementById("closedbtn2").style.backgroundColor = "#F04705";
+
+}
+// <-----------------------------ANALYTICS END--------------------------->
 // <-----------------------------LEAD SUBMITTED ------------------------->
 function visFunction() {
     document.getElementById("openimg").style.display = "contents";
