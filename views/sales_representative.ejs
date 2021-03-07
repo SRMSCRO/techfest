@@ -312,7 +312,7 @@
                     <button type="button" id="rejectedbtn" class="btn btn-primary events_btn_img rejectedbtn"  style="isolation: isolate; background-color: #6c63ff; border-color: #6c63ff;" onclick="visFunction2()">REJECTED</button>
                     <button type="button" id="closedbtn" class="btn btn-primary events_btn_img closedbtn"  style="isolation: isolate; background-color: #6c63ff; border-color: #6c63ff;" onclick="visFunction3()">CLOSED</button>
                     </div>
-                    <button type="button" class="export1" >Export</button>
+                    
                 </div>
                 
                     
@@ -346,7 +346,16 @@
                         <img  class="sideimge"  src="../image/Group 27.png">
                         
                         <div class="caption text"><%=lead.project_name%></div>
-                        <div class="caption status"> <button type="button" class="submit"><%=lead.Status%></button></div>
+                        <div class="caption status"> <button id="modal1" type="button" class="submit"><%=lead.Status%></button></div>
+                        <div id="myModal1" class="modal1">
+
+                            <!-- Modal content -->
+                            <div class="modal-content1">
+                              <span class="close1">&times;</span>
+                              <p>Some text in the Modal..</p>
+                            </div>
+                          
+                        </div>
                     </div>
                     <%}%> <%}%>
                     <div>
@@ -361,7 +370,16 @@
                         <img class="sideimge" src="../image/Group 26.png">
                         
                         <div class="caption text"><%=lead.project_name%></div>
-                        <div class="caption status"> <button type="button" class="submit"><%=lead.Status%></button></div>
+                        <div class="caption status"> <button id="modal2" type="button" class="submit"><%=lead.Status%></button></div>
+                        <div id="myModal2" class="modal2">
+
+                            <!-- Modal content -->
+                            <div class="modal-content2">
+                              <span class="close2">&times;</span>
+                              <p>Some text in the Modal..</p>
+                            </div>
+                          
+                        </div>
                     </div>
                     <%}}%>
                     <div>
@@ -376,7 +394,16 @@
                         <img class="sideimge" src="../image/Group 25.png">
                         
                         <div class="caption text"><%=lead.project_name%></div>
-                        <div class="caption status"> <button type="button" class="submit"><%=lead.Status%></button></div>
+                        <div class="caption status"> <button id="modal3" type="button" class="submit"><%=lead.Status%></button></div>
+                        <div id="myModal3" class="modal3">
+
+                            <!-- Modal content -->
+                            <div class="modal-content3">
+                              <span class="close3">&times;</span>
+                              <p>Some text in the Modal..</p>
+                            </div>
+                          
+                        </div>
                     </div>
                     <%}}%>
                      <div>
@@ -414,7 +441,7 @@
                     <button type="button" id="rejected_btn" class="btn btn-primary events_btn_img rejected_btn"  style="isolation: isolate; background-color: #6c63ff; border-color: #6c63ff;" onclick="visFunction6()">REJECTED</button>                  
                     <button type="button" id="closed_btn" class="btn btn-primary events_btn_img closed_btn"  style="isolation: isolate; background-color: #6c63ff; border-color: #6c63ff;" onclick="visFunction7()">CLOSED</button>
                 </div>
-                    <button type="button" class="export1" >Export</button>
+                   
             </div>
                 
 
