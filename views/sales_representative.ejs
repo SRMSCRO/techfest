@@ -134,19 +134,20 @@
             <div class="sections text-center buttons-analytics ">
                 <button type="button" id="openbtn2" class="btn btn-primary events_btn_img openbtn "  style="isolation: isolate; background-color: #f04705; border-color: #f04705;" onclick="vis2Function()">LEADS</button>                  
                 <button type="button" id="validatedbtn2" class="btn btn-primary events_btn_img validatedbtn"  style="isolation: isolate; background-color: #6c63ff; border-color: #6c63ff;" onclick="vis2Function1()">STATUS</button>
-                <button type="button" id="rejectedbtn2" class="btn btn-primary events_btn_img rejectedbtn"  style="isolation: isolate; background-color: #6c63ff; border-color: #6c63ff;" onclick="vis2Function2()">LEADS APPROVED</button>
+                <button type="button" id="rejectedbtn2" class="btn btn-primary events_btn_img1 rejectedbtn"  style="isolation: isolate; background-color: #6c63ff; border-color: #6c63ff;" onclick="vis2Function2()">LEADS APPROVED</button>
                 <!-- <button type="button" id="closedbtn2" class="btn btn-primary events_btn_img closedbtn"  style="isolation: isolate; background-color: #6c63ff; border-color: #6c63ff;" onclick="vis2Function3()">CLOSED</button> -->
                 </div>
                 <form action="/leadexport/<%=userId%>" id="export_form" method="get"> 
                     <button type="button" onclick="document.getElementById('export_form').submit();" class="export" >Export</button>
                   </form>
             </div>
-            <label class="labl"for="start">Year & Months :</label>
+            <label class="labl"for="start">Year & Month :</label>
             <input class="y_m"type="month" id="start" name="start" min="2017-01" value="2021-01">
             <label class="lable"for="start">Total Leads submitted  : </label>
             <input class="leads_sub"type="text" value="10" readonly>
                 
-            <div class="members container openimg" id="openimg2"><%for(let lead of leads){%>
+            <div class="members container openimg" id="openimg2">
+                <%for(let lead of leads){%>
                 <%if(lead.Status == "Open"){%>
                 <div class="imageContainer-analytics">
                     <img class="sideimge" src="../image/Group 24.png">
@@ -184,15 +185,18 @@
                 
             </div>
             
-            <div class="members container rejectedimg" id="rejectedimg2"><%for(let lead of leads){%>
-                <%if(lead.Status == "Rejected"){%>
-                <div class="imageContainer-analytics">
-                    <img class="sideimge" src="../image/Group 26.png">
-                    
-                    <div class="caption text"><%=lead.project_name%></div>
-                    <div class="caption status"> <button type="button" class="submit"><%=lead.Status%></button></div>
-                </div>
-                <%}}%>
+            <div class="members container rejectedimg" id="rejectedimg2">
+                <label class="lab"for="start">Approved By User :</label>
+                <%for(let lead of leads){%>
+                    <%if(lead.Status == "Open"){%>
+                    <div class="imageContainer-analytics">
+                        <img class="sideimge" src="../image/Group 24.png">
+                        <div class="caption text"><%=lead.project_name%> </div>
+                        <div class="caption status"> <button  type="button" class="submit"><%=lead.Status%></button></div>
+    
+                    </div>
+                    <%}%>   <%}%>
+                
                 <div>
                     <img class="clipart_" src="../image/undraw_message_sent_1030.svg">
                     
