@@ -10,6 +10,7 @@ var chart = new Chart(ctx, {
             label: 'Open Leads',
             backgroundColor: '#505ae250',
             borderColor: '#5059E2',
+            hoverBackgroundColor: '#505ae2ab',
             
             data: [3, 10, 20, 5,15,35],
            
@@ -34,7 +35,7 @@ var chart = new Chart(ctx, {
             labels: {
                 fontColor: '#5059E2'
             }
-        }
+        },
         
     }
 });
@@ -51,8 +52,9 @@ var chart = new Chart(ctx, {
             label: 'Closed Leads',
             backgroundColor: '#505ae250',
             borderColor: '#5059E2',
-            
+            hoverBackgroundColor: '#505ae2ab',
             data: [3, 10, 20, 5,15,35],
+
            
             borderWidth:1,
         }]
@@ -93,7 +95,7 @@ var myDoughnutChart = new Chart(ctx, {
             backgroundColor: [
                 '#5059E2',
                 '#88E7E7',
-                '#da9ff9',
+                '#7868e6',
                 '#98acf8',
                 
             ]
@@ -101,15 +103,12 @@ var myDoughnutChart = new Chart(ctx, {
             borderColor: [
                 '#5059E2',
                 '#88E7E7',
-                '#da9ff9',
+                '#7868e6',
                 '#98acf8',
                 
-            ],
-            
-            
-            
+            ],  
             data: [3, 10, 15, 5,],
-            borderWidth:2,
+            borderWidth:-1,
            
         }]
     },
