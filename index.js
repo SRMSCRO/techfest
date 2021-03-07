@@ -9,10 +9,11 @@ const app = express();
 const Lead = require('./models/lead');
 const User = require('./models/user');
 
+
 const bcrypt = require('bcrypt');
 const session = require("express-session");
-const db = "LMS_4";
-mongoose.connect('mongodb://localhost:27017/'+db, { useNewUrlParser: true, useUnifiedTopology: true }).then(() => { console.log("MONGO CONNECTION OPEN") }).catch(err => {
+
+mongoose.connect('mongodb://localhost:27017/LMS_4', { useNewUrlParser: true, useUnifiedTopology: true }).then(() => { console.log("MONGO CONNECTION OPEN") }).catch(err => {
     console.log("THERE IS A PROBLEM");
     console.log(err)
 });
@@ -38,31 +39,7 @@ const requireLogin = (req, res, next) => {
 app.get("/",(req,res)=>{
     res.render("home");
 });
-// -------------------ADMIN PAGE EXPORT ---------------
-app.get("/leadexport/:id",requireLogin,(req,res)=>{
 
-    //Find all the leads and display it
-    Lead.find({},(err,leads)=>{
-
-        //Checking the user is admin or not
-        User.findById(req.params.id).then(user => {
-            
-            if(user.Position=="Admin"){
-                User.find({}).then(allUsers=>{
-                    res.set('Cache-Control', 'no-cache, private, no-store, must-revalidate, max-stale=0, post-check=0, pre-check=0');
-                    res.render("leadexport",{leads:leads,id:req.params.id,allUsers:allUsers,user:user});
-                });
-            }else{User.find({lead_submitted_by:user.Name, lead_submitted_to:user.Name}).then(allUsers=>{
-                res.set('Cache-Control', 'no-cache, private, no-store, must-revalidate, max-stale=0, post-check=0, pre-check=0');
-                res.render("leadexport",{leads:leads,id:req.params.id,allUsers:allUsers,user:user});
-            });
-            }
-        });
-        
-    });
-    
-});
-// ------------------------User Lead export ------------
 // -----------------AUTENTICATION-----------------------
 // --------------LOGIN------------------
 app.get("/login",(req,res)=>{
@@ -126,12 +103,10 @@ app.post("/logout", (req, res) => {
     req.session.destroy();
     res.redirect("/login");
 });
-// -------------------------Filter-----------------------
-
 
 // ----------------ADMIN PAGE- To Submit Leads-------------------------------------------------------------------------------------------
 app.get("/admin/:id",requireLogin,(req,res)=>{
-    
+
     //Find all the leads and display it
     Lead.find({},(err,leads)=>{
 
@@ -188,11 +163,10 @@ app.get("/sales_representative/:id",requireLogin,async(req,res)=>{
     // Find the user by ID
     let _id=req.params.id;
     const user = await User.findOne({ _id });
-    // console.log(user.Name);
     const countLead=await Lead.countDocuments();
     // Find the lead for the user
      Lead.find({},(err,leads)=>{
-        User.find({lead_submitted_by:user.Name, lead_submitted_to:user.Name}).then(allUsers=>{
+        User.find({}).then(allUsers=>{
             res.set('Cache-Control', 'no-cache, private, no-store, must-revalidate, max-stale=0, post-check=0, pre-check=0');
             res.render("sales_representative",{leads:leads,userId:req.params.id, user:user, countLead,allUsers:allUsers});
         });
@@ -236,7 +210,6 @@ app.post("/update_status/:id/:userId",async(req,res)=>{
     });
     }
 });
-
 app.get("*",(req,res)=>{
     res.send("404 page not found");
 });
