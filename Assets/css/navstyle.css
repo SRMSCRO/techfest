@@ -757,6 +757,7 @@ height: 25px;
 @media only screen and (max-width: 500px) {
   .btn {
     display: inline-block;
+    display: none;  /******************THIS*************/
     font-weight: 400;
     color: white;
     text-align: center;
@@ -791,14 +792,24 @@ height: 25px;
     margin-left: 15px;
 }
 
-.clipart1, .clipart2 , .clipart3 , .clipart4  {
+.clipart1 {
+   
   width: 291px;
   float: right;
   margin-top: 12px;
   margin-right: -4px;
 }
+.clipart2 , .clipart3 , .clipart4  {
+  display: none;   /******************THIS*************/
+  width: 291px;
+  float: right;
+  margin-top: 12px;
+  margin-right: -4px;
+
+}
 
 .export1 {
+  display: none;  /******************THIS*************/
   background-color: #f04705;
   border-color: #f04705;
   border-radius: 10px;
@@ -810,6 +821,13 @@ height: 25px;
   margin-left: 63px;
 }
 
+.text {
+  position: absolute;
+  top: 35%;
+  left: 27%;
+  font-size: 14px;
+  font-family: Montserrat Regular;
+}
 
 
 
