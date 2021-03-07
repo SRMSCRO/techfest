@@ -96,7 +96,7 @@
       
     <div class="row">
         <div class="col-md-12 col-xs-4">
-            <div class="sections text-center">
+            <div class="sections text-center buttons-analytics ">
                 <button type="button" id="openbtn2" class="btn btn-primary events_btn_img openbtn "  style="isolation: isolate; background-color: #f04705; border-color: #f04705;" onclick="vis2Function()">OPEN</button>                  
                 <button type="button" id="validatedbtn2" class="btn btn-primary events_btn_img validatedbtn"  style="isolation: isolate; background-color: #6c63ff; border-color: #6c63ff;" onclick="vis2Function1()">VALIDATED</button>
                 <button type="button" id="rejectedbtn2" class="btn btn-primary events_btn_img rejectedbtn"  style="isolation: isolate; background-color: #6c63ff; border-color: #6c63ff;" onclick="vis2Function2()">REJECTED</button>
@@ -110,15 +110,15 @@
                 
             <div class="members container openimg" id="openimg2"><%for(let lead of leads){%>
                 <%if(lead.Status == "Open"){%>
-                <div class="imageContainer">
-                    <img style="width: 700px;" src="../image/Group 24.png">
+                <div class="imageContainer-analytics">
+                    <img class="sideimge" src="../image/Group 24.png">
                     <div class="caption text"><%=lead.project_name%> </div>
                     <div class="caption status"> <button  type="button" class="submit"><%=lead.Status%></button></div>
 
                 </div>
                 <%}%>   <%}%>
                 <div>
-                    <img class="clipart" src="../image/undraw_envelope_n8lc.svg">
+                    <img class="clipart-analytics" src="../image/undraw_envelope_n8lc.svg">
                 </div>
                
             </div>
@@ -126,8 +126,8 @@
             
             <div class="members container validatedimg" id="validatedimg2"><%for(let lead of leads){%>
                 <%if(lead.Status == "Validated"){%>
-                <div class="imageContainer">
-                    <img style="width: 700px;" src="../image/Group 27.png">
+                <div class="imageContainer-analytics">
+                    <img class="sideimge" src="../image/Group 27.png">
                     
                     <div class="caption text"><%=lead.project_name%></div>
                     <div class="caption status"> <button type="button" class="submit"><%=lead.Status%></button></div>
@@ -141,8 +141,8 @@
             
             <div class="members container rejectedimg" id="rejectedimg2"><%for(let lead of leads){%>
                 <%if(lead.Status == "Rejected"){%>
-                <div class="imageContainer">
-                    <img style="width: 700px;" src="../image/Group 26.png">
+                <div class="imageContainer-analytics">
+                    <img class="sideimge" src="../image/Group 26.png">
                     
                     <div class="caption text"><%=lead.project_name%></div>
                     <div class="caption status"> <button type="button" class="submit"><%=lead.Status%></button></div>
@@ -156,8 +156,8 @@
             
             <div class="members container closedimg" id="closedimg2"><%for(let lead of leads){%>
                 <%if(lead.Status == "Closed"){%>
-                <div class="imageContainer">
-                    <img style="width: 700px;" src="../image/Group 25.png">
+                <div class="imageContainer-analytics">
+                    <img class="sideimge" src="../image/Group 25.png">
                     
                     <div class="caption text"><%=lead.project_name%></div>
                     <div class="caption status"> <button type="button" class="submit"><%=lead.Status%></button></div>
