@@ -102,7 +102,7 @@
                 <button type="button" id="rejectedbtn2" class="btn btn-primary events_btn_img rejectedbtn"  style="isolation: isolate; background-color: #6c63ff; border-color: #6c63ff;" onclick="vis2Function2()">REJECTED</button>
                 <button type="button" id="closedbtn2" class="btn btn-primary events_btn_img closedbtn"  style="isolation: isolate; background-color: #6c63ff; border-color: #6c63ff;" onclick="vis2Function3()">CLOSED</button>
                 </div>
-                <form action="/leadexport/<%=id%>" id="export_form" method="get"> 
+                <form action="/leadexport/<%=userId%>" id="export_form" method="get"> 
                     <button type="button" onclick="document.getElementById('export_form').submit();" class="export" >Export</button>
                   </form>
             </div>
