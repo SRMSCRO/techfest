@@ -53,14 +53,17 @@ app.get("/leadexport/:id",requireLogin,(req,res)=>{
                     res.set('Cache-Control', 'no-cache, private, no-store, must-revalidate, max-stale=0, post-check=0, pre-check=0');
                     res.render("leadexport",{leads:leads,id:req.params.id,allUsers:allUsers,user:user});
                 });
-            }else{
-                res.redirect("/sales_representative/"+user._id);
+            }else{User.find({lead_submitted_by:user.Name, lead_submitted_to:user.Name}).then(allUsers=>{
+                res.set('Cache-Control', 'no-cache, private, no-store, must-revalidate, max-stale=0, post-check=0, pre-check=0');
+                res.render("leadexport",{leads:leads,id:req.params.id,allUsers:allUsers,user:user});
+            });
             }
         });
         
     });
     
 });
+// ------------------------User Lead export ------------
 // -----------------AUTENTICATION-----------------------
 // --------------LOGIN------------------
 app.get("/login",(req,res)=>{
