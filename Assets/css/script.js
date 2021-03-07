@@ -308,3 +308,36 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+
+
+
+
+
+
+
+
+
+var modal_admin = document.getElementById("myModal_admin");
+
+// Get the button that opens the modal
+var btn_admin = document.getElementById("modal_admin");
+
+// Get the <span> element that closes the modal
+var span_admin = document.getElementsByClassName("close_admin")[0];
+
+// When the user clicks on the button, open the modal
+btn_admin.onclick = function() {
+  modal_admin.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span_admin.onclick = function() {
+  modal_admin.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal_admin) {
+    modal_admin.style.display = "none";
+  }
+}

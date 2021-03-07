@@ -17,9 +17,6 @@
         <link rel="stylesheet" href="/css/navstyle.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw==" crossorigin="anonymous">
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>
 
 </head>
 <body onload="visFunction8()">
@@ -95,16 +92,25 @@
    
         <div class="members container openimg1" id="openimg1"><%for(let lead of leads){%>
           <%if(lead.Status == "Open"){%>
-            <div class="imageContainer1">
+          <div class="imageContainer1">
               <img style="width: 700px;" src="../image/Component 10 – 56.png">
               
-              <div class="caption text"><%=lead.project_name%> </div>
-            <div class="caption status"><a href="#Project"><button type="button" class="submit"><%=lead.Status%></button></a></div>
+            <div class="caption text"><%=lead.project_name%> </div>
+            <div class="caption status"><button id="modal_admin" type="button" class="submit"><%=lead.Status%></button></div>
+            <div id="myModal_admin" class="modal_admin">
+
+              <!-- Modal content -->
+              <div class="modal-content_admin">
+                <span class="close_admin">&times;</span>
+                <p>Some text in the Modal..</p>
+              </div>
+            
+            </div>
           </div>
 
           <%}%>   <%}%>
 
-      </div>
+        </div>
      
       
       <div class="members container validatedimg" id="validatedimg1"><%for(let lead of leads){%>
@@ -309,6 +315,20 @@
         /*initiate the autocomplete function on the "myInput" element, and pass along the countries array as possible autocomplete values:*/
         autocomplete(document.getElementById("myInput"),users );
         </script>
-        <script src="../css/script.js" type="text/javascript"></script> 
+         <script src="../css/script.js" type="text/javascript"></script>        
+         <!-- <script src="https://kit.fontawesome.com/yourcode.js"></script> -->
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
+         <script src="/css/myChart.js" type="text/javascript"></script>
+         <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.4.1.min.220afd743d.js" type="text/javascript" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+               
+       <!---- <script src="../css/script.js" type="text/javascript"></script> 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
+        <script src="/css/myChart.js" type="text/javascript"></script>
+        <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.4.1.min.220afd743d.js" type="text/javascript" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>--->
+       
 </body>
 </html>
