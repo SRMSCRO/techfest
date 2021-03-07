@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lead Export</title>
+    <!-- <link rel="icon" href="/img/logowhite.svg" type="image/x-icon"> -->
+
+    <script type="text/javascript">
+        function exportToExcel(tableID, filename = 'Lead'){
+            var downloadurl;
+            var dataFileType = 'application/vnd.ms-excel';
+            var tableSelect = document.getElementById(tableID);
+            var tableHTMLData = tableSelect.outerHTML.replace(/ /g, '%20');
+            
+            // Specify file name
+            filename = filename?filename+'.xls':'export_excel_data.xls';
+            
+            // Create download link element
+            downloadurl = document.createElement("a");
+            
+            document.body.appendChild(downloadurl);
+            
+            if(navigator.msSaveOrOpenBlob){
+                var blob = new Blob(['\ufeff', tableHTMLData], {
+                    type: dataFileType
+                });
+                navigator.msSaveOrOpenBlob( blob, filename);
+            }else{
+                // Create a link to the file
+                downloadurl.href = 'data:' + dataFileType + ', ' + tableHTMLData;
+            
+                // Setting the file name
+                downloadurl.download = filename;
+                
+                //triggering the function
+                downloadurl.click();
+            }
+        }
+         
+        </script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    
+    <nav class="navbar">
+       <h1 > Lead Export Portal</h1>
+      </nav>
+      <!-- <h3>Hello! Admin : Please change the screen Zoom to 67% for better experience</h3> -->
+    <div>
+       
+        <button onclick="exportToExcel('tblexportData', 'user-data')" class="btn btn-success mt-2 mb-2">Export Table Data To Excel File</button>
+    </div>
+    <form action="/logout" method="POST">
+    <button>logout</button>
+    </form>
+    <div>
+        <div class="container"></div>
+    <table border="2px" id="tblexportData" class="table table-hover table-bordered">
+        <thead>
+            <td>Project Name</td>
+            <td>Status</td>
+            <td>Customer Name</td>
+            <td>Project Value</td>
+            <td>Segment</td>
+            <td>Submitted By</td>
+            <td>Assigned To</td>
+            <td>Opened at</td>
+            <td>Validated Or Rejected at</td>
+            <td>Closed At</td>
+            <td>Last Update at</td>
+        </thead>
+        <tbody>
+            <%for(let lead of leads){%>
+                <tr>
+                    <td>
+                        <%=lead.project_name%>
+                    </td>
+                    <td>
+                        <%=lead.Status%>
+                    </td>
+                    <td>
+                        <%=lead.customer_name%>
+                    </td>
+                    <td>
+                        <%=lead.project_value%>
+                    </td>
+                    <td>
+                        <%=lead.Segment_details%>
+                    </td>
+                    <td>
+                        <%=lead.lead_submitted_by%>
+                    </td>
+                    <td>
+                        <%=lead.lead_submitted_to%>
+                    </td>
+                    <td>
+                        <%=lead.Open_time%>
+                    </td>
+                    <td>
+                        <%=lead.Validate_or_reject_time%>
+                    </td>
+                    <td>
+                        <%=lead.Closed_time%>
+                    </td>
+                    <td>
+                        <%=lead.Update_time%>
+                    </td>
+                </tr>
+                <%}%>
+        </tbody>
+    </table>
+    </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+</body>
+
+</html>

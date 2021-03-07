@@ -61,7 +61,7 @@
         <div class="float-child">
             <div class="dropdown transparentbar" id="myseg" >
               
-             <input class="btn btn-light dropdown-toggle" id="segment1" type="text" list="segment"  name="Segment_details" placeholder="Segment Details" autocomplete="off">
+             <input class="btn1 btn-light dropdown-toggle" id="segment1" type="text" list="segment"  name="Segment_details" placeholder="Segment Details" autocomplete="off">
              
               <datalist id="segment">
                 <option value="Pharma">
@@ -70,7 +70,7 @@
                 <option value="Diagnostics">
                 <option value="Environmental & Applied Solutions">
               </datalist>
-              <button onclick="filterseg()" id="segfilter">filter</button>
+              <button class="filter-button" onclick="filterseg()" id="segfilter">filter</button>
          
              
         </div>
@@ -87,13 +87,15 @@
            
             
             </div>
-            <button type="button" class="export" >Export</button>
+           <form action="/leadexport/<%=id%>" id="export_form" method="get"> 
+            <button type="button" onclick="document.getElementById('export_form').submit();" class="export" >Export</button>
+          </form>
         </div>
    
         <div class="members container openimg1" id="openimg1"><%for(let lead of leads){%>
           <%if(lead.Status == "Open"){%>
           <div class="imageContainer1">
-              <img style="width: 700px;" src="../image/Component 10 – 56.png">
+              <img  class="sideimge" src="../image/Component 10 – 56.png">
               
             <div class="caption text"><%=lead.project_name%> </div>
             <div class="caption status"><button id="modal_admin" type="button" class="submit"><%=lead.Status%></button></div>
@@ -116,7 +118,7 @@
       <div class="members container validatedimg" id="validatedimg1"><%for(let lead of leads){%>
           <%if(lead.Status == "Validated"){%>
           <div class="imageContainer1">
-              <img style="width: 700px;" src="../image/Component 10 – 56.png">
+              <img class="sideimge" src="../image/Component 10 – 56.png">
               
               <div class="caption text"><%=lead.project_name%></div>
               <div class="caption status"> <button type="button" class="submit"><%=lead.Status%></button></div>
@@ -141,7 +143,7 @@
       <div class="members container closedimg" id="closedimg1"><%for(let lead of leads){%>
           <%if(lead.Status == "Closed"){%>
           <div class="imageContainer1">
-              <img style="width: 700px;" src="../image/Component 10 – 56.png">
+              <img class="sideimge" src="../image/Component 10 – 56.png">
               
               <div class="caption text"><%=lead.project_name%></div>
               <div class="caption status"> <button type="button" class="submit"><%=lead.Status%></button></div>
