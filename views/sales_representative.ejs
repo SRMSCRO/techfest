@@ -448,7 +448,7 @@
                 <div class="members container openimg_" id="openimg_"><%for (let lead of leads){%>
                     <%if(lead.lead_submitted_to == user.Name && lead.Status == "Open"){%>
                     <div class="imageContainer">
-                        <img style="width: 700px;" src="../image/Group 24.png">
+                        <img  class="sideimge"  src="../image/Group 24.png">
                         <div class="caption text"><%=lead.project_name%>
                         <form action="/update_status/<%=lead._id%>/<%=userId%>" method="POST">
                             <select name="status">
@@ -478,7 +478,7 @@
                 <div class="members container validatedimg_" id="validatedimg_"><%for (let lead of leads){%>
                     <%if(lead.lead_submitted_to == user.Name && lead.Status == "Validated"){%>
                     <div class="imageContainer">
-                        <img style="width: 700px;" src="../image/Group 27.png">
+                        <img class="sideimge" src="../image/Group 27.png">
                         <div class="caption text"><%=lead.project_name%>
                             <form action="/update_status/<%=lead._id%>/<%=userId%>" method="POST">
                             <select name="status">
@@ -507,7 +507,7 @@
                 <div class="members container rejectedimg_" id="rejectedimg_"><%for (let lead of leads){%>
                     <%if(lead.lead_submitted_to == user.Name && lead.Status == "Rejected"){%>
                     <div class="imageContainer">
-                        <img style="width: 700px;" src="../image/Group 26.png">
+                        <img class="sideimge" src="../image/Group 26.png">
                         <div class="caption text"><%=lead.project_name%>
                         <form action="/update_status/<%=lead._id%>/<%=userId%>" method="POST">
                             <select name="status">
@@ -536,7 +536,7 @@
                 <div class="members container closedimg_" id="closedimg_"><%for (let lead of leads){%>
                     <%if(lead.lead_submitted_to == user.Name && lead.Status == "Closed"){%>
                     <div class="imageContainer">
-                        <img style="width: 700px;" src="../image/Group 25.png">
+                        <img class="sideimge" src="../image/Group 25.png">
                         
                         <div class="caption text"><%=lead.project_name%>
                         <form action="/update_status/<%=lead._id%>/<%=userId%>" method="POST">
