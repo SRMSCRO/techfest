@@ -16,11 +16,7 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
         <link rel="stylesheet" href="/css/navstyle.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker.css" rel="stylesheet"/>
-        
 <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-
 </head>
 <body onload="vis()">
 
@@ -101,20 +97,16 @@
     <div class="row">
         <div class="col-md-12 col-xs-4">
             <div class="sections text-center">
-                <button type="button" id="openbtn2" class="btn btn-primary events_btn_img openbtn "  style="isolation: isolate; background-color: #f04705; border-color: #f04705;" onclick="vis2Function()">LEADS</button>                  
-                <button type="button" id="validatedbtn2" class="btn btn-primary events_btn_img validatedbtn"  style="isolation: isolate; background-color: #6c63ff; border-color: #6c63ff;" onclick="vis2Function1()">STATUS</button>
-                <button type="button" id="rejectedbtn2" class="btn btn-primary events_btn_img lsbtn"  style="isolation: isolate; background-color: #6c63ff; border-color: #6c63ff;" onclick="vis2Function2()">LEADS APPROVED</button>
-                <!-- <button type="button" id="closedbtn2" class="btn btn-primary events_btn_img closedbtn"  style="isolation: isolate; background-color: #6c63ff; border-color: #6c63ff;" onclick="vis2Function3()">CLOSED</button> -->
+                <button type="button" id="openbtn2" class="btn btn-primary events_btn_img openbtn "  style="isolation: isolate; background-color: #f04705; border-color: #f04705;" onclick="vis2Function()">OPEN</button>                  
+                <button type="button" id="validatedbtn2" class="btn btn-primary events_btn_img validatedbtn"  style="isolation: isolate; background-color: #6c63ff; border-color: #6c63ff;" onclick="vis2Function1()">VALIDATED</button>
+                <button type="button" id="rejectedbtn2" class="btn btn-primary events_btn_img rejectedbtn"  style="isolation: isolate; background-color: #6c63ff; border-color: #6c63ff;" onclick="vis2Function2()">REJECTED</button>
+                <button type="button" id="closedbtn2" class="btn btn-primary events_btn_img closedbtn"  style="isolation: isolate; background-color: #6c63ff; border-color: #6c63ff;" onclick="vis2Function3()">CLOSED</button>
                 </div>
-                <button type="button" class="export_1" >Export</button>
-        </div>
-        
-        <div class="y_m">
-            <label class="labl"for="start">Year & Month:</label>
-            <input class="datepicker" type="month" id="start" name="start" min="2017-01" value="2021-03">
-        </div>    
-            <div class="members container openimg" id="openimg2">
-                <%for(let lead of leads){%>
+                <button type="button" class="export1" >Export</button>
+            </div>
+            
+                
+            <div class="members container openimg" id="openimg2"><%for(let lead of leads){%>
                 <%if(lead.Status == "Open"){%>
                 <div class="imageContainer">
                     <img style="width: 700px;" src="../image/Group 24.png">
@@ -122,20 +114,16 @@
                     <div class="caption status"> <button  type="button" class="submit"><%=lead.Status%></button></div>
 
                 </div>
-                <%}%>  
-                 <%}%>
+                <%}%>   <%}%>
                 <div>
-                    <img class="clipart_3" src="../image/undraw_Data_re_80ws.png">
+                    <img class="clipart" src="../image/undraw_envelope_n8lc.svg">
                 </div>
                
             </div>
             
             
-            <div class="members container validatedimg" id="validatedimg2">
-                
-                <%for(let lead of leads){%>
+            <div class="members container validatedimg" id="validatedimg2"><%for(let lead of leads){%>
                 <%if(lead.Status == "Validated"){%>
-                    
                 <div class="imageContainer">
                     <img style="width: 700px;" src="../image/Group 27.png">
                     
@@ -143,15 +131,6 @@
                     <div class="caption status"> <button type="button" class="submit"><%=lead.Status%></button></div>
                 </div>
                 <%}%> <%}%>
-                <div class="barChart"> 
-                    <canvas id="myChart"></canvas>
-                </div>
-                <div class="barChart1"> 
-                    <canvas id="myChart1"></canvas>
-                </div>
-                <div class="pieChart"> 
-                    <canvas id="pieChart"></canvas>
-                </div>
                 <div>
                     <img class="clipart_" src="../image/undraw_message_sent_1030.svg">
                     
@@ -168,7 +147,7 @@
                 </div>
                 <%}}%>
                 <div>
-                    <img class="clipart_1" src="../image/undraw_message_sent_1030.svg">
+                    <img class="clipart_1" src="../image/undraw_cancel_u1it (1).svg">
                     
                 </div>
             </div>
@@ -664,14 +643,12 @@
         crossorigin="anonymous"></script> -->
         <script src="../css/script.js" type="text/javascript"></script>        
         <!-- <script src="https://kit.fontawesome.com/yourcode.js"></script> -->
-        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script> -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
         <script src="/css/myChart.js" type="text/javascript"></script>
         <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.4.1.min.220afd743d.js" type="text/javascript" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.js"></script>    
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+              
         
 </body>
 </html>
