@@ -9,7 +9,6 @@ const app = express();
 const Lead = require('./models/lead');
 const User = require('./models/user');
 
-
 const bcrypt = require('bcrypt');
 const session = require("express-session");
 const db = "LMS_4";
@@ -127,10 +126,12 @@ app.post("/logout", (req, res) => {
     req.session.destroy();
     res.redirect("/login");
 });
+// -------------------------Filter-----------------------
+
 
 // ----------------ADMIN PAGE- To Submit Leads-------------------------------------------------------------------------------------------
 app.get("/admin/:id",requireLogin,(req,res)=>{
-
+    
     //Find all the leads and display it
     Lead.find({},(err,leads)=>{
 
