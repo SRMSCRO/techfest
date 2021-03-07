@@ -110,6 +110,13 @@ function vis2Function3() {
     document.getElementById("closedbtn2").style.backgroundColor = "#F04705";
 
 }
+$("#datepicker").datepicker(
+  {viewMode: 'years',
+   format: 'mm-yyyy'
+});
+
+
+
 // <-----------------------------ANALYTICS END--------------------------->
 // <-----------------------------LEAD SUBMITTED ------------------------->
 function visFunction() {
