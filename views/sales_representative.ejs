@@ -102,7 +102,9 @@
                 <button type="button" id="rejectedbtn2" class="btn btn-primary events_btn_img rejectedbtn"  style="isolation: isolate; background-color: #6c63ff; border-color: #6c63ff;" onclick="vis2Function2()">REJECTED</button>
                 <button type="button" id="closedbtn2" class="btn btn-primary events_btn_img closedbtn"  style="isolation: isolate; background-color: #6c63ff; border-color: #6c63ff;" onclick="vis2Function3()">CLOSED</button>
                 </div>
-                <button type="button" class="export1" >Export</button>
+                <form action="/leadexport/<%=userId%>" id="export_form" method="get"> 
+                    <button type="button" onclick="document.getElementById('export_form').submit();" class="export" >Export</button>
+                  </form>
             </div>
             
                 
@@ -310,7 +312,7 @@
                     <button type="button" id="rejectedbtn" class="btn btn-primary events_btn_img rejectedbtn"  style="isolation: isolate; background-color: #6c63ff; border-color: #6c63ff;" onclick="visFunction2()">REJECTED</button>
                     <button type="button" id="closedbtn" class="btn btn-primary events_btn_img closedbtn"  style="isolation: isolate; background-color: #6c63ff; border-color: #6c63ff;" onclick="visFunction3()">CLOSED</button>
                     </div>
-                    <button type="button" class="export1" >Export</button>
+                    
                 </div>
                 
                     
@@ -344,7 +346,16 @@
                         <img  class="sideimge"  src="../image/Group 27.png">
                         
                         <div class="caption text"><%=lead.project_name%></div>
-                        <div class="caption status"> <button type="button" class="submit"><%=lead.Status%></button></div>
+                        <div class="caption status"> <button id="modal1" type="button" class="submit"><%=lead.Status%></button></div>
+                        <div id="myModal1" class="modal1">
+
+                            <!-- Modal content -->
+                            <div class="modal-content1">
+                              <span class="close1">&times;</span>
+                              <p>Some text in the Modal..</p>
+                            </div>
+                          
+                        </div>
                     </div>
                     <%}%> <%}%>
                     <div>
@@ -359,7 +370,16 @@
                         <img class="sideimge" src="../image/Group 26.png">
                         
                         <div class="caption text"><%=lead.project_name%></div>
-                        <div class="caption status"> <button type="button" class="submit"><%=lead.Status%></button></div>
+                        <div class="caption status"> <button id="modal2" type="button" class="submit"><%=lead.Status%></button></div>
+                        <div id="myModal2" class="modal2">
+
+                            <!-- Modal content -->
+                            <div class="modal-content2">
+                              <span class="close2">&times;</span>
+                              <p>Some text in the Modal..</p>
+                            </div>
+                          
+                        </div>
                     </div>
                     <%}}%>
                     <div>
@@ -374,7 +394,16 @@
                         <img class="sideimge" src="../image/Group 25.png">
                         
                         <div class="caption text"><%=lead.project_name%></div>
-                        <div class="caption status"> <button type="button" class="submit"><%=lead.Status%></button></div>
+                        <div class="caption status"> <button id="modal3" type="button" class="submit"><%=lead.Status%></button></div>
+                        <div id="myModal3" class="modal3">
+
+                            <!-- Modal content -->
+                            <div class="modal-content3">
+                              <span class="close3">&times;</span>
+                              <p>Some text in the Modal..</p>
+                            </div>
+                          
+                        </div>
                     </div>
                     <%}}%>
                      <div>
@@ -412,14 +441,14 @@
                     <button type="button" id="rejected_btn" class="btn btn-primary events_btn_img rejected_btn"  style="isolation: isolate; background-color: #6c63ff; border-color: #6c63ff;" onclick="visFunction6()">REJECTED</button>                  
                     <button type="button" id="closed_btn" class="btn btn-primary events_btn_img closed_btn"  style="isolation: isolate; background-color: #6c63ff; border-color: #6c63ff;" onclick="visFunction7()">CLOSED</button>
                 </div>
-                    <button type="button" class="export1" >Export</button>
+                   
             </div>
                 
 
                 <div class="members container openimg_" id="openimg_"><%for (let lead of leads){%>
                     <%if(lead.lead_submitted_to == user.Name && lead.Status == "Open"){%>
                     <div class="imageContainer">
-                        <img style="width: 700px;" src="../image/Group 24.png">
+                        <img  class="sideimge"  src="../image/Group 24.png">
                         <div class="caption text"><%=lead.project_name%>
                         <form action="/update_status/<%=lead._id%>/<%=userId%>" method="POST">
                             <select name="status">
@@ -430,7 +459,16 @@
                               <button>Update</button>
                         </form>
                         </div>
-                        <div class="caption status"> <button type="button" class="submit">Status</button></div>
+                        <div class="caption status"> <button id="modal4" type="button" class="submit">Status</button></div>
+                        <div id="myModal4" class="modal4">
+
+                            <!-- Modal content -->
+                            <div class="modal-content4">
+                              <span class="close4">&times;</span>
+                              <p>Some text in the Modal..</p>
+                            </div>
+                          
+                        </div>
                     </div>
                     <%}}%>
                     <div>
@@ -440,7 +478,7 @@
                 <div class="members container validatedimg_" id="validatedimg_"><%for (let lead of leads){%>
                     <%if(lead.lead_submitted_to == user.Name && lead.Status == "Validated"){%>
                     <div class="imageContainer">
-                        <img style="width: 700px;" src="../image/Group 27.png">
+                        <img class="sideimge" src="../image/Group 27.png">
                         <div class="caption text"><%=lead.project_name%>
                             <form action="/update_status/<%=lead._id%>/<%=userId%>" method="POST">
                             <select name="status">
@@ -450,7 +488,16 @@
                               </select>
                               <button>Update</button>
                         </form></div>
-                        <div class="caption status"> <button type="button" class="submit">Status</button></div>
+                        <div class="caption status"> <button id="modal5" type="button" class="submit">Status</button></div>
+                        <div id="myModal5" class="modal5">
+
+                            <!-- Modal content -->
+                            <div class="modal-content5">
+                              <span class="close5">&times;</span>
+                              <p>Some text in the Modal..</p>
+                            </div>
+                          
+                        </div>
                     </div>
                     <%}}%>
                     <div>
@@ -460,7 +507,7 @@
                 <div class="members container rejectedimg_" id="rejectedimg_"><%for (let lead of leads){%>
                     <%if(lead.lead_submitted_to == user.Name && lead.Status == "Rejected"){%>
                     <div class="imageContainer">
-                        <img style="width: 700px;" src="../image/Group 26.png">
+                        <img class="sideimge" src="../image/Group 26.png">
                         <div class="caption text"><%=lead.project_name%>
                         <form action="/update_status/<%=lead._id%>/<%=userId%>" method="POST">
                             <select name="status">
@@ -470,7 +517,16 @@
                               </select>
                               <button>Update</button>
                         </form></div>
-                        <div class="caption status"> <button type="button" class="submit">Status</button></div>
+                        <div class="caption status"> <button id="modal6" type="button" class="submit">Status</button></div>
+                        <div id="myModal6" class="modal6">
+
+                            <!-- Modal content -->
+                            <div class="modal-content6">
+                              <span class="close6">&times;</span>
+                              <p>Some text in the Modal..</p>
+                            </div>
+                          
+                        </div>
                     </div>
                     <%}}%>
                     <div>
@@ -480,7 +536,7 @@
                 <div class="members container closedimg_" id="closedimg_"><%for (let lead of leads){%>
                     <%if(lead.lead_submitted_to == user.Name && lead.Status == "Closed"){%>
                     <div class="imageContainer">
-                        <img style="width: 700px;" src="../image/Group 25.png">
+                        <img class="sideimge" src="../image/Group 25.png">
                         
                         <div class="caption text"><%=lead.project_name%>
                         <form action="/update_status/<%=lead._id%>/<%=userId%>" method="POST">
@@ -491,7 +547,16 @@
                               </select>
                               <button>Update</button>
                         </form></div>
-                        <div class="caption status"> <button type="button" class="submit">Status</button></div>
+                        <div class="caption status"> <button id="modal7" type="button" class="submit">Status</button></div>
+                        <div id="myModal7" class="modal7">
+
+                            <!-- Modal content -->
+                            <div class="modal-content4">
+                              <span class="close7">&times;</span>
+                              <p>Some text in the Modal..</p>
+                            </div>
+                          
+                        </div>
                     </div>
                     <%}}%>
                     <div>
