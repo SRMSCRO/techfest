@@ -940,205 +940,7 @@ opacity: 1;
 
 
 
-@media only screen and (max-width: 500px) {
-  .btn {
-    display: inline-block;
-    display: none;  /******************THIS*************/
-    font-weight: 400;
-    color: white;
-    text-align: center;
-    cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    height: 26px;
-    width: 100px;
-    -ms-user-select: none;
-    border: black;
-    user-select: none;
-    font-family: 'Montserrat';
-    background-color: #f04705;
-    border: 1px solid transparent;
-    padding: .375rem .75rem;
-    font-size: 98%;
-    line-height: 0.5;
-    border-radius: 10;
-    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-    margin-left: 10px;
-}
 
-.leadhead
-{
-  width: 100%;
-    margin-left: 14px;
-}
-
-.line{
-  vertical-align: middle;
-    width: 215px;
-    margin-left: 15px;
-}
-
-.clipart1 {
-   
-  width: 291px;
-  float: right;
-  margin-top: 12px;
-  margin-right: -4px;
-}
-.clipart2 , .clipart3 , .clipart4  {
-  display: none;   /******************THIS*************/
-  width: 291px;
-  float: right;
-  margin-top: 12px;
-  margin-right: -4px;
-
-}
-
-.export1 {
-  display: none;  /******************THIS*************/
-  background-color: #f04705;
-  border-color: #f04705;
-  border-radius: 10px;
-  height: 15%;
-  width: 71%;
-  color: #fff;
-  margin-top: 141%;
-  position: absolute;
-  margin-left: 63px;
-}
-
-.text {
-  position: absolute;
-  top: 35%;
-  left: 27%;
-  font-size: 14px;
-  font-family: Montserrat Regular;
-}
-
-
-
- 
-.status {
-  position: absolute;
-  top: 31%;
-  left: 76%;
-}
-
-
-.sideimge{
-  width: 339px;
-}
-
-.imageContainer {
-  display: inline-block;
-  position: relative;
-  text-align: center;
-  float: left;
-  width: 337px;
-  top: 223px;
-}
-
-
-.clipart {
-  width: 250px;
-  float: right;
-  margin-top: -172px;
-  margin-right: 0px;
-}
-
-.clipart_, .clipart_1, .clipart_2 {
-  width: 250px;
-  float: right;
-  margin-top: 0px;
-  margin-right: 0px;
-}
-.submit {
-  background-color: #6c63ff;
-  color: #ffffff;
-  width: 60px;
-  height: 20px;
-  border-radius: 7px;
-  border-color: #6c63ff;
-  box-shadow: 0.5px 0.5px #6c63ff;
-  float: right;
-  border: none;
-}
-
- 
-.clipart_ad {
-  width: 246px;
-  float: right;
-  position: absolute;
-  top: 147%;
-  left: 0%;
-}
-
-.btn1 {
-  display: -webkit-box;
-  font-weight: 400;
-  color: white;
-  text-align: center;
-  cursor: pointer;
-  -webkit-user-select: none;
-  width: 300%;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  border: black;
-  user-select: none;
-  font-family: 'Montserrat';
-  background-color: #f04705;
-  border: 1px solid transparent;
-  padding: .375rem .75rem;
-  font-size: 120%;
-  border-radius: 11px;
-  line-height: 1.5;
-  border-radius: 10;
-  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-  margin-left: 10px;
-}
-
-.export {
-  display: none; /*----------this---------------------*/
-  background-color: #f04705;
-  border-color: #f04705;
-  border-radius: 10px;
-  height: 20%;
-  width: 20%;
-  color: #fff;
-  margin-top: 65%;
-  position: absolute;
-  margin-left: 250px;
-}
-
-.filter-button {
-  display: inline-block;
-  font-weight: 400;
-  color: white;
-  text-align: center;
-  cursor: pointer;
-  -webkit-user-select: none;
-  position: absolute;
-   
-  -moz-user-select: none;
-  margin: top;
-  margin-top: -37px;
-   
-  -ms-user-select: none;
-   
-  border: black;
-   
-  user-select: none;
-  font-family: 'Montserrat';
-  background-color: #f04705;
-  border: 1px solid transparent;
-  padding: .375rem .75rem;
-  font-size: 140%;
-  border-radius: 10px;
-  line-height: 1.5;
-  border-radius: 10;
-  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-  margin-left: 181px;
-}
 
 
 /****************validate ls**************/
@@ -1465,4 +1267,222 @@ opacity: 1;
   color: black;
   text-decoration: none;
   cursor: pointer;
+}
+
+
+
+
+
+@media only screen and (max-width: 500px) {
+  .btn {
+    display: inline-block;
+    display: none;  /******************THIS*************/
+    font-weight: 400;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    height: 26px;
+    width: 100px;
+    -ms-user-select: none;
+    border: black;
+    user-select: none;
+    font-family: 'Montserrat';
+    background-color: #f04705;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 98%;
+    line-height: 0.5;
+    border-radius: 10;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    margin-left: 10px;
+}
+
+.leadhead
+{
+  width: 100%;
+    margin-left: 14px;
+}
+
+.line{
+  vertical-align: middle;
+    width: 215px;
+    margin-left: 15px;
+}
+
+.clipart1 {
+   
+  width: 291px;
+  float: right;
+  margin-top: 12px;
+  margin-right: -4px;
+}
+.clipart2 , .clipart3 , .clipart4  {
+  display: none;   /******************THIS*************/
+  width: 291px;
+  float: right;
+  margin-top: 12px;
+  margin-right: -4px;
+
+}
+
+.export1 {
+  display: none;  /******************THIS*************/
+  background-color: #f04705;
+  border-color: #f04705;
+  border-radius: 10px;
+  height: 15%;
+  width: 71%;
+  color: #fff;
+  margin-top: 141%;
+  position: absolute;
+  margin-left: 63px;
+}
+
+.text {
+  position: absolute;
+  top: 35%;
+  left: 27%;
+  font-size: 14px;
+  font-family: Montserrat Regular;
+}
+
+
+
+ 
+.status {
+  position: absolute;
+  top: 31%;
+  left: 76%;
+}
+
+
+.sideimge{
+  width: 339px;
+}
+
+.imageContainer {
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  float: left;
+  width: 337px;
+  top: 223px;
+}
+
+
+.clipart {
+  width: 250px;
+  float: right;
+  margin-top: -172px;
+  margin-right: 0px;
+}
+
+.clipart_, .clipart_1, .clipart_2 {
+  width: 250px;
+  float: right;
+  margin-top: 0px;
+  margin-right: 0px;
+}
+.submit {
+  background-color: #6c63ff;
+  color: #ffffff;
+  width: 60px;
+  height: 20px;
+  border-radius: 7px;
+  border-color: #6c63ff;
+  box-shadow: 0.5px 0.5px #6c63ff;
+  float: right;
+  border: none;
+}
+
+ 
+ 
+.export {
+  display: none; /*----------this---------------------*/
+  background-color: #f04705;
+  border-color: #f04705;
+  border-radius: 10px;
+  height: 20%;
+  width: 20%;
+  color: #fff;
+  margin-top: 65%;
+  position: absolute;
+  margin-left: 250px;
+}
+
+ 
+
+
+.imageContainer1 {
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  float: left;
+  top: 194px;
+  left: -42px;
+  width: 303px;
+  transition: 0.5s ease;
+  -webkit-transition: 0.5s ease;
+  -moz-transition: 0.5s ease;
+}
+
+
+.clipart_ad {
+  width: 229px;
+  float: right;
+  position: absolute;
+  /* top: 147%; */
+  left: 10%;
+}
+
+.btn1 {
+  /* display: -webkit-box; */
+  /* font-weight: 400; */
+  /* color: white; */
+  /* text-align: center; */
+  height: 25px;
+  /* cursor: pointer; */
+  width: 190px;
+  /* -webkit-user-select: none; */
+  /* width: 300%; */
+  -moz-user-select: none;
+  font-size: 14px;
+  -ms-user-select: none;
+   
+  margin-left: -11px;
+  /* line-height: 1.5; */
+  border-radius: 10;
+  /* transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out; */
+  /* margin-left: 10px; */
+}
+
+
+.filter-button {
+  display: inline-block;
+  font-weight: 400;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  -webkit-user-select: none;
+  position: absolute;
+  -moz-user-select: none;
+  margin: top;
+  margin-top: 10px;
+  -ms-user-select: none;
+  border: black;
+  user-select: none;
+  font-family: 'Montserrat';
+  background-color: #f04705;
+  border: 1px solid transparent;
+  padding: .375rem .75rem;
+  height: 24px;
+  font-size: 93%;
+  border-radius: 10px;
+  line-height: 1.5;
+  border-radius: 10;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  /* margin-left: 181px; */
+}
 }
