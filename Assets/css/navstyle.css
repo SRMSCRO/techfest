@@ -184,6 +184,88 @@ display: none;
 display: none;
 }
 
+/******************PROFILE**********************/
+
+
+.profileimg 
+{
+  height: 40%;
+  width: 20%;
+  margin-top: 10%;
+}
+
+.det h1
+{
+  font-size: 180%;
+  font-family: Monsterrat Regular;
+  margin-left: 28%;
+  margin-top: -18%;
+  color: #6c63ff;
+}
+
+
+.det img 
+{
+  width: 20%;
+ 
+  margin-top: -2%;
+  margin-left: 28%;
+}
+
+.det2 h1
+{
+  font-size: 180%;
+  font-family: Monsterrat Regular;
+  margin-left: 28%;
+  margin-top: 1%;
+  color: #6c63ff;
+}
+
+.det2 img 
+{
+  width: 20%;
+ 
+  margin-top: -2%;
+  margin-left: 28%;
+}
+
+.det3 h1
+{
+  font-size: 180%;
+  font-family: Monsterrat Regular;
+  margin-left: 28%;
+  margin-top: 1%;
+  color: #6c63ff;
+}
+
+
+.det3 img 
+{
+  width: 20%;
+
+  margin-top: -2%;
+  margin-left: 28%;
+}
+
+
+.pclip 
+{
+  width: 50%;
+  height: 9%;
+  margin-left: 60%;
+  margin-top: -56%;
+}
+
+.pclip2 
+{
+  width: 50%;
+  height: 9%;
+  margin-left: 10%;
+  margin-top: 4%;
+}
+
+
+
 
 /**********************************ADD LEAD CSS**********************/
 
