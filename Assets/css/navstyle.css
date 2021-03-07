@@ -264,7 +264,73 @@ display: none;
   margin-top: 4%;
 }
 
+/**********************************ANALYTICS**********************/
+.labl{
+  margin-top: 10%;
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  color: #5059E2;
+  font-size: 2rem;
+  margin-left: 2%;
+}
+.y_m{
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  color: #5059E2;
+  font-size: 1.5rem;
+  margin-left: 2%;
+}
+.lable{
+  margin-top: 3%;
+  font-family: 'Montserrat', sans-serif;
+  color: #5059E2;
+  font-size: 2rem;
+  margin-left: 2%;
+}
+.leads_sub{
+  
+  font-family: 'Montserrat', sans-serif;
+  color: #5059E2;
+  width: 2.3%;
+  font-size: 1.5rem;
 
+}
+
+.barChart {
+  position: absolute;
+  margin-left: 45%;
+  margin-top: 5%;
+  height: 40%;
+  width: 40%;
+  padding: 10px;
+  box-shadow: 10px 10px 20px #505ae250;
+  border-radius: 20px;
+  background-color: #fff;
+}
+.barChart1 {
+  position: absolute;
+  margin-left: 0%;
+  margin-top: 5%;
+  height: 40%;
+  width: 40%;
+  padding: 10px;
+  box-shadow: 10px 10px 20px #505ae250;
+  border-radius: 20px;
+  background-color: #fff;
+  
+}
+
+
+.pieChart {
+  position: absolute;
+  margin-left: 25%;
+  margin-top: 28%;
+  height: 40%;
+  width: 40%;
+  border-radius: 20px;
+  box-shadow: 10px 10px 20px #505ae250;
+  background-color: #fff;
+}
 
 
 /**********************************ADD LEAD CSS**********************/
@@ -531,10 +597,10 @@ height: 25px;
     cursor: pointer;
     line-height: 50px;
     border: 7px solid #f04705;
-    
     border-radius: 40px;
-    box-shadow: rgba(0, 191, 255, 0) 0 7px 5px;
-    width: 150px;
+    box-shadow: 5px 5px 10px #505ae28e;
+    width: 250px;
+    height: 50px;
     font-family: Montserrat Regular;
     float: left;
 }
@@ -564,21 +630,7 @@ height: 25px;
 }
 
 
-.events_btn_img {
-    background-color: #bfbfbf;
-    margin: 10px;
-    color: white;
-    font-weight: 500;
-    cursor: pointer;
-    line-height: 30px;
-    border: 0;
-    border-radius: 10px;
-    box-shadow: rgba(0, 191, 255, 0) 0 7px 5px;
-    width: 150px;
-    height: 50px;
-    font-family: Montserrat Regular;
-    padding-left: 10px;
-}
+
 .btn-primary {
     color: #fff;
     background-color: #f04705;
@@ -665,13 +717,13 @@ height: 25px;
 
 }
 
-.clipart
+/* .clipart
 {
     width: 550px;
     float: right;
-    margin-top: -80px;
+    margin-top: 60px;
     margin-right: -120px;
-}
+} */
 
 .clipart_
 {
@@ -789,17 +841,17 @@ height: 25px;
 
 .submit
 {
-    background-color: #6c63ff;
+    background-color: #5059E2;
    color:#ffffff;
    width: 100px;
-   height: 20px;
-   border-radius: 7px;
-   border-color: #6c63ff;
-   box-shadow: 0.5px 0.5px  #6c63ff;
+   height: 25px;
+   border-radius: 10px;
+   
+   box-shadow: 3px 3px 8px #505ae294;
    float: right;
-  
    border: none;
 }
+
 
 /********************lead assigned***************************/
 
@@ -810,7 +862,7 @@ height: 25px;
 {
     width: 550px;
     float: right;
-    margin-top: -80px;
+    margin-top: -30%;
     margin-right: -120px;
 }
 
@@ -818,7 +870,7 @@ height: 25px;
 {
     width: 550px;
     float: right;
-    margin-top: -40px;
+    margin-top: 20px;
     margin-right: -180px;
 }
 
@@ -872,19 +924,7 @@ height: 25px;
     
 }
 
-.submit
-{
-    background-color: #6c63ff;
-   color:#ffffff;
-   width: 100px;
-   height: 20px;
-   border-radius: 7px;
-   border-color: #6c63ff;
-   box-shadow: 0.5px 0.5px  #6c63ff;
-   float: right;
-  
-   border: none;
-}
+
 
 .export1
 {
@@ -1372,7 +1412,7 @@ opacity: 1;
 .clipart-analytics {
   width: 250px;
   float: right;
-  margin-top: -215px;
+  margin-top: -30%;
   margin-right: 32px;
 }
 
