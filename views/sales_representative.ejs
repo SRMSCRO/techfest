@@ -18,7 +18,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 </head>
-<body onload="vis()">
+<body onload="vis();vis20Function();">
 
 <!---------------NAVBAR------------>
 <div class="sidenav"  >
@@ -136,10 +136,9 @@
     <div class="row">
         <div class="col-md-12 col-xs-4">
             <div class="sections text-center buttons-analytics ">
-                <button type="button" id="openbtn2" class="btn btn-primary events_btn_img openbtn "  style="isolation: isolate; background-color: #f04705; border-color: #f04705;" onclick="vis2Function()">LEADS</button>                  
-                <button type="button" id="validatedbtn2" class="btn btn-primary events_btn_img validatedbtn"  style="isolation: isolate; background-color: #6c63ff; border-color: #6c63ff;" onclick="vis2Function1()">STATUS</button>
-                <button type="button" id="rejectedbtn2" class="btn btn-primary events_btn_img1 rejectedbtn"  style="isolation: isolate; background-color: #6c63ff; border-color: #6c63ff;" onclick="vis2Function2()">LEADS APPROVED</button>
-                <!-- <button type="button" id="closedbtn2" class="btn btn-primary events_btn_img closedbtn"  style="isolation: isolate; background-color: #6c63ff; border-color: #6c63ff;" onclick="vis2Function3()">CLOSED</button> -->
+                <button type="button" id="openbtn20" class="btn btn-primary events_btn_img openbtn "  style="isolation: isolate; background-color: #f04705; border-color: #f04705;" onclick="vis20Function()">LEADS</button>                  
+                <button type="button" id="validatedbtn20" class="btn btn-primary events_btn_img validatedbtn"  style="isolation: isolate; background-color: #6c63ff; border-color: #6c63ff;" onclick="vis20Function1()">STATUS</button>
+                <button type="button" id="rejectedbtn20" class="btn btn-primary events_btn_img1 rejectedbtn"  style="isolation: isolate; background-color: #6c63ff; border-color: #6c63ff;" onclick="vis20Function2()">LEADS VALIDATED</button>
                 </div>
                 <form action="/leadexport/<%=userId%>" id="export_form" method="get"> 
                     <button type="button" onclick="document.getElementById('export_form').submit();" class="export" >Export</button>
@@ -148,7 +147,7 @@
             <label class="lable"for="start">Total Leads submitted  : </label>
             <input class="leads_sub"type="text" value="<%=countLead%>" readonly>
                 
-            <div class="members container openimg" id="openimg2">
+            <div class="members container openimg" id="openimg20">
                 <%for(let lead of leads){%>
                 <div class="imageContainer-analytics">
                     <img class="sideimge" src="../image/Group 24.png">
@@ -164,26 +163,26 @@
             </div>
             
             
-            <div class="members container validatedimg" id="validatedimg2">
+            <div class="members container validatedimg" id="validatedimg20">
+                <label class="lable"for="start">Total Leads Open  : </label>
+            <input class="leads_sub"type="text" value="<%=countLead_open%>" readonly>
+            <label class="lable"for="start">Total Leads Closed  : </label>
+            <input class="leads_sub"type="text" value="<%=countLead_closed%>" readonly><br>
+            <label class="lable"for="start">Total Leads Validated  : </label>
+            <input class="leads_sub"type="text" value="<%=countLead_validated%>" readonly>
+            <label class="lable"for="start">Total Leads Rejected  : </label>
+            <input class="leads_sub"type="text" value="<%=countLead_rejected%>" readonly>
                 <div class="pieChart"> 
                     <canvas id="pieChart"></canvas>
                 </div>
-                <%for(let lead of leads){%>
-                <%if(lead.Status == "Validated"){%>
-                <div class="imageContainer-analytics">
-                    <img class="sideimge" src="../image/Group 27.png">
-                    
-                    <div class="caption text"><%=lead.project_name%></div>
-                    <div class="caption status"> <button type="button" class="submit"><%=lead.Status%></button></div>
-                </div>
-                <%}%> <%}%>
+                
                 
             </div>
             
-            <div class="members container rejectedimg" id="rejectedimg2">
+            <div class="members container rejectedimg" id="rejectedimg20">
                 <label class="lab"for="start">Approved By User :</label>
                 <%for(let lead of leads){%>
-                    <%if(lead.Status == "Open"){%>
+                    <%if(lead.Status == "Validated"){%>
                     <div class="imageContainer-analytics">
                         <img class="sideimge" src="../image/Group 24.png">
                         <div class="caption text"><%=lead.project_name%> </div>
@@ -198,19 +197,7 @@
                 </div>
             </div>
             
-            <div class="members container closedimg" id="closedimg2"><%for(let lead of leads){%>
-                <%if(lead.Status == "Closed"){%>
-                <div class="imageContainer-analytics">
-                    <img class="sideimge" src="../image/Group 25.png">
-                    
-                    <div class="caption text"><%=lead.project_name%></div>
-                    <div class="caption status"> <button type="button" class="submit"><%=lead.Status%></button></div>
-                </div>
-                <%}}%>
-                 <div>
-                    <img class="clipart_2" src="../image/undraw_my_files_swob.svg">
-                </div>
-            </div>
+           
             
         </div>
         

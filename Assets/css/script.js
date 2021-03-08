@@ -282,6 +282,42 @@ function visFunction11() {
     document.getElementById("closedbtn1").style.backgroundColor = "#F04705";
 
 }
+
+function vis20Function() {
+  document.getElementById("openimg20").style.display = "contents";
+  document.getElementById("validatedimg20").style.display = "none";
+  document.getElementById("rejectedimg20").style.display = "none";
+ 
+ 
+  document.getElementById("openbtn20").style.backgroundColor = "#F04705";
+  document.getElementById("validatedbtn20").style.backgroundColor = "#6c63ff";
+  document.getElementById("rejectedbtn20").style.backgroundColor = "#6c63ff";
+
+}
+
+function vis20Function1() {
+  document.getElementById("openimg20").style.display = "none";
+  document.getElementById("validatedimg20").style.display = "contents";
+  document.getElementById("rejectedimg20").style.display = "none";
+
+  document.getElementById("openbtn20").style.backgroundColor = "#6c63ff";
+  document.getElementById("validatedbtn20").style.backgroundColor = "#F04705";
+  document.getElementById("rejectedbtn20").style.backgroundColor = "#6c63ff";
+
+}
+
+function vis20Function2() {
+  document.getElementById("openimg20").style.display = "none";
+  document.getElementById("validatedimg20").style.display = "none";
+  document.getElementById("rejectedimg20").style.display = "contents";
+
+
+  document.getElementById("openbtn20").style.backgroundColor = "#6c63ff";
+  document.getElementById("validatedbtn20").style.backgroundColor = "#6c63ff";
+  document.getElementById("rejectedbtn20").style.backgroundColor = "#F04705";
+ 
+
+}
 //<-----------------------------Filter segment admin page script --------------------------->
 //<-----------------------------Modal script------------------------------------------------>
 var modal = document.getElementById("myModal");
