@@ -1464,11 +1464,11 @@ opacity: 1;
   margin-left: 92px;
 }
 
-.clipart-analytics {
-  width: 250px;
-  float: right;
-  margin-top: -30%;
-  margin-right: 32px;
+.clipart_ad {
+  width: 244px;
+  float: none;
+  position: absolute;
+  left: 0%;
+  top: 188px;
 }
-
 }
