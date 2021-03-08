@@ -332,13 +332,21 @@ display: none;
 
 .pieChart {
   position: absolute;
-  margin-left: 25%;
-  margin-top: 28%;
+  margin-left: 0%;
+  margin-top: 5%;
   height: 40%;
   width: 40%;
   border-radius: 20px;
   box-shadow: 10px 10px 20px #505ae250;
   background-color: #fff;
+}
+.clipart_3{
+
+  width: 550px;
+  float: right;
+  margin-top: -15%;
+  margin-right: -120px;
+
 }
 
 
@@ -978,6 +986,22 @@ height: 25px;
   margin-top: 18%;
   position: absolute;
   left: 41%;
+  border-radius: 20px;
+  font-size: 1.5rem;
+  box-shadow: 3px 3px 8px #f0480571;
+  border-style: none;
+  outline: none;
+}
+.export_adm 
+{
+  background-color: #f04705;
+  height: 35%;
+  width: 15%;
+  color: #fff;
+  margin-top: 70%;
+  margin-bottom: 10%;
+  position: absolute;
+  margin-left: 40%;
   border-radius: 20px;
   font-size: 1.5rem;
   box-shadow: 3px 3px 8px #f0480571;
