@@ -138,7 +138,7 @@
             <div class="sections text-center buttons-analytics ">
                 <button type="button" id="openbtn20" class="btn btn-primary events_btn_img openbtn "  style="isolation: isolate; background-color: #f04705; border-color: #f04705;" onclick="vis20Function()">LEADS</button>                  
                 <button type="button" id="validatedbtn20" class="btn btn-primary events_btn_img validatedbtn"  style="isolation: isolate; background-color: #6c63ff; border-color: #6c63ff;" onclick="vis20Function1()">STATUS</button>
-                <button type="button" id="rejectedbtn20" class="btn btn-primary events_btn_img1 rejectedbtn"  style="isolation: isolate; background-color: #6c63ff; border-color: #6c63ff;" onclick="vis20Function2()">LEADS VALIDATED</button>
+                <button type="button" id="rejectedbtn20" class="btn btn-primary events_btn_img1 rejectedbtn"  style="isolation: isolate; background-color: #6c63ff; border-color: #6c63ff;" onclick="vis20Function2()">LEADS CLOSED</button>
                 </div>
                 <form action="/leadexport/<%=userId%>" id="export_form" method="get"> 
                     <button type="button" onclick="document.getElementById('export_form').submit();" class="export" >Export</button>
@@ -192,9 +192,9 @@
             </div>
             
             <div class="members container rejectedimg" id="rejectedimg20">
-                <label class="lab"for="start">Validated By Users :</label>
+                <label class="lab"for="start">Closed By Users :</label>
                 <%for(let lead of leads){%>
-                    <%if(lead.Status == "Validated"){%>
+                    <%if(lead.Status == "Closed"){%>
                     <div class="imageContainer-analytics">
                         <img class="sideimge" src="../image/Group 27.png">
                         <div class="caption text"><%=lead.project_name%> </div>
