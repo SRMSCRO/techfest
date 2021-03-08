@@ -1049,6 +1049,14 @@ opacity: 1;
   top: 29%;
   left: 60%;
 }
+
+
+.clipart_Leadapproved {
+  width: 550px;
+  float: right;
+  margin-top: -63%;
+  margin-right: -113px;
+}
 /* The Modal (background) */
 .modal {
   display: none; /* Hidden by default */
@@ -1542,7 +1550,21 @@ opacity: 1;
   margin-left: 88px;
 }
 
-
+.clipart_Leadapproved {
+  width: 239px;
+  float: right;
+  margin-top: -64%;
+  margin-right: 36px;
+}
+.lab {
+  margin-top: 36%;
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  color: #5059E2;
+  font-size: 2rem;
+  width: 201px;
+  margin-left: 35%;
+}
 
   
 
