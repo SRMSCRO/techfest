@@ -1331,27 +1331,26 @@ opacity: 1;
 
 .clipart1 {
   width: 235px;
-  float: right;
+  /* float: right; */
   margin-top: 10%;
   margin-right: 46px;
 }
  
 .clipart2  {
   width: 193px;
-  float: right;
+  /* float: right; */
   margin-top: 10%;
   margin-right: 61px;
 }
   .clipart3  {
   width: 152px;
-  float: right;
+  /* float: right; */
   margin-top: 10%;
   margin-right: 102px;
 }
   .clipart4 {
   width: 193px;
-  float: right;
-  margin-top: 10%;
+  margin-top: -17%;
   margin-right: 84px;
 }
  
