@@ -777,19 +777,17 @@ height: 25px;
   margin-right: -113px;
 }
 
-.clipart_1
-{
-    width: 490px;
-    float: right;
-    margin-top: -38px;
-    margin-right: -120px;
+.clipart_1 {
+  width: 490px;
+  float: right;
+  margin-top: 9px;
+  margin-right: -120px;
 }
-.clipart_2
-{
-    width: 550px;
-    float: right;
-    margin-top: -38px;
-    margin-right: -120px;
+.clipart_2 {
+  width: 550px;
+  float: right;
+  margin-top: 21px;
+  margin-right: -113px;
 }
 
 .imageContainer {
@@ -903,10 +901,10 @@ height: 25px;
 
 
 .clipart {
-  width: 550px;
+  width: 523px;
   float: right;
   margin-top: -295px;
-  margin-right: -120px;
+  margin-right: -106px;
 }
 
 .clipart1
@@ -917,12 +915,11 @@ height: 25px;
     margin-right: -180px;
 }
 
-.clipart2
-{
-    width: 450px;
-    float: right;
-    margin-top: -42px;
-    margin-right: -150px;
+.clipart2 {
+  width: 450px;
+  float: right;
+  margin-top: 17px;
+  margin-right: -98px;
 }
 
 
