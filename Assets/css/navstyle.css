@@ -1360,12 +1360,11 @@ opacity: 1;
 
 .text {
   position: absolute;
-  
   font-size: 14px;
   font-family: Montserrat Regular;
-  top: 23%;
+  top: 27%;
   left: 20%;
-  font-size: 15px;
+  font-size: 12px;
   color: #6c63ff;
 }
 
@@ -1373,16 +1372,16 @@ opacity: 1;
   position: absolute;
   top: 23%;
   left: 40%;
-  font-size: 15px;
+  font-size: 12px;
   font-family: Montserrat Regular;
   color:#6c63ff;
 }
 
 .text2 {
   position: absolute;
-  top: 42%;
+  top: 50%;
   left: 20%;
-  font-size: 15px;
+  font-size: 12px;
   font-family: Montserrat Regular;
   color:#6c63ff;
 }
@@ -1424,7 +1423,7 @@ opacity: 1;
 
  
 .sideimge {
-  width: 301px;
+  width: 316px;
   height: 91px;
 }
 
