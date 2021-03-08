@@ -136,10 +136,9 @@
     <div class="row">
         <div class="col-md-12 col-xs-4">
             <div class="sections text-center buttons-analytics ">
-                <button type="button" id="openbtn2" class="btn btn-primary events_btn_img openbtn "  style="isolation: isolate; background-color: #f04705; border-color: #f04705;" onclick="vis2Function()">LEADS</button>                  
-                <button type="button" id="validatedbtn2" class="btn btn-primary events_btn_img validatedbtn"  style="isolation: isolate; background-color: #6c63ff; border-color: #6c63ff;" onclick="vis2Function1()">STATUS</button>
-                <button type="button" id="rejectedbtn2" class="btn btn-primary events_btn_img1 rejectedbtn"  style="isolation: isolate; background-color: #6c63ff; border-color: #6c63ff;" onclick="vis2Function2()">LEADS APPROVED</button>
-                <!-- <button type="button" id="closedbtn2" class="btn btn-primary events_btn_img closedbtn"  style="isolation: isolate; background-color: #6c63ff; border-color: #6c63ff;" onclick="vis2Function3()">CLOSED</button> -->
+                <button type="button" id="openbtn20" class="btn btn-primary events_btn_img openbtn "  style="isolation: isolate; background-color: #f04705; border-color: #f04705;" onclick="vis20Function()">LEADS</button>                  
+                <button type="button" id="validatedbtn20" class="btn btn-primary events_btn_img validatedbtn"  style="isolation: isolate; background-color: #6c63ff; border-color: #6c63ff;" onclick="vis20Function1()">STATUS</button>
+                <button type="button" id="rejectedbtn20" class="btn btn-primary events_btn_img1 rejectedbtn"  style="isolation: isolate; background-color: #6c63ff; border-color: #6c63ff;" onclick="vis20Function2()">LEADS CLOSED</button>
                 </div>
                 <form action="/leadexport/<%=userId%>" id="export_form" method="get"> 
                     <button type="button" onclick="document.getElementById('export_form').submit();" class="export" >Export</button>
@@ -151,7 +150,15 @@
             <div class="members container openimg" id="openimg2">
                 <%for(let lead of leads){%>
                 <div class="imageContainer-analytics">
+                    <%if(lead.Status=="Open"){%>
                     <img class="sideimge" src="../image/Group 24.png">
+                    <%}%><%if(lead.Status=="Closed"){%>
+                    <img class="sideimge" src="../image/Group 25.png">
+                    <%}if(lead.Status=="Validated"){%>
+                    <img class="sideimge" src="../image/Group 27.png">
+                    <%}if(lead.Status=="Rejected"){%>
+                    <img class="sideimge" src="../image/Group 26.png">
+                    <%}%>
                     <div class="caption text"><%=lead.project_name%> </div>
                     <div class="caption status"> <button  type="button" class="submit"><%=lead.Status%></button></div>
 
@@ -165,6 +172,19 @@
             
             
             <div class="members container validatedimg" id="validatedimg2">
+            <div class="members container validatedimg" id="validatedimg20">
+                <label class="lable1"for="start">Total Leads Open  : </label>
+            <input class="leads_sub1"type="text" value="<%=countLead_open%>" readonly>
+            <br>
+            <label class="lable1"for="start">Total Leads Closed  : </label>
+            <input class="leads_sub"type="text" value="<%=countLead_closed%>" readonly>
+            <br>
+            <label class="lable1"for="start">Total Leads Validated  : </label>
+            <input class="leads_sub1"type="text" value="<%=countLead_validated%>" readonly>
+            <br>
+            <label class="lable1"for="start">Total Leads Rejected  : </label>
+            <input class="leads_sub1"type="text" value="<%=countLead_rejected%>" readonly>
+            <br>
                 <div class="pieChart"> 
                     <canvas id="pieChart"></canvas>
                 </div>
@@ -180,12 +200,12 @@
                 
             </div>
             
-            <div class="members container rejectedimg" id="rejectedimg2">
-                <label class="lab"for="start">Approved By User :</label>
+            <div class="members container rejectedimg" id="rejectedimg20">
+                <label class="lab"for="start">Closed By Users :</label>
                 <%for(let lead of leads){%>
-                    <%if(lead.Status == "Open"){%>
+                    <%if(lead.Status == "Closed"){%>
                     <div class="imageContainer-analytics">
-                        <img class="sideimge" src="../image/Group 24.png">
+                        <img class="sideimge" src="../image/Group 25.png">
                         <div class="caption text"><%=lead.project_name%> </div>
                         <div class="caption status"> <button  type="button" class="submit"><%=lead.Status%></button></div>
     
@@ -363,72 +383,17 @@
                     <%if(lead.lead_submitted_by == user.Name && lead.Status == "Open"){%>
                     <div class="imageContainer">
                         <img class="sideimge" src="../image/Group 24.png">
-                        <div class="caption text"><%=lead.project_name%> </div>
-                        <div class="caption status"> <button id="modal" type="button" class="submit"><%=lead.Status%></button></div>
-                        <div id="myModal" class="modal">
+                      
+                            <div class="caption text"><%=lead.project_name%> </div>
+                           
+                            <div class="caption text1">Customer Name</div>
+                            <div class="caption text2">Project Value</div>
+                            <div class="caption text3">Segment</div>
 
-                            <!-- Modal content -->
-                            <div class="modal-content">
-                              <span class="close">&times;</span>
-                                <p class="head"><u>PROJECT</u>&ensp;<u>DETAILS</u></p>
-                            <div class="modal-body ">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="cust">
-                                        <h1>Customer Name:</h1>
-                                    </div>
-
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="proj">
-                                        <h1>Project Name:</h1>
-                                    </div>
-                                </div>
                             
-                            </div>
-
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="detail">
-                                        <h1>Project Detail:</h1>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="value">
-                                        <h1>Project Value:</h1>
-                                    </div>
-                                </div>
-                            
-                            </div>
-
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="segd">
-                                        <h1>Segment:</h1>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="stat">
-                                        <h1>Status:</h1>
-                                    </div>
-                                </div>
-                            
-                            </div>
-
-                            <div class="row">
-                                <div class="col-lg-12">
-                                    <div class="upd">
-                                        <h1>Update Time:</h1>
-                                    </div>
-                                </div>
-                              
-                            
-                            </div>
                         
-                            </div>
-                            </div>
-                          
-                        </div>
+                        <div class="caption status"> <button type="button" class="submit"><%=lead.Status%></button></div>
+                        
                     </div>
                     <%}%>   <%}%>
                     <div>
@@ -444,71 +409,12 @@
                         <img  class="sideimge"  src="../image/Group 27.png">
                         
                         <div class="caption text"><%=lead.project_name%></div>
-                        <div class="caption status"> <button id="modal1" type="button" class="submit"><%=lead.Status%></button></div>
-                        <div id="myModal1" class="modal">
-
-                          <!-- Modal content -->
-                          <div class="modal-content">
-                            <span class="close">&times;</span>
-                              <p class="head"><u>PROJECT</u>&ensp;<u>DETAILS</u></p>
-                          <div class="modal-body ">
-                          <div class="row">
-                              <div class="col-md-6">
-                                  <div class="cust">
-                                      <h1>Customer Name:</h1>
-                                  </div>
-
-                              </div>
-                              <div class="col-md-6">
-                                  <div class="proj">
-                                      <h1>Project Name:</h1>
-                                  </div>
-                              </div>
-                          
-                          </div>
-
-                          <div class="row">
-                              <div class="col-md-6">
-                                  <div class="detail">
-                                      <h1>Project Detail:</h1>
-                                  </div>
-                              </div>
-                              <div class="col-md-6">
-                                  <div class="value">
-                                      <h1>Project Value:</h1>
-                                  </div>
-                              </div>
-                          
-                          </div>
-
-                          <div class="row">
-                              <div class="col-md-6">
-                                  <div class="segd">
-                                      <h1>Segment:</h1>
-                                  </div>
-                              </div>
-                              <div class="col-md-6">
-                                  <div class="stat">
-                                      <h1>Status:</h1>
-                                  </div>
-                              </div>
-                          
-                          </div>
-
-                          <div class="row">
-                              <div class="col-lg-12">
-                                  <div class="upd">
-                                      <h1>Update Time:</h1>
-                                  </div>
-                              </div>
-                            
-                          
-                          </div>
-                      
-                          </div>
-                          </div>
-                          
-                        </div>
+                        
+                        <div class="caption text1">Customer Name</div>
+                        <div class="caption text2">Project Value</div>
+                        <div class="caption text3">Segment</div>
+                        <div class="caption status"> <button  type="button" class="submit"><%=lead.Status%></button></div>
+                        
                     </div>
                     <%}%> <%}%>
                     <div>
@@ -523,71 +429,12 @@
                         <img class="sideimge" src="../image/Group 26.png">
                         
                         <div class="caption text"><%=lead.project_name%></div>
-                        <div class="caption status"> <button id="modal2" type="button" class="submit"><%=lead.Status%></button></div>
-                        <div id="myModal2" class="modal">
-
-                          <!-- Modal content -->
-                          <div class="modal-content">
-                            <span class="close">&times;</span>
-                              <p class="head"><u>PROJECT</u>&ensp;<u>DETAILS</u></p>
-                          <div class="modal-body ">
-                          <div class="row">
-                              <div class="col-md-6">
-                                  <div class="cust">
-                                      <h1>Customer Name:</h1>
-                                  </div>
-
-                              </div>
-                              <div class="col-md-6">
-                                  <div class="proj">
-                                      <h1>Project Name:</h1>
-                                  </div>
-                              </div>
-                          
-                          </div>
-
-                          <div class="row">
-                              <div class="col-md-6">
-                                  <div class="detail">
-                                      <h1>Project Detail:</h1>
-                                  </div>
-                              </div>
-                              <div class="col-md-6">
-                                  <div class="value">
-                                      <h1>Project Value:</h1>
-                                  </div>
-                              </div>
-                          
-                          </div>
-
-                          <div class="row">
-                              <div class="col-md-6">
-                                  <div class="segd">
-                                      <h1>Segment:</h1>
-                                  </div>
-                              </div>
-                              <div class="col-md-6">
-                                  <div class="stat">
-                                      <h1>Status:</h1>
-                                  </div>
-                              </div>
-                          
-                          </div>
-
-                          <div class="row">
-                              <div class="col-lg-12">
-                                  <div class="upd">
-                                      <h1>Update Time:</h1>
-                                  </div>
-                              </div>
-                            
-                          
-                          </div>
-                      
-                          </div>
-                          </div>
-                          
-                        </div>
+                        
+                        <div class="caption text1">Customer Name</div>
+                        <div class="caption text2">Project Value</div>
+                        <div class="caption text3">Segment</div>
+                        <div class="caption status"> <button  type="button" class="submit"><%=lead.Status%></button></div>
+                        
                     </div>
                     <%}}%>
                     <div>
@@ -602,71 +449,12 @@
                         <img class="sideimge" src="../image/Group 25.png">
                         
                         <div class="caption text"><%=lead.project_name%></div>
-                        <div class="caption status"> <button id="modal3" type="button" class="submit"><%=lead.Status%></button></div>
-                        <div id="myModal3" class="modal">
-
-                           <!-- Modal content -->
-                           <div class="modal-content">
-                            <span class="close">&times;</span>
-                              <p class="head"><u>PROJECT</u>&ensp;<u>DETAILS</u></p>
-                          <div class="modal-body ">
-                          <div class="row">
-                              <div class="col-md-6">
-                                  <div class="cust">
-                                      <h1>Customer Name:</h1>
-                                  </div>
-
-                              </div>
-                              <div class="col-md-6">
-                                  <div class="proj">
-                                      <h1>Project Name:</h1>
-                                  </div>
-                              </div>
-                          
-                          </div>
-
-                          <div class="row">
-                              <div class="col-md-6">
-                                  <div class="detail">
-                                      <h1>Project Detail:</h1>
-                                  </div>
-                              </div>
-                              <div class="col-md-6">
-                                  <div class="value">
-                                      <h1>Project Value:</h1>
-                                  </div>
-                              </div>
-                          
-                          </div>
-
-                          <div class="row">
-                              <div class="col-md-6">
-                                  <div class="segd">
-                                      <h1>Segment:</h1>
-                                  </div>
-                              </div>
-                              <div class="col-md-6">
-                                  <div class="stat">
-                                      <h1>Status:</h1>
-                                  </div>
-                              </div>
-                          
-                          </div>
-
-                          <div class="row">
-                              <div class="col-lg-12">
-                                  <div class="upd">
-                                      <h1>Update Time:</h1>
-                                  </div>
-                              </div>
-                            
-                          
-                          </div>
-                      
-                          </div>
-                          </div>
-                          
-                        </div>
+                        
+                        <div class="caption text1">Customer Name</div>
+                        <div class="caption text2">Project Value</div>
+                        <div class="caption text3">Segment</div>
+                        <div class="caption status"> <button  type="button" class="submit"><%=lead.Status%></button></div>
+                       
                     </div>
                     <%}}%>
                      <div>
@@ -713,80 +501,24 @@
                     <div class="imageContainer">
                         <img  class="sideimge"  src="../image/Group 24.png">
                         <div class="caption text"><%=lead.project_name%>
-                        <form action="/update_status/<%=lead._id%>/<%=userId%>" method="POST">
-                            <select name="status">
-                                <option value="Validated">Validated</option>
-                                <option value="Rejected">Rejected</option>
-                                <option value="Closed">Closed</option>
-                              </select>
-                              <button>Update</button>
-                        </form>
+                        
+                        <div class="caption text1">Customer Name</div>
+                        <div class="caption text2">Project Value</div>
+                        <div class="caption text3">Segment</div>
+                        
+                        <div class="caption status1">
+                            <form action="/update_status/<%=lead._id%>/<%=userId%>" method="POST">
+                                <select name="status">
+                                    <option value="Validated">Validated</option>
+                                    <option value="Rejected">Rejected</option>
+                                    <option value="Closed">Closed</option>
+                                </select>
+                                <button class="update">Update</button>
+                            </form>
                         </div>
+
                         <div class="caption status"> <button id="modal4" type="button" class="submit"><%=lead.Status%></button></div>
-                        <div id="myModal4" class="modal">
-
-                        <!-- Modal content -->
-                        <div class="modal-content">
-                            <span class="close">&times;</span>
-                              <p class="head"><u>PROJECT</u>&ensp;<u>DETAILS</u></p>
-                          <div class="modal-body ">
-                          <div class="row">
-                              <div class="col-md-6">
-                                  <div class="cust">
-                                      <h1>Customer Name:</h1>
-                                  </div>
-
-                              </div>
-                              <div class="col-md-6">
-                                  <div class="proj">
-                                      <h1>Project Name:</h1>
-                                  </div>
-                              </div>
-                          
-                          </div>
-
-                          <div class="row">
-                              <div class="col-md-6">
-                                  <div class="detail">
-                                      <h1>Project Detail:</h1>
-                                  </div>
-                              </div>
-                              <div class="col-md-6">
-                                  <div class="value">
-                                      <h1>Project Value:</h1>
-                                  </div>
-                              </div>
-                          
-                          </div>
-
-                          <div class="row">
-                              <div class="col-md-6">
-                                  <div class="segd">
-                                      <h1>Segment:</h1>
-                                  </div>
-                              </div>
-                              <div class="col-md-6">
-                                  <div class="stat">
-                                      <h1>Status:</h1>
-                                  </div>
-                              </div>
-                          
-                          </div>
-
-                          <div class="row">
-                              <div class="col-lg-12">
-                                  <div class="upd">
-                                      <h1>Update Time:</h1>
-                                  </div>
-                              </div>
-                            
-                          
-                          </div>
-                      
-                          </div>
-                          </div>
-                          
-                        </div>
+                        
                     </div>
                     <%}}%>
                     <div>
@@ -797,80 +529,25 @@
                     <%if(lead.lead_submitted_to == user.Name && lead.Status == "Validated"){%>
                     <div class="imageContainer">
                         <img class="sideimge" src="../image/Group 27.png">
-                        <div class="caption text"><%=lead.project_name%>
+                        <div class="caption text"><%=lead.project_name%></div>
+                        <div class="caption text1">Customer Name</div>
+                        <div class="caption text2">Project Value</div>
+                        <div class="caption text3">Segment</div>
+                        
+                        <div class="caption status1">
                             <form action="/update_status/<%=lead._id%>/<%=userId%>" method="POST">
-                            <select name="status">
-                                <option value="Validated">Validated</option>
-                                <option value="Rejected">Rejected</option>
-                                <option value="Closed">Closed</option>
-                              </select>
-                              <button>Update</button>
-                        </form></div>
-                        <div class="caption status"> <button id="modal5" type="button" class="submit"><%=lead.Status%></button></div>
-                        <div id="myModal5" class="modal">
-
-                         <!-- Modal content -->
-                         <div class="modal-content">
-                            <span class="close">&times;</span>
-                              <p class="head"><u>PROJECT</u>&ensp;<u>DETAILS</u></p>
-                          <div class="modal-body ">
-                          <div class="row">
-                              <div class="col-md-6">
-                                  <div class="cust">
-                                      <h1>Customer Name:</h1>
-                                  </div>
-
-                              </div>
-                              <div class="col-md-6">
-                                  <div class="proj">
-                                      <h1>Project Name:</h1>
-                                  </div>
-                              </div>
-                          
-                          </div>
-
-                          <div class="row">
-                              <div class="col-md-6">
-                                  <div class="detail">
-                                      <h1>Project Detail:</h1>
-                                  </div>
-                              </div>
-                              <div class="col-md-6">
-                                  <div class="value">
-                                      <h1>Project Value:</h1>
-                                  </div>
-                              </div>
-                          
-                          </div>
-
-                          <div class="row">
-                              <div class="col-md-6">
-                                  <div class="segd">
-                                      <h1>Segment:</h1>
-                                  </div>
-                              </div>
-                              <div class="col-md-6">
-                                  <div class="stat">
-                                      <h1>Status:</h1>
-                                  </div>
-                              </div>
-                          
-                          </div>
-
-                          <div class="row">
-                              <div class="col-lg-12">
-                                  <div class="upd">
-                                      <h1>Update Time:</h1>
-                                  </div>
-                              </div>
-                            
-                          
-                          </div>
-                      
-                          </div>
-                          </div>
-                          
+                                <select name="status">
+                                    <option value="Validated">Validated</option>
+                                    <option value="Rejected">Rejected</option>
+                                    <option value="Closed">Closed</option>
+                                </select>
+                                <button class="update">Update</button>
+                            </form>
                         </div>
+
+                        <div class="caption status"><button  type="button" class="submit"><%=lead.Status%></button></div>
+                        
+                        
                     </div>
                     <%}}%>
                     <div>
@@ -882,79 +559,23 @@
                     <div class="imageContainer">
                         <img class="sideimge" src="../image/Group 26.png">
                         <div class="caption text"><%=lead.project_name%>
-                        <form action="/update_status/<%=lead._id%>/<%=userId%>" method="POST">
-                            <select name="status">
-                                <option value="Validated">Validated</option>
-                                <option value="Rejected">Rejected</option>
-                                <option value="Closed">Closed</option>
-                              </select>
-                              <button>Update</button>
-                        </form></div>
-                        <div class="caption status"> <button id="modal6" type="button" class="submit"><%=lead.Status%></button></div>
-                        <div id="myModal6" class="modal">
-
-                         <!-- Modal content -->
-                         <div class="modal-content">
-                            <span class="close">&times;</span>
-                              <p class="head"><u>PROJECT</u>&ensp;<u>DETAILS</u></p>
-                          <div class="modal-body ">
-                          <div class="row">
-                              <div class="col-md-6">
-                                  <div class="cust">
-                                      <h1>Customer Name:</h1>
-                                  </div>
-
-                              </div>
-                              <div class="col-md-6">
-                                  <div class="proj">
-                                      <h1>Project Name:</h1>
-                                  </div>
-                              </div>
-                          
-                          </div>
-
-                          <div class="row">
-                              <div class="col-md-6">
-                                  <div class="detail">
-                                      <h1>Project Detail:</h1>
-                                  </div>
-                              </div>
-                              <div class="col-md-6">
-                                  <div class="value">
-                                      <h1>Project Value:</h1>
-                                  </div>
-                              </div>
-                          
-                          </div>
-
-                          <div class="row">
-                              <div class="col-md-6">
-                                  <div class="segd">
-                                      <h1>Segment:</h1>
-                                  </div>
-                              </div>
-                              <div class="col-md-6">
-                                  <div class="stat">
-                                      <h1>Status:</h1>
-                                  </div>
-                              </div>
-                          
-                          </div>
-
-                          <div class="row">
-                              <div class="col-lg-12">
-                                  <div class="upd">
-                                      <h1>Update Time:</h1>
-                                  </div>
-                              </div>
+                        <div class="caption text1">Customer Name</div>
+                        <div class="caption text2">Project Value</div>
+                        <div class="caption text3">Segment</div>
                             
-                          
-                          </div>
-                      
-                          </div>
-                          </div>
-                          
+                        <div class="caption status1">
+                            <form action="/update_status/<%=lead._id%>/<%=userId%>" method="POST">
+                                <select name="status">
+                                        <option value="Validated">Validated</option>
+                                        <option value="Rejected">Rejected</option>
+                                        <option value="Closed">Closed</option>
+                                </select>
+                                <button class="update">Update</button>
+                            </form>
                         </div>
+
+                        <div class="caption status"> <button  type="button" class="submit"><%=lead.Status%></button></div>
+                        
                     </div>
                     <%}}%>
                     <div>
@@ -967,78 +588,23 @@
                         <img class="sideimge" src="../image/Group 25.png">
                         
                         <div class="caption text"><%=lead.project_name%>
-                        <form action="/update_status/<%=lead._id%>/<%=userId%>" method="POST">
-                            <select name="status">
-                                <option value="Validated">Validated</option>
-                                <option value="Rejected">Rejected</option>
-                                <option value="Closed">Closed</option>
-                              </select>
-                              <button>Update</button>
-                        </form></div>
-                        <div class="caption status"> <button id="modal7" type="button" class="submit"><%=lead.Status%></button></div>
-                        <div id="myModal7" class="modal">
-
-                         <!-- Modal content -->
-                         <div class="modal-content">
-                            <span class="close">&times;</span>
-                              <p class="head"><u>PROJECT</u>&ensp;<u>DETAILS</u></p>
-                          <div class="modal-body ">
-                          <div class="row">
-                              <div class="col-md-6">
-                                  <div class="cust">
-                                      <h1>Customer Name:</h1>
-                                  </div>
-
-                              </div>
-                              <div class="col-md-6">
-                                  <div class="proj">
-                                      <h1>Project Name:</h1>
-                                  </div>
-                              </div>
-                          
-                          </div>
-
-                          <div class="row">
-                              <div class="col-md-6">
-                                  <div class="detail">
-                                      <h1>Project Detail:</h1>
-                                  </div>
-                              </div>
-                              <div class="col-md-6">
-                                  <div class="value">
-                                      <h1>Project Value:</h1>
-                                  </div>
-                              </div>
-                          
-                          </div>
-
-                          <div class="row">
-                              <div class="col-md-6">
-                                  <div class="segd">
-                                      <h1>Segment:</h1>
-                                  </div>
-                              </div>
-                              <div class="col-md-6">
-                                  <div class="stat">
-                                      <h1>Status:</h1>
-                                  </div>
-                              </div>
-                          
-                          </div>
-
-                          <div class="row">
-                              <div class="col-lg-12">
-                                  <div class="upd">
-                                      <h1>Update Time:</h1>
-                                  </div>
-                              </div>
+                        <div class="caption text1">Customer Name</div>
+                        <div class="caption text2">Project Value</div>
+                        <div class="caption text3">Segment</div>
                             
-                          
-                          </div>
-                      
-                          </div>
-                          </div>
-                        </div>
+                            <div class="caption status1">
+                                <form action="/update_status/<%=lead._id%>/<%=userId%>" method="POST">
+                                    <select name="status">
+                                        <option value="Validated">Validated</option>
+                                        <option value="Rejected">Rejected</option>
+                                        <option value="Closed">Closed</option>
+                                    </select>
+                                    <button class="update">Update</button>
+                                </form>
+                            </div>
+                        <div class="caption status"> <button  type="button" class="submit"><%=lead.Status%></button></div>
+                       
+                        
                     </div>
                     <%}}%>
                     <div>
@@ -1075,8 +641,8 @@
         <br>
 
 
-     <!--CAUTION:::::::: DONOT MOVE THE BELOW SCRIPT TO SCRIPT.JS 👇👇 -->
-     <script>
+       <!--CAUTION:::::::: DONOT MOVE THE BELOW SCRIPT TO SCRIPT.JS 👇👇 -->
+       <script>
         function autocomplete(inp, arr) {
           /*the autocomplete function takes two arguments,
           the text field element and an array of possible autocompleted values:*/
@@ -1110,7 +676,7 @@
                       /*insert the value for the autocomplete text field:*/
                       inp.value = this.getElementsByTagName("input")[0].value;
                       /*close the list of autocompleted values,
-                      or any other open lists of autocompleted values:*/
+                      (or any other open lists of autocompleted values:*/
                       closeAllLists();
                   });
                   a.appendChild(b);
@@ -1175,7 +741,7 @@
         }
         
         /*An array containing all the country names in the world:*/
-        var  users= [ <%for(let user of allUsers){%>
+        var  users= [<%for(let user of allUsers){%>
            "<%=user.Name%>",
             <%}%>]
         /*initiate the autocomplete function on the "myInput" element, and pass along the countries array as possible autocomplete values:*/
