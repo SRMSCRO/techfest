@@ -628,6 +628,7 @@ height: 25px;
 .sideimge
 {
   width: 700px;
+  height: 40%;
 }
 
 /************************FOUR BUTTONS CSS***********/
@@ -813,7 +814,7 @@ height: 25px;
   display: inline-block;
   position: relative;
   text-align: center;
-  float:left;
+  float: left;
   width: 700px;
   
 }
@@ -891,22 +892,18 @@ height: 25px;
     color: #000000;
 }
 
-.status 
-{
-    position: absolute;
-    top: 35%;
-    left: 70%;
-    
-}
+
+
+
+
 
 .submit
 {
     background-color: #5059E2;
    color:#ffffff;
    width: 100px;
-   height: 25px;
+   height: 20px;
    border-radius: 10px;
-   
    box-shadow: 3px 3px 8px #505ae294;
    float: right;
    border: none;
@@ -964,25 +961,70 @@ height: 25px;
     text-align: center;
     float:left;
     width: 700px;
+    height: 120%;
     
  }
 
 .text {
     position: absolute;
-    top: 35%;
-    left: 27%;
-    font-size: 20px;
+    top: 23%;
+    left: 20%;
+    font-size: 15px;
     font-family: Montserrat Regular;
+    color: #6c63ff;
 }
 
+.text1 {
+  position: absolute;
+  top: 23%;
+  left: 40%;
+  font-size: 15px;
+  font-family: Montserrat Regular;
+  color:#6c63ff;
+}
+
+.text2 {
+  position: absolute;
+  top: 42%;
+  left: 20%;
+  font-size: 15px;
+  font-family: Montserrat Regular;
+  color:#6c63ff;
+}
+
+.text3 {
+  position: absolute;
+  top: 42%;
+  left: 40%;
+  font-size: 15px;
+  font-family: Montserrat Regular;
+  color: #6c63ff;
+}
 .status 
 {
     position: absolute;
-    top: 35%;
+    top: 25%;
     left: 70%;
     
 }
 
+
+.status1 
+{
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    
+}
+
+
+.update 
+{
+  background-color: #6c63ff;
+  color: #ffffff;
+  border-radius: 10px;
+  border-color: #6c63ff;
+}
 
 
 .export1
