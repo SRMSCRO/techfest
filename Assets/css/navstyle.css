@@ -412,9 +412,11 @@ display: none;
       border-color: #5059E2;
   }*/
 
-.segment
+.btn-primary
 {
   color:#ffffff;
+  border-radius: 20px;
+  margin-left: 6%;
 }
 
 .segment2
@@ -427,7 +429,13 @@ display: none;
   margin-top: 15px;
   margin-left: 10px;
   margin-right: 0px;
-}    
+} 
+
+.file1
+{
+  margin-left: 75%;
+  
+}
 
 .float-child {
  font-family: 'Montserrat';
@@ -468,12 +476,14 @@ display: none;
 .grp20
 {
   margin-top: 20px;
-  margin-left:-200px;
+  margin-left: 0%;
 }
 
 .g202
 {
   width: 250px;
+  margin-top: -60%;
+  margin-left: 35%;
 }
 
 .g201
@@ -609,8 +619,8 @@ height: 25px;
  border-radius: 20px;
  box-shadow: 4px 4px 10px #f048059f;
  float: right;
- margin-right: 720px;
- margin-top: -230px;
+ margin-right: 680px;
+ margin-top: 50px;
  border: none;
  border-style: none;
  outline: none;
