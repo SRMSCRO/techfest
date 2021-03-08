@@ -36,7 +36,7 @@ const requireLogin = (req, res, next) => {
 
 // ----------------HOME PAGE---------------------------
 app.get("/",(req,res)=>{
-    res.render("home");
+    res.redirect("/login");
 });
 // -------------------ADMIN PAGE EXPORT ---------------
 app.get("/leadexport/:id",requireLogin,(req,res)=>{
