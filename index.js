@@ -196,7 +196,7 @@ app.get("/sales_representative/:id",requireLogin,async(req,res)=>{
     const countLead=await Lead.countDocuments();
     // Find the lead for the user
      Lead.find({},(err,leads)=>{
-        User.find({lead_submitted_by:user.Name, lead_submitted_to:user.Name}).then(allUsers=>{
+        User.find({}).then(allUsers=>{
             res.set('Cache-Control', 'no-cache, private, no-store, must-revalidate, max-stale=0, post-check=0, pre-check=0');
             res.render("sales_representative",{leads:leads,userId:req.params.id, user:user, countLead,allUsers:allUsers,countLead_open,countLead_closed,countLead_rejected,countLead_validated,});
         });

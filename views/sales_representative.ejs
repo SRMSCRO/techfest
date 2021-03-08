@@ -150,7 +150,15 @@
             <div class="members container openimg" id="openimg20">
                 <%for(let lead of leads){%>
                 <div class="imageContainer-analytics">
+                    <%if(lead.Status=="Open"){%>
                     <img class="sideimge" src="../image/Group 24.png">
+                    <%}%><%if(lead.Status=="Closed"){%>
+                    <img class="sideimge" src="../image/Group 25.png">
+                    <%}if(lead.Status=="Validated"){%>
+                    <img class="sideimge" src="../image/Group 27.png">
+                    <%}if(lead.Status=="Rejected"){%>
+                    <img class="sideimge" src="../image/Group 26.png">
+                    <%}%>
                     <div class="caption text"><%=lead.project_name%> </div>
                     <div class="caption status"> <button  type="button" class="submit"><%=lead.Status%></button></div>
 
@@ -180,11 +188,11 @@
             </div>
             
             <div class="members container rejectedimg" id="rejectedimg20">
-                <label class="lab"for="start">Approved By User :</label>
+                <label class="lab"for="start">Validated By Users :</label>
                 <%for(let lead of leads){%>
                     <%if(lead.Status == "Validated"){%>
                     <div class="imageContainer-analytics">
-                        <img class="sideimge" src="../image/Group 24.png">
+                        <img class="sideimge" src="../image/Group 27.png">
                         <div class="caption text"><%=lead.project_name%> </div>
                         <div class="caption status"> <button  type="button" class="submit"><%=lead.Status%></button></div>
     
@@ -1063,8 +1071,8 @@
         <br>
 
 
-     <!--CAUTION:::::::: DONOT MOVE THE BELOW SCRIPT TO SCRIPT.JS 👇👇 -->
-     <script>
+       <!--CAUTION:::::::: DONOT MOVE THE BELOW SCRIPT TO SCRIPT.JS 👇👇 -->
+       <script>
         function autocomplete(inp, arr) {
           /*the autocomplete function takes two arguments,
           the text field element and an array of possible autocompleted values:*/
@@ -1098,7 +1106,7 @@
                       /*insert the value for the autocomplete text field:*/
                       inp.value = this.getElementsByTagName("input")[0].value;
                       /*close the list of autocompleted values,
-                      or any other open lists of autocompleted values:*/
+                      (or any other open lists of autocompleted values:*/
                       closeAllLists();
                   });
                   a.appendChild(b);
@@ -1163,7 +1171,7 @@
         }
         
         /*An array containing all the country names in the world:*/
-        var  users= [ <%for(let user of allUsers){%>
+        var  users= [<%for(let user of allUsers){%>
            "<%=user.Name%>",
             <%}%>]
         /*initiate the autocomplete function on the "myInput" element, and pass along the countries array as possible autocomplete values:*/
