@@ -3,9 +3,10 @@ const signInButton = document.getElementById('signIn');
 const container = document.getElementById('container');
 
 
-function myFunction() {
-alert("Best View in desktop!");
-}
+function myFunction(){
+  if (screen.width < 800) {
+      alert('Best viewed on Desktop');
+  }}
 
 
 // signUpButton.addEventListener('click', () => {
