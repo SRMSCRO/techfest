@@ -565,6 +565,26 @@ height: 25px;
   
 }
 
+
+.form-control1 {
+  display: block;
+  width: 64%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 18px;
+  line-height: 1.42857143;
+  color: black;
+  background-color: #F2F3FE;
+  background-image: none;
+  border-top-style: hidden;
+  border-left-style: hidden;
+  border-radius: 0%;
+  border-bottom-width: medium;
+  border-color: none;
+  
+  
+}
+
 .customer
 {
   margin-top: 60px;
@@ -1243,7 +1263,7 @@ height: 25px;
     overflow-x: hidden;
   }
 
-  
+
   .btn {
     display: inline-block;
     font-weight: 400;
@@ -1670,4 +1690,128 @@ height: 25px;
   border-radius: 20px;
   font-size: 1.5rem;
 }
+
+/* addd lead */
+
+
+.addlead {
+  width: 67%;
+  height: 20%;
+  margin-left: 168px;
+  margin-top: 40px;
+}
+
+
+.form-control {
+  display: block;
+  width: 45%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 18px;
+  line-height: 1.42857143;
+  color: black;
+  background-color: #F2F3FE;
+  margin-left: 168px;
+  background-image: none;
+  border-top-style: hidden;
+  border-left-style: hidden;
+  border-radius: 0%;
+  border-bottom-width: medium;
+  border-color: none;
+}
+
+#addimg {
+  display: none;
+  float: right;
+  /* margin-left: 315px; */
+  height: 450px;
+  /* left: 15px; */
+  margin-top: -200px;
+  position: absolute;
+  width: 500px;
+}
+
+.grp20 {
+  margin-top: 20px;
+  margin-left: 45%;
+  width: 40%;
+}
+
+.form-control1 {
+  display: block;
+  width: 64%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 18px;
+  line-height: 1.42857143;
+  margin-left: -265px;
+  color: black;
+  background-color: #F2F3FE;
+  background-image: none;
+  border-top-style: hidden;
+  border-left-style: hidden;
+  border-radius: 0%;
+  border-bottom-width: medium;
+  border-color: none;
+}
+
+
+.area {
+  position: absolute;
+  margin-left: 162px;
+  margin-top: 48px;
+  background-color: #F2F3FE;
+  width: 236px;
+  height: 150px;
+  border-color: #6c63ff;
+  border-radius: 10px;
+  font-family: Monsterrat;
+  font-size: 20px;
+  color: #F04705;
+}
+
+
+
+.form-control {
+  display: block;
+  width: 45%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 18px;
+  line-height: 1.42857143;
+  color: black;
+  background-color: #F2F3FE;
+  margin-top: 133px;
+  margin-left: 168px;
+  background-image: none;
+  border-top-style: hidden;
+  border-left-style: hidden;
+  border-radius: 0%;
+  border-bottom-width: medium;
+  border-color: none;
+}
+
+.child {
+  margin-left: 127px;
+  margin-top: 176px;
+}
+
+.submit1 {
+  background-color: #F04705;
+  color: #ffffff;
+  width: 120px;
+  height: 37px;
+  border-radius: 20px;
+  box-shadow: 4px 4px 10px #f048059f;
+  float: right;
+  margin-right: -21pxx;
+  margin-right: 10px;
+  margin-top: 50px;
+  border: none;
+  border-style: none;
+  outline: none;
+  font-size: 20px;
+  font-family: Monsterrat Regular;
+}
+
 }
