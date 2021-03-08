@@ -296,22 +296,6 @@ display: none;
   font-size: 1.5rem;
 
 }
-.lable1{
-  
-  margin-top: 3%;
-  font-family: 'Montserrat', sans-serif;
-  color: #5059E2;
-  font-size: 2rem;
-  margin-left: 2%;
-}
-.leads_sub1{
-  
-  font-family: 'Montserrat', sans-serif;
-  color: #5059E2;
-  width: 2.3%;
-  font-size: 1.5rem;
-
-}
 .lab{
   margin-top: 5%;
   display: block;
@@ -349,8 +333,8 @@ display: none;
 
 .pieChart {
   position: absolute;
-  margin-left: 30%;
-  margin-top: -20%;
+  margin-left: 0%;
+  margin-top: 5%;
   height: 40%;
   width: 40%;
   border-radius: 20px;
@@ -631,7 +615,6 @@ height: 25px;
 .sideimge
 {
   width: 700px;
-  height: 40%;
 }
 
 /************************FOUR BUTTONS CSS***********/
@@ -817,7 +800,7 @@ height: 25px;
   display: inline-block;
   position: relative;
   text-align: center;
-  float: left;
+  float:left;
   width: 700px;
   
 }
@@ -895,18 +878,22 @@ height: 25px;
     color: #000000;
 }
 
-
-
-
-
+.status 
+{
+    position: absolute;
+    top: 35%;
+    left: 70%;
+    
+}
 
 .submit
 {
     background-color: #5059E2;
    color:#ffffff;
    width: 100px;
-   height: 20px;
+   height: 25px;
    border-radius: 10px;
+   
    box-shadow: 3px 3px 8px #505ae294;
    float: right;
    border: none;
@@ -964,70 +951,25 @@ height: 25px;
     text-align: center;
     float:left;
     width: 700px;
-    height: 120%;
     
  }
 
 .text {
     position: absolute;
-    top: 23%;
-    left: 20%;
-    font-size: 15px;
+    top: 35%;
+    left: 27%;
+    font-size: 20px;
     font-family: Montserrat Regular;
-    color: #6c63ff;
 }
 
-.text1 {
-  position: absolute;
-  top: 23%;
-  left: 40%;
-  font-size: 15px;
-  font-family: Montserrat Regular;
-  color:#6c63ff;
-}
-
-.text2 {
-  position: absolute;
-  top: 42%;
-  left: 20%;
-  font-size: 15px;
-  font-family: Montserrat Regular;
-  color:#6c63ff;
-}
-
-.text3 {
-  position: absolute;
-  top: 42%;
-  left: 40%;
-  font-size: 15px;
-  font-family: Montserrat Regular;
-  color: #6c63ff;
-}
 .status 
 {
     position: absolute;
-    top: 25%;
+    top: 35%;
     left: 70%;
     
 }
 
-
-.status1 
-{
-    position: absolute;
-    top: 50%;
-    left: 70%;
-    
-}
-
-
-.update 
-{
-  background-color: #6c63ff;
-  color: #ffffff;
-  border-radius: 10px;
-  border-color: #6c63ff;
-}
 
 
 .export1
@@ -1556,7 +1498,7 @@ opacity: 1;
 
 .buttons-analytics {
   margin-left: 112px;
-  margin-top: 3%px;
+  margin-top: 148px;
 }
 
 .clipart_ad {
@@ -1578,42 +1520,17 @@ opacity: 1;
 
 
 .lable {
-  margin-top: 35%;
-  font-family: 'Montserrat', sans-serif;
-  color: #5059E2;
-  font-size: 2rem;
-  margin-left: -8%;
-}
-.leads_sub {
-  font-family: 'Montserrat', sans-serif;
-  color: #5059E2;
-  width: 5%;
-  font-size: 1.5rem;
-}
-.lable1{
-  
   margin-top: 3%;
   font-family: 'Montserrat', sans-serif;
   color: #5059E2;
   font-size: 2rem;
-  margin-left: 25%;
+  margin-left: -4%;
 }
-.leads_sub1{
-  
+.leads_sub {
   font-family: 'Montserrat', sans-serif;
   color: #5059E2;
-  width: 5%;
+  width: 6.3%;
   font-size: 1.5rem;
-
-}
-.lab{
-  margin-top: 5%;
-  display: block;
-  font-family: 'Montserrat', sans-serif;
-  color: #5059E2;
-  font-size: 2rem;
-  margin-left: 30%;
-
 }
 
 .barChart , .barChart1 , .pieChart
