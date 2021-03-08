@@ -296,6 +296,22 @@ display: none;
   font-size: 1.5rem;
 
 }
+.lable1{
+  
+  margin-top: 3%;
+  font-family: 'Montserrat', sans-serif;
+  color: #5059E2;
+  font-size: 2rem;
+  margin-left: 2%;
+}
+.leads_sub1{
+  
+  font-family: 'Montserrat', sans-serif;
+  color: #5059E2;
+  width: 2.3%;
+  font-size: 1.5rem;
+
+}
 .lab{
   margin-top: 5%;
   display: block;
@@ -333,8 +349,8 @@ display: none;
 
 .pieChart {
   position: absolute;
-  margin-left: 0%;
-  margin-top: 5%;
+  margin-left: 30%;
+  margin-top: -20%;
   height: 40%;
   width: 40%;
   border-radius: 20px;
@@ -1495,7 +1511,7 @@ opacity: 1;
 
 .buttons-analytics {
   margin-left: 112px;
-  margin-top: 148px;
+  margin-top: 3%px;
 }
 
 .clipart_ad {
@@ -1517,17 +1533,42 @@ opacity: 1;
 
 
 .lable {
-  margin-top: 3%;
+  margin-top: 35%;
   font-family: 'Montserrat', sans-serif;
   color: #5059E2;
   font-size: 2rem;
-  margin-left: -4%;
+  margin-left: -8%;
 }
 .leads_sub {
   font-family: 'Montserrat', sans-serif;
   color: #5059E2;
-  width: 6.3%;
+  width: 5%;
   font-size: 1.5rem;
+}
+.lable1{
+  
+  margin-top: 3%;
+  font-family: 'Montserrat', sans-serif;
+  color: #5059E2;
+  font-size: 2rem;
+  margin-left: 25%;
+}
+.leads_sub1{
+  
+  font-family: 'Montserrat', sans-serif;
+  color: #5059E2;
+  width: 5%;
+  font-size: 1.5rem;
+
+}
+.lab{
+  margin-top: 5%;
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  color: #5059E2;
+  font-size: 2rem;
+  margin-left: 30%;
+
 }
 
 .barChart , .barChart1 , .pieChart
