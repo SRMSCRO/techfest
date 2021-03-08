@@ -138,7 +138,7 @@
             <div class="sections text-center buttons-analytics ">
                 <button type="button" id="openbtn20" class="btn btn-primary events_btn_img openbtn "  style="isolation: isolate; background-color: #f04705; border-color: #f04705;" onclick="vis20Function()">LEADS</button>                  
                 <button type="button" id="validatedbtn20" class="btn btn-primary events_btn_img validatedbtn"  style="isolation: isolate; background-color: #6c63ff; border-color: #6c63ff;" onclick="vis20Function1()">STATUS</button>
-                <button type="button" id="rejectedbtn20" class="btn btn-primary events_btn_img1 rejectedbtn"  style="isolation: isolate; background-color: #6c63ff; border-color: #6c63ff;" onclick="vis20Function2()">LEADS VALIDATED</button>
+                <button type="button" id="rejectedbtn20" class="btn btn-primary events_btn_img1 rejectedbtn"  style="isolation: isolate; background-color: #6c63ff; border-color: #6c63ff;" onclick="vis20Function2()">LEADS CLOSED</button>
                 </div>
                 <form action="/leadexport/<%=userId%>" id="export_form" method="get"> 
                     <button type="button" onclick="document.getElementById('export_form').submit();" class="export" >Export</button>
@@ -180,11 +180,11 @@
             </div>
             
             <div class="members container rejectedimg" id="rejectedimg20">
-                <label class="lab"for="start">Approved By User :</label>
+                <label class="lab"for="start">Closed By Users : <%=countLead_closed%></label>
                 <%for(let lead of leads){%>
-                    <%if(lead.Status == "Validated"){%>
+                    <%if(lead.Status == "Closed"){%>
                     <div class="imageContainer-analytics">
-                        <img class="sideimge" src="../image/Group 24.png">
+                        <img class="sideimge" src="../image/Group 25.png">
                         <div class="caption text"><%=lead.project_name%> </div>
                         <div class="caption status"> <button  type="button" class="submit"><%=lead.Status%></button></div>
     
@@ -481,7 +481,7 @@
                             <select name="status">
                                 <option value="Validated">Validated</option>
                                 <option value="Rejected">Rejected</option>
-                                <option value="Closed">Closed</option>
+                                
                               </select>
                               <button>Update</button>
                         </form>
@@ -510,8 +510,7 @@
                             <div class="caption status1">
                                 <form action="/update_status/<%=lead._id%>/<%=userId%>" method="POST">
                                     <select name="status">
-                                        <option value="Validated">Validated</option>
-                                        <option value="Rejected">Rejected</option>
+                                       
                                         <option value="Closed">Closed</option>
                                     </select>
                                     <button class="update">Update</button>
@@ -539,14 +538,7 @@
                         <div class="caption text3"><%=lead.Segment_details%></div>
                         
                         <div class="caption status1">
-                            <form action="/update_status/<%=lead._id%>/<%=userId%>" method="POST">
-                                <select name="status">
-                                    <option value="Validated">Validated</option>
-                                    <option value="Rejected">Rejected</option>
-                                    <option value="Closed">Closed</option>
-                                </select>
-                                <button class="update">Update</button>
-                            </form>
+                            
                         </div>
 
                         <div class="caption status"> <button  type="button" class="submit"><%=lead.Status%></button></div>
@@ -570,14 +562,7 @@
                         <div class="caption text3"><%=lead.Segment_details%></div>
                         
                         <div class="status1">
-                        <form action="/update_status/<%=lead._id%>/<%=userId%>" method="POST">
-                            <select name="status">
-                                <option value="Validated">Validated</option>
-                                <option value="Rejected">Rejected</option>
-                                <option value="Closed">Closed</option>
-                              </select>
-                              <button>Update</button>
-                        </form>
+                        
                         </div>
 
                         <div class="caption status"> <button  type="button" class="submit"><%=lead.Status%></button></div>
