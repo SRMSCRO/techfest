@@ -6,6 +6,7 @@ const container = document.getElementById('container');
 function myFunction(){
   if (screen.width < 800) {
       alert('Best viewed on Desktop');
+      console.clear();
   }}
 
 
@@ -23,6 +24,7 @@ document.getElementById('Analytics').style.display ="none";
 document.getElementById('Add_lead').style.display ="none";
 document.getElementById('lead_submitted').style.display ="none";
 document.getElementById('lead_assigned').style.display ="none";
+console.clear();
 }
 function vis1(){
 	document.getElementById('Profile').style.display ="contents";
@@ -202,7 +204,7 @@ function visFunction5() {
     document.getElementById("validated_btn").style.backgroundColor = "#F04705";
     document.getElementById("rejected_btn").style.backgroundColor = "#6c63ff";
     document.getElementById("closed_btn").style.backgroundColor = "#6c63ff";
-
+    console.clear();
 }
 
 function visFunction6() {
@@ -241,7 +243,7 @@ function visFunction8() {
     document.getElementById("validatedimg1").style.display = "none";
     document.getElementById("rejectedimg1").style.display = "none";
     document.getElementById("closedimg1").style.display = "none";
-   
+    console.clear();
    
     document.getElementById("openbtn1").style.backgroundColor = "#F04705";
     document.getElementById("validatedbtn1").style.backgroundColor = "#6c63ff";
