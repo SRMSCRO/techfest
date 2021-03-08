@@ -988,12 +988,12 @@ height: 25px;
 .export 
 {
   background-color: #f04705;
-  height: 45%;
+  height: 4%;
   width: 10%;
   color: #fff;
-  margin-top: 18%;
-  position: absolute;
-  left: 41%;
+  margin-top: -4%;
+  position: fixed;
+  left: 61%;
   border-radius: 20px;
   font-size: 1.5rem;
   box-shadow: 3px 3px 8px #f0480571;
@@ -1046,14 +1046,13 @@ opacity: 1;
 
 .clipart_ad
 {
-    width: 550px;
+    width: 450px;
     float: right;
     /*margin-top: -20%;
     margin-left: 5%;*/
     position: fixed;
-    top: 20%;
-    left: 60%;
-    
+    top: 34%;
+    left: 62%;
 }
 /* The Modal (background) */
 .modal {
@@ -1363,21 +1362,21 @@ opacity: 1;
 .clipart_  {
   width: 276px;
   float: right;
-  margin-top: 0px;
-  margin-right: 0px;
+  margin-top: 27px;
+  margin-right: 29px;
 }
 
   .clipart_1  {
-  width: 276px;
+  width: 250px;
   float: right;
-  margin-top: 0px;
-  margin-right: 0px;
+  margin-top: 25px;
+  margin-right: 39px;
 }
 
   .clipart_2 {
-  width: 276px;
+  width: 286px;
   float: right;
-  margin-top: 0px;
+  margin-top: -23px;
   margin-right: 0px;
 }
 
