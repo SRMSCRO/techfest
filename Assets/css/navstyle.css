@@ -1278,19 +1278,30 @@ opacity: 1;
 }
 
 .clipart1 {
-  width: 250px;
+  width: 235px;
   float: right;
   margin-top: 2px;
-  margin-right: 32px;
+  margin-right: 46px;
 }
  
-.clipart2, .clipart3, .clipart4 {
+.clipart2  {
   width: 193px;
   float: right;
-  margin-top: -30px;
+  margin-top: -29px;
   margin-right: 61px;
 }
-
+  .clipart3  {
+  width: 152px;
+  float: right;
+  margin-top: 10px;
+  margin-right: 102px;
+}
+  .clipart4 {
+  width: 193px;
+  float: right;
+  margin-top: 7px;
+  margin-right: 84px;
+}
  
 
 .export1 {
@@ -1340,21 +1351,36 @@ opacity: 1;
 
 
 
-
+/*************LEAD Submitted***********************************/
 
 .clipart {
   width: 250px;
   float: right;
-  margin-top: -116px;
+  margin-top: -157px;
   margin-right: 32px;
 }
 
-.clipart_, .clipart_1, .clipart_2 {
+.clipart_  {
   width: 276px;
   float: right;
   margin-top: 0px;
   margin-right: 0px;
 }
+
+  .clipart_1  {
+  width: 276px;
+  float: right;
+  margin-top: 0px;
+  margin-right: 0px;
+}
+
+  .clipart_2 {
+  width: 276px;
+  float: right;
+  margin-top: 0px;
+  margin-right: 0px;
+}
+
 .submit {
   background-color: #6c63ff;
   color: #ffffff;
@@ -1383,7 +1409,7 @@ opacity: 1;
 }
 
  
-
+/***************************************Admin Area***********************************************/
 
 .imageContainer1 {
   display: inline-block;
