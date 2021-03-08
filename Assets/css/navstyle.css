@@ -355,10 +355,9 @@ display: none;
 
 .addlead
 {
-    width: 28%;
+    width:30%;
     height: 20%;
     margin-top: 40px;
-    margin-left: 68px;
 }
 .dropdown-toggle{
   color: #5059E2; background-color:transparent; width : 140px; 
@@ -423,16 +422,17 @@ display: none;
 .area
 {
   position: absolute;
-  margin-left: -200px;
-  margin-top: -188px;
+  margin-left: 255px;
+  margin-top: -150px;
   background-color: #F2F3FE;
-  width: 312px;
-  height: 193px;
+  width:400px;
+  height: 200px;
   border-color: #6c63ff;
-  border-radius: 10px;
+  border-radius: 10px ;
   font-family: Monsterrat;
   font-size: 20px;
   color: #F04705;
+
 }
 
 .area:hover{
@@ -441,17 +441,13 @@ display: none;
 }
 .grp20
 {
-  margin-top: 38px;
-  margin-left: -314px;
-  width: 208px;
+  margin-top: 20px;
+  margin-left:-200px;
 }
 
 .g202
 {
-  width: 215px;
-  margin-left: 7px;
-  /* margin-left: 300px !important; */
-  /* margin-top: -700px; */
+  width: 250px;
 }
 
 .g201
@@ -470,9 +466,10 @@ height: 25px;
 
 .pos 
 {
-  /* margin-left: -80px; */
-  /* margin-top: -120px; */
-  float: left;
+  margin-left: -80px;
+  margin-top: -120px;
+  
+  
 }
 
 
@@ -494,12 +491,11 @@ height: 25px;
  #addimg {
   float: right;
   /* margin-left: 315px; */
-  height: 441px;
+  height: 450px;
   /* left: 15px; */
-  margin-top: -228px;
-  margin-left: 65px;
+  margin-top: -200px;
   position: absolute;
-  width: 435px;
+  width: 500px;
 }
 
 
@@ -516,11 +512,10 @@ height: 25px;
 
 .form-control {
   display: block;
-  width: 49%;
+  width: 64%;
   height: 34px;
   padding: 6px 12px;
   font-size: 18px;
-  margin-left: 79px;
   line-height: 1.42857143;
   color: black;
   background-color: #F2F3FE;
@@ -530,6 +525,8 @@ height: 25px;
   border-radius: 0%;
   border-bottom-width: medium;
   border-color: none;
+  
+  
 }
 
 .customer
@@ -1513,8 +1510,8 @@ opacity: 1;
   position: relative;
   width: 200px;
   float: right;
-  margin-top: -101%;
-  margin-right: 4%;
+  margin-top: -65%;
+  margin-right: 15%;
   z-index: -10;
 }
 
