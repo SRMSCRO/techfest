@@ -777,17 +777,19 @@ height: 25px;
   margin-right: -113px;
 }
 
-.clipart_1 {
-  width: 490px;
-  float: right;
-  margin-top: 9px;
-  margin-right: -120px;
+.clipart_1
+{
+    width: 490px;
+    float: right;
+    margin-top: -38px;
+    margin-right: -120px;
 }
-.clipart_2 {
-  width: 550px;
-  float: right;
-  margin-top: 21px;
-  margin-right: -113px;
+.clipart_2
+{
+    width: 550px;
+    float: right;
+    margin-top: -38px;
+    margin-right: -120px;
 }
 
 .imageContainer {
@@ -901,10 +903,10 @@ height: 25px;
 
 
 .clipart {
-  width: 523px;
+  width: 550px;
   float: right;
   margin-top: -295px;
-  margin-right: -106px;
+  margin-right: -120px;
 }
 
 .clipart1
@@ -915,11 +917,12 @@ height: 25px;
     margin-right: -180px;
 }
 
-.clipart2 {
-  width: 450px;
-  float: right;
-  margin-top: 17px;
-  margin-right: -98px;
+.clipart2
+{
+    width: 450px;
+    float: right;
+    margin-top: -42px;
+    margin-right: -150px;
 }
 
 
@@ -982,22 +985,21 @@ height: 25px;
 
 /*************************ADMIN**************************/
 
-.export {
+.export 
+{
   background-color: #f04705;
-  /* height: 56%; */
-  width: 12%;
-  /* top: -14px; */
+  height: 45%;
+  width: 10%;
   color: #fff;
-  margin-top: -5%;
+  margin-top: 18%;
   position: absolute;
-  /* left: 107%; */
+  left: 41%;
   border-radius: 20px;
   font-size: 1.5rem;
   box-shadow: 3px 3px 8px #f0480571;
   border-style: none;
   outline: none;
 }
-
 .export_adm 
 {
   background-color: #f04705;
@@ -1042,20 +1044,16 @@ opacity: 1;
 }
 
 
-.clipart_ad {
-  width: 446px;
-  float: right;
-  position: fixed;
-  top: 29%;
-  left: 60%;
-}
-
-
-.clipart_Leadapproved {
-  width: 550px;
-  float: right;
-  margin-top: -63%;
-  margin-right: -113px;
+.clipart_ad
+{
+    width: 550px;
+    float: right;
+    /*margin-top: -20%;
+    margin-left: 5%;*/
+    position: fixed;
+    top: 20%;
+    left: 60%;
+    
 }
 /* The Modal (background) */
 .modal {
@@ -1402,11 +1400,11 @@ opacity: 1;
 
 
 .clipart_ad {
-  width: 207px;
+  width: 244px;
   float: none;
   position: absolute;
-  left: 5%;
-  top: 235px;
+  left: 0%;
+  top: 223px;
 }
 
 .btn1 {
@@ -1475,7 +1473,13 @@ opacity: 1;
   margin-top: 148px;
 }
 
- 
+.clipart_ad {
+  width: 244px;
+  float: none;
+  position: absolute;
+  left: 0%;
+  top: 188px;
+}
   
 .clipart-analytics {
   width: 241px;
@@ -1550,21 +1554,7 @@ opacity: 1;
   margin-left: 88px;
 }
 
-.clipart_Leadapproved {
-  width: 239px;
-  float: right;
-  margin-top: -64%;
-  margin-right: 36px;
-}
-.lab {
-  margin-top: 36%;
-  display: block;
-  font-family: 'Montserrat', sans-serif;
-  color: #5059E2;
-  font-size: 2rem;
-  width: 201px;
-  margin-left: 35%;
-}
+
 
   
 
