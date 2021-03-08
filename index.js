@@ -219,7 +219,7 @@ app.post("/update_status/:id/:userId",async(req,res)=>{
     //If Validated or Rejected
     if(Status=="Validated"||Status=="Rejected")
     {
-        Lead.findByIdAndUpdate(req.params.id,{"Status":Status,"Validate_or_reject_time":datetime},(err,result)=>{
+        Lead.findByIdAndUpdate(req.params.id,{"Status":Status,"Validate_or_reject_time":datetime, "Update_time":datetime,},(err,result)=>{
             if(err){
                 res.send(err);
             }else{
@@ -231,7 +231,7 @@ app.post("/update_status/:id/:userId",async(req,res)=>{
     //If Closed
     if(Status=="Closed")
     {
-    Lead.findByIdAndUpdate(req.params.id,{"Status":Status,"Closed`_time":datetime},(err,result)=>{
+    Lead.findByIdAndUpdate(req.params.id,{"Status":Status,"Closed_time":datetime, "Update_time":datetime },(err,result)=>{
         if(err){
             res.send(err);
         }else{
