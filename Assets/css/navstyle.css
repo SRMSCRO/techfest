@@ -1460,8 +1460,9 @@ opacity: 1;
 
 .clipart_  {
   width: 276px;
-  float: right;
-  margin-top: 10%;
+  position: revert;
+  /* float: right; */
+  margin-top: -40%;
   margin-right: 29px;
 }
 
@@ -1604,10 +1605,10 @@ opacity: 1;
 }
   
 .clipart-analytics {
-  position: relative;
+  position: revert;
   width: 200px;
-  float: right;
-  margin-top: -100%;
+  /* float: right; */
+  margin-top: -147%;
   margin-right: 15%;
   z-index: -10;
 }
