@@ -6,7 +6,7 @@ body{
 
   background-attachment: fixed;
   background-size: 50% 115%;
- overflow-x: hidden;
+  overflow-x: hidden;
  
   
 }
@@ -1228,6 +1228,12 @@ height: 25px;
 
 
 @media only screen and (max-width: 500px) {
+
+  body{
+    overflow-x: hidden;
+  }
+
+  
   .btn {
     display: inline-block;
     font-weight: 400;
@@ -1425,7 +1431,6 @@ height: 25px;
   float: right;
   border: none;
 }
-
 
  
 /***************************************Admin Area***********************************************/
@@ -1639,7 +1644,20 @@ height: 25px;
 }
 
 
-
-  
-
+.export 
+{
+  background-color: #f04705;
+  height: 4%;
+  width: 10%;
+  height: 3%;
+  width: 24%;
+  color: #fff;
+  margin-top: -4%;
+  position: revert;
+  margin-top: -15%;
+  /* position: fixed; */
+  left: 79%;
+  border-radius: 20px;
+  font-size: 1.5rem;
+}
 }
