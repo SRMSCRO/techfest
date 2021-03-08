@@ -61,17 +61,9 @@
         <div class="float-child">
             <div class="dropdown transparentbar" id="myseg" >
               
-             <input class="btn1 btn-light dropdown-toggle" id="segment1" type="text" list="segment"  name="Segment_details" placeholder="Segment Details" autocomplete="off">
-             
-              <datalist id="segment">
-                <option value="Pharma">
-                <option value="Bio-Pharma">
-                <option value="Life Sciences">
-                <option value="Diagnostics">
-                <option value="Environmental & Applied Solutions">
-              </datalist>
-              <button class="filter-button" onclick="filterseg()" id="segfilter">filter</button>
-         
+              <form action="/leadexport/<%=id%>" id="export_form" method="get">  
+                <button type="button" class="filter-button" onclick="document.getElementById('export_form').submit();" >Export</button>
+              </form>
              
         </div>
     <div>
@@ -83,14 +75,8 @@
            
             <button type="button" id="rejectedbtn1" class="btn btn-primary events_btn_img rejectedbtn1"  style="isolation: isolate; background-color: #6c63ff; border-color: #6c63ff;" onclick="visFunction10()">REJECTED</button>
           
-            <button type="button" id="closedbtn1" class="btn btn-primary events_btn_img closedbtn1"  style="isolation: isolate; background-color: #6c63ff; border-color: #6c63ff;" onclick="visFunction11()">CLOSED</button>
-           
-            
-            </div>
-           <form action="/leadexport/<%=id%>" id="export_form" method="get"> 
-            <button type="button" onclick="document.getElementById('export_form').submit();" class="export" >Export</button>
-          </form>
-        </div>
+            <button type="button" id="closedbtn1" class="btn btn-primary events_btn_img closedbtn1"  style="isolation: isolate; background-color: #6c63ff; border-color: #6c63ff;" onclick="visFunction11()">CLOSED</button>   
+        
    
         <div class="members container openimg1" id="openimg1"><%for(let lead of leads){%>
           <%if(lead.Status == "Open"){%>
