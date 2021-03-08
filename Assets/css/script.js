@@ -2,6 +2,12 @@ const signUpButton = document.getElementById('signUp');
 const signInButton = document.getElementById('signIn');
 const container = document.getElementById('container');
 
+
+function myFunction() {
+alert("Best View in desktop!");
+}
+
+
 // signUpButton.addEventListener('click', () => {
 // 	container.classList.add("right-panel-active");
 // });

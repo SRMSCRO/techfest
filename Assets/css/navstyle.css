@@ -187,6 +187,17 @@ display: none;
 
 /******************PROFILE**********************/
 
+.alertbtn 
+{
+  background-color: #F04705;
+  border-color: #F04705 ;
+  color: #ffffff;
+  margin-left: 90%;
+  margin-top: 10%;
+  width: 10%;
+  height: 80%;
+  border-radius: 10px;
+}
 
 .profileimg 
 {
