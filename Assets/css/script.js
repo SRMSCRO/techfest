@@ -338,7 +338,7 @@ window.onclick = function(event) {
 
 
 
-var modal2 = document.getElementById("myModal");
+var modal2 = document.getElementById("myModal2");
 
 // Get the button that opens the modal
 var btn2 = document.getElementById("modal2");
@@ -365,7 +365,7 @@ window.onclick = function(event) {
 
 
 
-var modal3 = document.getElementById("myModal");
+var modal3 = document.getElementById("myModal3");
 
 // Get the button that opens the modal
 var btn3 = document.getElementById("modal3");
@@ -391,7 +391,7 @@ window.onclick = function(event) {
 }
 
 
-var modal4 = document.getElementById("myModal");
+var modal4 = document.getElementById("myModal4");
 
 // Get the button that opens the modal
 var btn4 = document.getElementById("modal4");
@@ -418,7 +418,7 @@ window.onclick = function(event) {
 
 
 
-var modal5 = document.getElementById("myModal");
+var modal5 = document.getElementById("myModal5");
 
 // Get the button that opens the modal
 var btn5 = document.getElementById("modal5");
@@ -446,7 +446,7 @@ window.onclick = function(event) {
 
 
 
-var modal6 = document.getElementById("myModal");
+var modal6 = document.getElementById("myModal6");
 
 // Get the button that opens the modal
 var btn6 = document.getElementById("modal6");
@@ -473,7 +473,7 @@ window.onclick = function(event) {
 
 
 
-var modal7 = document.getElementById("myModal");
+var modal7 = document.getElementById("myModal7");
 
 // Get the button that opens the modal
 var btn7 = document.getElementById("modal7");
