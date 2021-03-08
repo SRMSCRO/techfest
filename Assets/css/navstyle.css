@@ -1355,9 +1355,9 @@ opacity: 1;
 
 .text3 {
   position: absolute;
-  top: 42%;
+  top: 51%;
   left: 40%;
-  font-size: 15px;
+  font-size: 11px;
   font-family: Montserrat Regular;
   color: #6c63ff;
 }
@@ -1390,7 +1390,8 @@ opacity: 1;
 
  
 .sideimge {
-  width: 321px;
+  width: 301px;
+  height: 91px;
 }
 
 .imageContainer {
@@ -1398,7 +1399,7 @@ opacity: 1;
   position: relative;
   text-align: center;
   float: left;
-  width: 313px;
+  width: 317px;
   top: 223px;
 }
 
@@ -1409,7 +1410,7 @@ opacity: 1;
 .clipart {
   width: 250px;
   float: right;
-  margin-top: -157px;
+  margin-top: -255px;
   margin-right: 32px;
 }
 
