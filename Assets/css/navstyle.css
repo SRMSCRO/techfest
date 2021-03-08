@@ -982,21 +982,22 @@ height: 25px;
 
 /*************************ADMIN**************************/
 
-.export 
-{
+.export {
   background-color: #f04705;
-  height: 45%;
-  width: 10%;
+  /* height: 56%; */
+  width: 12%;
+  /* top: -14px; */
   color: #fff;
-  margin-top: 18%;
+  margin-top: -5%;
   position: absolute;
-  left: 41%;
+  /* left: 107%; */
   border-radius: 20px;
   font-size: 1.5rem;
   box-shadow: 3px 3px 8px #f0480571;
   border-style: none;
   outline: none;
 }
+
 .export_adm 
 {
   background-color: #f04705;
@@ -1041,16 +1042,12 @@ opacity: 1;
 }
 
 
-.clipart_ad
-{
-    width: 550px;
-    float: right;
-    /*margin-top: -20%;
-    margin-left: 5%;*/
-    position: fixed;
-    top: 20%;
-    left: 60%;
-    
+.clipart_ad {
+  width: 446px;
+  float: right;
+  position: fixed;
+  top: 29%;
+  left: 60%;
 }
 /* The Modal (background) */
 .modal {
@@ -1397,11 +1394,11 @@ opacity: 1;
 
 
 .clipart_ad {
-  width: 244px;
+  width: 207px;
   float: none;
   position: absolute;
-  left: 0%;
-  top: 223px;
+  left: 5%;
+  top: 235px;
 }
 
 .btn1 {
@@ -1470,13 +1467,7 @@ opacity: 1;
   margin-top: 148px;
 }
 
-.clipart_ad {
-  width: 244px;
-  float: none;
-  position: absolute;
-  left: 0%;
-  top: 188px;
-}
+ 
   
 .clipart-analytics {
   width: 241px;
