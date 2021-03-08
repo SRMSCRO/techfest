@@ -82,18 +82,15 @@
           <%if(lead.Status == "Open"){%>
           <div class="imageContainer1">
               <img  class="sideimge" src="../image/Component 10 – 56.png">
+              <div class="caption text1">Customer Name</div>
+              <div class="caption text2">Project Value</div>
+              <div class="caption text3">Segment</div>
+              <div class="caption text4">Submitted by</div>
+              <div class="caption text5">Submitted to</div>
               
             <div class="caption text"><%=lead.project_name%> </div>
-            <div class="caption status"><button id="modal_admin" type="button" class="submit"><%=lead.Status%></button></div>
-            <div id="myModal_admin" class="modal_admin">
-
-              <!-- Modal content -->
-              <div class="modal-content_admin">
-                <span class="close_admin">&times;</span>
-                <p>Some text in the Modal..</p>
-              </div>
-            
-            </div>
+            <div class="caption status"><button  type="button" class="submit"><%=lead.Status%></button></div>
+           
           </div>
 
           <%}%>   <%}%>
@@ -107,6 +104,11 @@
               <img class="sideimge" src="../image/Component 10 – 56.png">
               
               <div class="caption text"><%=lead.project_name%></div>
+              <div class="caption text1">Customer Name</div>
+              <div class="caption text2">Project Value</div>
+              <div class="caption text3">Segment</div>
+              <div class="caption text4">Submitted by</div>
+              <div class="caption text5">Submitted to</div>
               <div class="caption status"> <button type="button" class="submit"><%=lead.Status%></button></div>
           </div>
           <%}%> <%}%>
@@ -116,9 +118,14 @@
       <div class="members container rejectedimg" id="rejectedimg1"><%for(let lead of leads){%>
           <%if(lead.Status == "Rejected"){%>
           <div class="imageContainer1">
-            <img src="../image/Component 10 – 56.png">
+            <img class="sideimge" src="../image/Component 10 – 56.png">
               
               <div class="caption text"><%=lead.project_name%></div>
+              <div class="caption text1">Customer Name</div>
+              <div class="caption text2">Project Value</div>
+              <div class="caption text3">Segment</div>
+              <div class="caption text4">Submitted by</div>
+              <div class="caption text5">Submitted to</div>
               <div class="caption status"> <button type="button" class="submit"><%=lead.Status%></button></div>
           </div>
 
@@ -132,6 +139,11 @@
               <img class="sideimge" src="../image/Component 10 – 56.png">
               
               <div class="caption text"><%=lead.project_name%></div>
+              <div class="caption text1">Customer Name</div>
+              <div class="caption text2">Project Value</div>
+              <div class="caption text3">Segment</div>
+              <div class="caption text4">Submitted by</div>
+              <div class="caption text5">Submitted to</div>
               <div class="caption status"> <button type="button" class="submit"><%=lead.Status%></button></div>
           </div>
           <%}}%>

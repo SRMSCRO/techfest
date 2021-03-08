@@ -988,7 +988,7 @@ height: 25px;
 
 .text2 {
   position: absolute;
-  top: 42%;
+  top: 40%;
   left: 20%;
   font-size: 15px;
   font-family: Montserrat Regular;
@@ -997,7 +997,25 @@ height: 25px;
 
 .text3 {
   position: absolute;
-  top: 42%;
+  top: 40%;
+  left: 40%;
+  font-size: 15px;
+  font-family: Montserrat Regular;
+  color: #6c63ff;
+}
+
+.text4 {
+  position: absolute;
+  top: 54%;
+  left: 20%;
+  font-size: 15px;
+  font-family: Montserrat Regular;
+  color: #6c63ff;
+}
+
+.text5 {
+  position: absolute;
+  top: 54%;
   left: 40%;
   font-size: 15px;
   font-family: Montserrat Regular;
