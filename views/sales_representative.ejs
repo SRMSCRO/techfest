@@ -18,7 +18,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 </head>
-<body onload="vis();vis20Function();">
+<body onload="vis()">
 
 <!---------------NAVBAR------------>
 <div class="sidenav"  >
@@ -136,9 +136,10 @@
     <div class="row">
         <div class="col-md-12 col-xs-4">
             <div class="sections text-center buttons-analytics ">
-                <button type="button" id="openbtn20" class="btn btn-primary events_btn_img openbtn "  style="isolation: isolate; background-color: #f04705; border-color: #f04705;" onclick="vis20Function()">LEADS</button>                  
-                <button type="button" id="validatedbtn20" class="btn btn-primary events_btn_img validatedbtn"  style="isolation: isolate; background-color: #6c63ff; border-color: #6c63ff;" onclick="vis20Function1()">STATUS</button>
-                <button type="button" id="rejectedbtn20" class="btn btn-primary events_btn_img1 rejectedbtn"  style="isolation: isolate; background-color: #6c63ff; border-color: #6c63ff;" onclick="vis20Function2()">LEADS VALIDATED</button>
+                <button type="button" id="openbtn2" class="btn btn-primary events_btn_img openbtn "  style="isolation: isolate; background-color: #f04705; border-color: #f04705;" onclick="vis2Function()">LEADS</button>                  
+                <button type="button" id="validatedbtn2" class="btn btn-primary events_btn_img validatedbtn"  style="isolation: isolate; background-color: #6c63ff; border-color: #6c63ff;" onclick="vis2Function1()">STATUS</button>
+                <button type="button" id="rejectedbtn2" class="btn btn-primary events_btn_img1 rejectedbtn"  style="isolation: isolate; background-color: #6c63ff; border-color: #6c63ff;" onclick="vis2Function2()">LEADS APPROVED</button>
+                <!-- <button type="button" id="closedbtn2" class="btn btn-primary events_btn_img closedbtn"  style="isolation: isolate; background-color: #6c63ff; border-color: #6c63ff;" onclick="vis2Function3()">CLOSED</button> -->
                 </div>
                 <form action="/leadexport/<%=userId%>" id="export_form" method="get"> 
                     <button type="button" onclick="document.getElementById('export_form').submit();" class="export" >Export</button>
@@ -147,7 +148,7 @@
             <label class="lable"for="start">Total Leads submitted  : </label>
             <input class="leads_sub"type="text" value="<%=countLead%>" readonly>
                 
-            <div class="members container openimg" id="openimg20">
+            <div class="members container openimg" id="openimg2">
                 <%for(let lead of leads){%>
                 <div class="imageContainer-analytics">
                     <img class="sideimge" src="../image/Group 24.png">
@@ -163,26 +164,26 @@
             </div>
             
             
-            <div class="members container validatedimg" id="validatedimg20">
-                <label class="lable"for="start">Total Leads Open  : </label>
-            <input class="leads_sub"type="text" value="<%=countLead_open%>" readonly>
-            <label class="lable"for="start">Total Leads Closed  : </label>
-            <input class="leads_sub"type="text" value="<%=countLead_closed%>" readonly><br>
-            <label class="lable"for="start">Total Leads Validated  : </label>
-            <input class="leads_sub"type="text" value="<%=countLead_validated%>" readonly>
-            <label class="lable"for="start">Total Leads Rejected  : </label>
-            <input class="leads_sub"type="text" value="<%=countLead_rejected%>" readonly>
+            <div class="members container validatedimg" id="validatedimg2">
                 <div class="pieChart"> 
                     <canvas id="pieChart"></canvas>
                 </div>
-                
+                <%for(let lead of leads){%>
+                <%if(lead.Status == "Validated"){%>
+                <div class="imageContainer-analytics">
+                    <img class="sideimge" src="../image/Group 27.png">
+                    
+                    <div class="caption text"><%=lead.project_name%></div>
+                    <div class="caption status"> <button type="button" class="submit"><%=lead.Status%></button></div>
+                </div>
+                <%}%> <%}%>
                 
             </div>
             
-            <div class="members container rejectedimg" id="rejectedimg20">
+            <div class="members container rejectedimg" id="rejectedimg2">
                 <label class="lab"for="start">Approved By User :</label>
                 <%for(let lead of leads){%>
-                    <%if(lead.Status == "Validated"){%>
+                    <%if(lead.Status == "Open"){%>
                     <div class="imageContainer-analytics">
                         <img class="sideimge" src="../image/Group 24.png">
                         <div class="caption text"><%=lead.project_name%> </div>
@@ -197,7 +198,19 @@
                 </div>
             </div>
             
-           
+            <div class="members container closedimg" id="closedimg2"><%for(let lead of leads){%>
+                <%if(lead.Status == "Closed"){%>
+                <div class="imageContainer-analytics">
+                    <img class="sideimge" src="../image/Group 25.png">
+                    
+                    <div class="caption text"><%=lead.project_name%></div>
+                    <div class="caption status"> <button type="button" class="submit"><%=lead.Status%></button></div>
+                </div>
+                <%}}%>
+                 <div>
+                    <img class="clipart_2" src="../image/undraw_my_files_swob.svg">
+                </div>
+            </div>
             
         </div>
         
@@ -212,114 +225,113 @@
 <div id="Add_lead" class="main">
 
     <div class="container">
-        <form action="/Submit_lead/<%=userId%>" method="post">
-        <div class="main">
-            <div class="float-container">
-            <div class="float-child">
-                                 
-            </div>
-              </div>
-                </div>
-                <div class="previous">
-                    <a onclick="vis2()"><img style="margin-left: 1200px !important;" src="../image/Component 2 – 11.png"></div></a>
-                    <div >
-                        <img class="addlead" src="../image/Add Lead.svg">
-                        <div>
-                        <img class="line1" style=" width: 25%; margin-top: -10px;" src="../image/Path 26.svg"></div>
-                    </div>
-            
-            <div class="container" style="margin-top: 60px; margin-left: 150px;">
-                <div class="row" style="margin-top: 50px;">
-            <div class="row "  >
-                <div class="col-md-4 " >
-                    <div class="form">
-                        <label for="usr"></label>
-                        <div class="customer">
-                        <input type="text" class="form-control" name="customer_name" style="margin-left: -130px !important; margin-top: -160px;" placeholder="Customer Name"></div>
-                      </div>
-                      
-                
-                 </div> 
-             </div> 
-              <div class="row">
-                    <div class="col-md-4 ">
-                        <img class="grp20" style="margin-left: -130px !important;" src="../image/Grp 20.png" >
-                        <div class="centered"></div>
-                       </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4 ">
-                    <div class="form">
-                        <label for="usr"></label>
-                        <div class="Pname">
-                        <input type="text" class="form-control" style="margin-left: -130px !important;" name="project_name" placeholder="Project Name"></div> <br><br><br>
-                      </div>
-                </div>
-            
-                <div class="col-md-4"> 
-                    <div class="addpos">
-                    <img id ="addimg" style="margin-left: 260px !important ; margin-top: -300px;"src="../image/addimg.png"></div>
-                </div>
-            </div>
-            
-            <div class="row">
-                <div class="col-md-4 ">
-                     
-                    <div class="form" >
-                        <label for="usr"></label>
-                        <input type="text" name="project_value" class="form-control" style="margin-left: -130px !important; margin-top: -20px;" placeholder="Project $ Value">
-                      </div>
-                </div> 
-                <input type="text" name="lead_submitted_by" style="display: none;" value="<%=user.Name%>">
-                 <div class="row">
-                <div class="col-md-12">
-                    <img class="g202" style="margin-left: 300px !important; margin-top: -700px;" src="../image/Group 202.png" >
-                    <div class="centered"></div>
-                </div>
-                <div class="col-md-12" id="yoyo">
-                    <div class="form">
-                        <label for="usr"></label>
-                        <div class="autocomplete" style="width:300px;">
-                        <input type="text" name="lead_submitted_to" class="form-control" style="margin-left: -90px !important; margin-top: -330px; " autocomplete="off" placeholder="Name" id="myInput">
-                        </div>
-                    </div>
-                </div>
-    
-                </div>
-                    <textarea name="project_details" class="area" name="message" placeholder="Project Details......" rows="10" cols="30"></textarea>
-                    <br><br>
-            
-                <div class="float-container">
-                    <div class="float-child">
-                        <div class="pos">
-                            <input class="btn btn-primary dropdown-toggle" type="text" list="segment" class="segment" style="width: 200px; margin-left: -50px !important; margin-top: 80px; font-family: Monsterrat regular; border-radius: 7px; " name="Segment_details" placeholder="Segment Details" autocomplete="off">
-                         
-                          <datalist id="segment">
-                            <option value="Pharma">
-                            <option value="Bio-Pharma">
-                            <option value="Life Sciences">
-                            <option value="Diagnostics">
-                            <option value="Environmental & Applied Solutions">
-                          </datalist>
-                          
-                         
-                    </div>
-                <div>
-
-                    <button style="margin-left: -90px !important; margin-top: 10px;" class="submit1">SUBMIT</button>
-                </div>
-            
-            </div>
-        </form>
-            
-            </div>
-            </div>
         
-        </div>
+            
+               
+                   
+          <!----  <div class="previous">
+                       <a onclick="vis2()"><img style="margin-left: 1200px !important;" src="../image/Component 2 – 11.png">
+           </div>-->
+                       </a>
+                       <div >
+                          <img class="addlead" src="../image/Add Lead.svg">
+                          <div>
+                          <img class="line1" style=" width: 25%; margin-top: -10px;" src="../image/Path 26.svg">
+                          </div>
+                         </div>
+             
+  
+          <form action="/Submit_lead/<%=userId%>" method="post">
+              <div class="container" style="margin-top: 119px;">
+                 
+                   <div class="row justify-content-center "  >
+                      <div class="col-md-4 col-xs-12 " >
+                         <div class="form">
+                            <label for="usr"></label>
+                              <div class="customer">
+                                 <input type="text" class="form-control" name="customer_name" style=" margin-top: -160px;" placeholder="Customer Name">
+                              </div>
+                          </div>
+                      </div> 
+                    
+                
+                  
+                      <div class="col-md-8 col-xs-12 ">
+                          <img class="grp20"   src="../image/Grp 20.png" >
+                          <div class="centered"></div>
+                         </div>
+                         </div>
+                  </div>
+  
+                 <div class="row justify-content-center">
+                  <div class="col-md-6  col-xs-12 ">
+                      <div class="form">
+                          <label for="usr"></label>
+                          <div class="Pname">
+                          <input type="text" class="form-control"   name="project_name" placeholder="Project Name"></div> <br><br><br>
+                        </div>
+                  </div>
+              
+                  <div class="col-md-4 col-xs-12"> 
+                      <div class="addpos">
+                      <img id ="addimg" src="../image/addimg.png">
+                      </div>
+                      </div>
+                 </div>
+              
+                  <div class="row">
+                  <div class="col-md-6  col-xs-12">
+                       
+                      <div class="form" >
+                          <label for="usr"></label>
+                          <input type="text" name="project_value" class="form-control"   placeholder="Project $ Value">
+                        </div>
+                  </div> 
+                  <input type="text" name="lead_submitted_by" style="display: none;" value="<%=user.Name%>">
+                  </div> 
+                  <div class="row">
+                  <div class="col-md-6 col-xs-12">
+                      <img class="g202" style="margin-left: 300px !important; margin-top: -700px;" src="../image/Group 202.png" >
+                      <div class="centered"></div>
+                  </div>
+                  <div class="col-md-6 col-xs-12" id="yoyo">
+                      <div class="form">
+                          <label for="usr"></label>
+                          <div class="autocomplete"  >
+                          <input type="text" name="lead_submitted_to" class="form-control" style="margin-left: -90px !important; margin-top: -330px; " autocomplete="off" placeholder="Name" id="myInput">
+                          </div>
+                      </div>
+                  </div>
+                 
+                      <textarea name="project_details" class="area" name="message" placeholder="Project Details......" rows="10" cols="30"></textarea>
+                      <br><br>
+              
+                  <div class="container">
+                       <div class="child">
+                          <div class="pos">
+                              <input class="btn btn-primary dropdown-toggle" type="text" list="segment" class="segment" style="width: 200px; margin-left: -50px !important; margin-top: 80px; font-family: Monsterrat regular; border-radius: 7px; " name="Segment_details" placeholder="Segment Details" autocomplete="off">
+                           
+                            <datalist id="segment">
+                              <option value="Pharma">
+                              <option value="Bio-Pharma">
+                              <option value="Life Sciences">
+                              <option value="Diagnostics">
+                              <option value="Environmental & Applied Solutions">
+                            </datalist>
+                            
+                           
+                      
+                            <div>
+  
+                               <button style="margin-left: -90px !important; margin-top: 10px;" class="submit1">SUBMIT</button>
+                            </div>
+              
+                             </div> </div>
+                   </div>
+              </div>
+          </div> 
+      </form>
     </div>
-    
-</div>
-</div>
 
 
 <!---------------ADD LEAD ENDS---------------->
