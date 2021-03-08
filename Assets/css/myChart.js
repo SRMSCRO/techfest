@@ -1,87 +1,7 @@
-var ctx = document.getElementById('myChart').getContext('2d');
-var chart = new Chart(ctx, {
-    
-    type: 'bar',
-
-    // The data for our dataset
-    data: {
-        labels: ['January', 'February', 'March', 'April','May', 'June'],
-        datasets: [{
-            label: 'Open Leads',
-            backgroundColor: '#505ae250',
-            borderColor: '#5059E2',
-            hoverBackgroundColor: '#505ae2ab',
-            
-            data: [3, 10, 20, 5,15,35],
-           
-            borderWidth:1,
-        }]
-    },
-
-    options: {
-        layout: {
-            padding: {
-                left: 20,
-                right: 20,
-                top: 20,
-                bottom: 20,
-            }
-        },
-        animation: {
-            duration: 2000,
-        },
-        legend: {
-            display: true,
-            labels: {
-                fontColor: '#5059E2'
-            }
-        },
-        
-    }
-});
-
-var ctx = document.getElementById('myChart1').getContext('2d');
-var chart = new Chart(ctx, {
-    
-    type: 'bar',
-
-    // The data for our dataset
-    data: {
-        labels: ['January', 'February', 'March', 'April','May', 'June'],
-        datasets: [{
-            label: 'Closed Leads',
-            backgroundColor: '#505ae250',
-            borderColor: '#5059E2',
-            hoverBackgroundColor: '#505ae2ab',
-            data: [3, 10, 20, 5,15,35],
-
-           
-            borderWidth:1,
-        }]
-    },
-
-    options: {
-        layout: {
-            padding: {
-                left: 20,
-                right: 20,
-                top: 20,
-                bottom: 20,
-            }
-        },
-        animation: {
-            duration: 2000,
-        },
-        legend: {
-            display: true,
-            labels: {
-                fontColor: '#5059E2'
-            }
-        },
-       
-    }
-});
-
+var a = document.getElementById('value_open').textContent;
+var b = document.getElementById('value_closed').textContent;
+var c = document.getElementById('value_validated').textContent;
+var d = document.getElementById('value_rejected').textContent;
 var ctx = document.getElementById('pieChart').getContext('2d');
 var myDoughnutChart = new Chart(ctx, {
    
@@ -107,7 +27,7 @@ var myDoughnutChart = new Chart(ctx, {
                 '#98acf8',
                 
             ],  
-            data: [3, 10, 15, 5,],
+            data: [a, b, c, d,],
             borderWidth:-1,
            
         }]

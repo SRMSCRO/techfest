@@ -59,7 +59,8 @@ app.get("/leadexport/:id",requireLogin,(req,res)=>{
             }
         });
         
-    });
+    }).sort({ Status: 1 });
+    ;
     
 });
 // ------------------------User Lead export ------------
@@ -148,7 +149,7 @@ app.get("/admin/:id",requireLogin,(req,res)=>{
             }
         });
         
-    });
+    }).sort({ Status: 1 });
     
 });
 app.post("/Submit_lead/:id",async(req,res)=>{
@@ -184,7 +185,10 @@ app.get("/q/:name/:id",requireLogin,async(req,res)=>{
 
 // ----------------SALES REP PAGE - To update the Status of the lead-------------------------------------------------------------------------------
 app.get("/sales_representative/:id",requireLogin,async(req,res)=>{
-
+    const countLead_open= await Lead.count({"Status":"Open"});
+    const countLead_closed= await Lead.count({"Status" : "Closed"});
+    const countLead_validated= await Lead.count({"Status" : "Validated"});
+    const countLead_rejected= await Lead.count({"Status" : "Rejected"});
     // Find the user by ID
     let _id=req.params.id;
     const user = await User.findOne({ _id });
@@ -194,9 +198,9 @@ app.get("/sales_representative/:id",requireLogin,async(req,res)=>{
      Lead.find({},(err,leads)=>{
         User.find({lead_submitted_by:user.Name, lead_submitted_to:user.Name}).then(allUsers=>{
             res.set('Cache-Control', 'no-cache, private, no-store, must-revalidate, max-stale=0, post-check=0, pre-check=0');
-            res.render("sales_representative",{leads:leads,userId:req.params.id, user:user, countLead,allUsers:allUsers});
+            res.render("sales_representative",{leads:leads,userId:req.params.id, user:user, countLead,allUsers:allUsers,countLead_open,countLead_closed,countLead_rejected,countLead_validated,});
         });
-    });
+    }).sort({ Status: 1 });
 });
 app.post("/update_status/:id/:userId",async(req,res)=>{
     //To find the data and the time and store it in open time

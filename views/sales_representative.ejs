@@ -128,6 +128,10 @@
             <img class="leadhead-profile" src="../image/Analytics.png">
             <div>
             <img class="line-profile" src="../image/Path 26.png"></div>
+            <p style="display: none;" id="value_open"><%=countLead_open%></p>
+            <p style="display: none;" id="value_closed"><%=countLead_closed%></p>
+            <p style="display: none;" id="value_validated"><%=countLead_validated%></p>
+            <p style="display: none;" id="value_rejected"><%=countLead_rejected%></p>
         </div>
     <div class="row">
         <div class="col-md-12 col-xs-4">
@@ -141,21 +145,18 @@
                     <button type="button" onclick="document.getElementById('export_form').submit();" class="export" >Export</button>
                   </form>
             </div>
-            <label class="labl"for="start">Year & Month :</label>
-            <input class="y_m"type="month" id="start" name="start" min="2017-01" value="2021-01">
             <label class="lable"for="start">Total Leads submitted  : </label>
-            <input class="leads_sub"type="text" value="10" readonly>
+            <input class="leads_sub"type="text" value="<%=countLead%>" readonly>
                 
             <div class="members container openimg" id="openimg2">
                 <%for(let lead of leads){%>
-                <%if(lead.Status == "Open"){%>
                 <div class="imageContainer-analytics">
                     <img class="sideimge" src="../image/Group 24.png">
                     <div class="caption text"><%=lead.project_name%> </div>
                     <div class="caption status"> <button  type="button" class="submit"><%=lead.Status%></button></div>
 
                 </div>
-                <%}%>   <%}%>
+                <%}%> 
                 <div>
                     <img class="clipart-analytics" src="../image/undraw_envelope_n8lc.svg">
                 </div>
@@ -164,12 +165,6 @@
             
             
             <div class="members container validatedimg" id="validatedimg2">
-                <div class="barChart"> 
-                    <canvas id="myChart"></canvas>
-                </div>
-                <div class="barChart1"> 
-                    <canvas id="myChart1"></canvas>
-                </div>
                 <div class="pieChart"> 
                     <canvas id="pieChart"></canvas>
                 </div>
@@ -1187,7 +1182,7 @@
         /*initiate the autocomplete function on the "myInput" element, and pass along the countries array as possible autocomplete values:*/
         autocomplete(document.getElementById("myInput"),users );
         </script>
-
+    
         <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
         crossorigin="anonymous"></script>
