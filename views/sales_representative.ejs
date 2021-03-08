@@ -713,7 +713,6 @@
                             <select name="status">
                                 <option value="Validated">Validated</option>
                                 <option value="Rejected">Rejected</option>
-                                <option value="Closed">Closed</option>
                               </select>
                               <button>Update</button>
                         </form>
@@ -796,8 +795,6 @@
                         <div class="caption text"><%=lead.project_name%>
                             <form action="/update_status/<%=lead._id%>/<%=userId%>" method="POST">
                             <select name="status">
-                                <option value="Validated">Validated</option>
-                                <option value="Rejected">Rejected</option>
                                 <option value="Closed">Closed</option>
                               </select>
                               <button>Update</button>
@@ -878,14 +875,7 @@
                     <div class="imageContainer">
                         <img class="sideimge" src="../image/Group 26.png">
                         <div class="caption text"><%=lead.project_name%>
-                        <form action="/update_status/<%=lead._id%>/<%=userId%>" method="POST">
-                            <select name="status">
-                                <option value="Validated">Validated</option>
-                                <option value="Rejected">Rejected</option>
-                                <option value="Closed">Closed</option>
-                              </select>
-                              <button>Update</button>
-                        </form></div>
+                       </div>
                         <div class="caption status"> <button id="modal6" type="button" class="submit"><%=lead.Status%></button></div>
                         <div id="myModal6" class="modal">
 
@@ -963,14 +953,7 @@
                         <img class="sideimge" src="../image/Group 25.png">
                         
                         <div class="caption text"><%=lead.project_name%>
-                        <form action="/update_status/<%=lead._id%>/<%=userId%>" method="POST">
-                            <select name="status">
-                                <option value="Validated">Validated</option>
-                                <option value="Rejected">Rejected</option>
-                                <option value="Closed">Closed</option>
-                              </select>
-                              <button>Update</button>
-                        </form></div>
+                        </div>
                         <div class="caption status"> <button id="modal7" type="button" class="submit"><%=lead.Status%></button></div>
                         <div id="myModal7" class="modal">
 
