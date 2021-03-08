@@ -185,10 +185,10 @@ app.get("/q/:name/:id",requireLogin,async(req,res)=>{
 
 // ----------------SALES REP PAGE - To update the Status of the lead-------------------------------------------------------------------------------
 app.get("/sales_representative/:id",requireLogin,async(req,res)=>{
-    const countLead_open= await Lead.count({"Status":"Open"});
-    const countLead_closed= await Lead.count({"Status" : "Closed"});
-    const countLead_validated= await Lead.count({"Status" : "Validated"});
-    const countLead_rejected= await Lead.count({"Status" : "Rejected"});
+    const countLead_open= await Lead.countDocuments({"Status":"Open"});
+    const countLead_closed= await Lead.countDocuments({"Status" : "Closed"});
+    const countLead_validated= await Lead.countDocuments({"Status" : "Validated"});
+    const countLead_rejected= await Lead.countDocuments({"Status" : "Rejected"});
     // Find the user by ID
     let _id=req.params.id;
     const user = await User.findOne({ _id });
