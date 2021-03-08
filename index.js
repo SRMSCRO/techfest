@@ -196,7 +196,7 @@ app.get("/sales_representative/:id",requireLogin,async(req,res)=>{
     const countLead=await Lead.countDocuments();
     // Find the lead for the user
      Lead.find({},(err,leads)=>{
-        User.find({lead_submitted_by:user.Name, lead_submitted_to:user.Name}).then(allUsers=>{
+        User.find({}).then(allUsers=>{
             res.set('Cache-Control', 'no-cache, private, no-store, must-revalidate, max-stale=0, post-check=0, pre-check=0');
             res.render("sales_representative",{leads:leads,userId:req.params.id, user:user, countLead,allUsers:allUsers,countLead_open,countLead_closed,countLead_rejected,countLead_validated,});
         });
@@ -219,7 +219,7 @@ app.post("/update_status/:id/:userId",async(req,res)=>{
     //If Validated or Rejected
     if(Status=="Validated"||Status=="Rejected")
     {
-        Lead.findByIdAndUpdate(req.params.id,{"Status":Status,"Validate_or_reject_time":datetime},(err,result)=>{
+        Lead.findByIdAndUpdate(req.params.id,{"Status":Status,"Validate_or_reject_time":datetime, "Update_time":datetime,},(err,result)=>{
             if(err){
                 res.send(err);
             }else{
@@ -231,7 +231,7 @@ app.post("/update_status/:id/:userId",async(req,res)=>{
     //If Closed
     if(Status=="Closed")
     {
-    Lead.findByIdAndUpdate(req.params.id,{"Status":Status,"Closed`_time":datetime},(err,result)=>{
+        Lead.findByIdAndUpdate(req.params.id,{"Status":Status,"Closed_time":datetime, "Update_time":datetime },(err,result)=>{
         if(err){
             res.send(err);
         }else{

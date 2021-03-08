@@ -640,7 +640,7 @@
                       /*insert the value for the autocomplete text field:*/
                       inp.value = this.getElementsByTagName("input")[0].value;
                       /*close the list of autocompleted values,
-                      or any other open lists of autocompleted values:*/
+                      (or any other open lists of autocompleted values:*/
                       closeAllLists();
                   });
                   a.appendChild(b);
@@ -705,7 +705,7 @@
         }
         
         /*An array containing all the country names in the world:*/
-        var  users= [ <%for(let user of allUsers){%>
+        var  users= [<%for(let user of allUsers){%>
            "<%=user.Name%>",
             <%}%>]
         /*initiate the autocomplete function on the "myInput" element, and pass along the countries array as possible autocomplete values:*/
